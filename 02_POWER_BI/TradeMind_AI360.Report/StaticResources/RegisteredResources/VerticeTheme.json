@@ -1,0 +1,80 @@
+{
+  "name": "Vertice TradeMind",
+  "dataColors": [
+    "#06436E",
+    "#F58200",
+    "#4387AD",
+    "#FFA51B",
+    "#082746",
+    "#16856A",
+    "#94A3B8",
+    "#C85B60"
+  ],
+  "foreground": "#1B3044",
+  "foregroundNeutralSecondary": "#64748B",
+  "background": "#FFFFFF",
+  "backgroundLight": "#F7F9FC",
+  "tableAccent": "#F58200",
+  "good": "#16856A",
+  "neutral": "#D99528",
+  "bad": "#C85B60",
+  "maximum": "#082746",
+  "center": "#4387AD",
+  "minimum": "#E6EDF3",
+  "textClasses": {
+    "callout": {
+      "fontSize": 32,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#082746"
+    },
+    "title": {
+      "fontSize": 14,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#1B3044"
+    },
+    "header": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#1B3044"
+    },
+    "label": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI",
+      "color": "#64748B"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "dropShadow": [
+          {
+            "show": false
+          }
+        ],
+        "border": [
+          {
+            "show": false
+          }
+        ],
+        "visualHeader": [
+          {
+            "show": false
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F7F9FC"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

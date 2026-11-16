@@ -1,0 +1,13 @@
+{
+  "dataRoles": [{ "displayName": "Contexto (medida texto)", "name": "contexto", "kind": "Measure" }],
+  "dataViewMappings": [{ "conditions": [{ "contexto": { "max": 1 } }], "single": { "role": "contexto" } }],
+  "objects": {
+    "api": { "properties": {
+      "url": { "type": { "text": true } },
+      "usuario": { "type": { "text": true } }
+    } }
+  },
+  "privileges": [{ "name": "WebAccess", "essential": true, "parameters": ["http://127.0.0.1:8360", "http://localhost:8360"] }],
+  "supportsLandingPage": true,
+  "supportsEmptyDataView": true
+}

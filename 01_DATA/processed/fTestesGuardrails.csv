@@ -1,0 +1,11 @@
+cenario,perfil,regra_aplicada,resultado_esperado,resultado_obtido,status,timestamp,latencia_ms
+Acesso autorizado,cliente.aurora,regra_acesso,permitido,permitido,Aprovado,2026-11-15T00:21:42,123
+Acesso indevido (cross-tenant),cliente.aurora,RLS industria_id aplicado no backend (retorno restrito à indústria própria),bloqueado,bloqueado,Bloqueado corretamente,2026-11-15T00:21:42,248
+Acesso indevido (recurso),promotor.sul,perfil promotor sem acesso a vendas,bloqueado,bloqueado,Bloqueado corretamente,2026-11-15T00:21:42,9
+Dados pessoais,gestor.demo,dados_pessoais,bloqueado,bloqueado,Bloqueado corretamente,2026-11-15T00:21:42,3
+Prompt injection na pergunta,gestor.demo,prompt_injection,bloqueado,bloqueado,Bloqueado corretamente,2026-11-15T00:21:42,3
+Prompt injection em documento,gestor.demo,sanitizacao de contexto recuperado,sanitizado,sanitizado,Bloqueado corretamente,2026-11-15T00:21:42,3
+Consulta arbitrária,admin.demo,consulta_arbitraria,bloqueado,bloqueado,Bloqueado corretamente,2026-11-15T00:21:42,3
+Parâmetro inválido,admin.demo,validacao payload: metric invalida,bloqueado,bloqueado,Bloqueado corretamente,2026-11-15T00:21:42,3
+Escopo regional promotor,promotor.sul,RLS regiao do promotor,escopo_restrito,escopo_restrito,Bloqueado corretamente,2026-11-15T00:21:42,10
+Usuário desconhecido,hacker,usuario_desconhecido,bloqueado,bloqueado,Bloqueado corretamente,2026-11-15T00:21:42,3

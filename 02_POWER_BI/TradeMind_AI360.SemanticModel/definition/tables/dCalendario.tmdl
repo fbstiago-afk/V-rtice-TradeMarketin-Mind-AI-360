@@ -1,0 +1,76 @@
+table dCalendario
+	lineageTag: 1d89d2be-8bf3-03fe-a44a-29680dd9342e
+	dataCategory: Time
+
+	column Data
+		dataType: dateTime
+		isKey
+		formatString: dd/mm/yyyy
+		lineageTag: 0883ee86-2e88-e38d-c9fb-a3e752e4193b
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ano
+		dataType: int64
+		lineageTag: 59e2ac59-73c6-0035-e1fc-a94a415d8a32
+		summarizeBy: none
+		sourceColumn: Ano
+
+	column MesNum
+		dataType: int64
+		lineageTag: 48cda15b-8961-a5ae-eaa4-bc9cb4c5babc
+		summarizeBy: none
+		sourceColumn: MesNum
+
+	column Mes
+		dataType: string
+		lineageTag: c57f261a-137a-e69d-697f-9d7a0e6c916f
+		summarizeBy: none
+		sourceColumn: Mes
+
+	column MesAno
+		dataType: string
+		lineageTag: f7677379-186c-cb05-114d-6684fc4df6d5
+		summarizeBy: none
+		sourceColumn: MesAno
+		sortByColumn: AnoMes
+
+	column AnoMes
+		dataType: int64
+		lineageTag: 83f0d083-2a19-678e-6b45-b4ee5aba3777
+		summarizeBy: none
+		sourceColumn: AnoMes
+
+	column Semana
+		dataType: int64
+		lineageTag: b607a54c-fbaa-035c-b887-3dc26e12ed82
+		summarizeBy: none
+		sourceColumn: Semana
+
+	column InicioSemana
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: e6f27063-5584-e32d-caed-ee02d5cdbacb
+		summarizeBy: none
+		sourceColumn: InicioSemana
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column StatusPeriodo
+		dataType: string
+		lineageTag: 82d0cdb6-221e-9feb-4ca5-53124ce4d288
+		summarizeBy: none
+		sourceColumn: StatusPeriodo
+
+	partition dCalendario = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "dCalendario.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"Data", type date}, {"Ano", Int64.Type}, {"MesNum", Int64.Type}, {"Mes", type text}, {"MesAno", type text}, {"AnoMes", Int64.Type}, {"Semana", Int64.Type}, {"InicioSemana", type date}, {"StatusPeriodo", type text}}, "en-US")
+				in
+				    Tipos
+

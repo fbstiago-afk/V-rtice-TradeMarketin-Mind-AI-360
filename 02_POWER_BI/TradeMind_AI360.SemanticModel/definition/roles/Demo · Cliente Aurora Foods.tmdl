@@ -1,0 +1,15 @@
+role 'Demo · Cliente Aurora Foods'
+	modelPermission: read
+
+	tablePermission dProduto = [industria] = "Aurora Foods"
+
+	tablePermission dCampanha = [industria_campanha] = "Aurora Foods"
+
+	tablePermission fVisita = FALSE()
+
+	tablePermission fAuditoria = FALSE()
+
+	tablePermission dUsuarioAcesso = FALSE()
+
+	annotation PBI_Id = a76685dbd864c4a9bfe40afff10803c1
+

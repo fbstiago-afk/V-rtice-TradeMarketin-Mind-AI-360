@@ -1,0 +1,21 @@
+role 'Acesso por Usuário (dinâmico)'
+	modelPermission: read
+
+	tablePermission dUsuarioAcesso = [upn] = USERPRINCIPALNAME()
+
+	tablePermission dProduto = VAR i = LOOKUPVALUE(dUsuarioAcesso[industria_acesso], dUsuarioAcesso[upn], USERPRINCIPALNAME()) RETURN NOT ISBLANK(LOOKUPVALUE(dUsuarioAcesso[perfil], dUsuarioAcesso[upn], USERPRINCIPALNAME())) && (i = "" || [industria] = i)
+
+	tablePermission dCampanha = VAR i = LOOKUPVALUE(dUsuarioAcesso[industria_acesso], dUsuarioAcesso[upn], USERPRINCIPALNAME()) RETURN NOT ISBLANK(LOOKUPVALUE(dUsuarioAcesso[perfil], dUsuarioAcesso[upn], USERPRINCIPALNAME())) && (i = "" || [industria_campanha] = i)
+
+	tablePermission dPDV = VAR r = LOOKUPVALUE(dUsuarioAcesso[regiao_acesso], dUsuarioAcesso[upn], USERPRINCIPALNAME()) RETURN NOT ISBLANK(LOOKUPVALUE(dUsuarioAcesso[perfil], dUsuarioAcesso[upn], USERPRINCIPALNAME())) && (r = "" || [regiao] = r)
+
+	tablePermission fVenda = LOOKUPVALUE(dUsuarioAcesso[pode_vendas], dUsuarioAcesso[upn], USERPRINCIPALNAME()) = 1
+
+	tablePermission fEstoque = LOOKUPVALUE(dUsuarioAcesso[pode_estoque], dUsuarioAcesso[upn], USERPRINCIPALNAME()) = 1
+
+	tablePermission fVisita = LOOKUPVALUE(dUsuarioAcesso[pode_visitas], dUsuarioAcesso[upn], USERPRINCIPALNAME()) = 1
+
+	tablePermission fAuditoria = LOOKUPVALUE(dUsuarioAcesso[pode_visitas], dUsuarioAcesso[upn], USERPRINCIPALNAME()) = 1
+
+	annotation PBI_Id = 3dd7ecf679f53b9f2d0b554215981de5
+

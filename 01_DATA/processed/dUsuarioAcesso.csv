@@ -1,0 +1,6 @@
+login,upn,perfil,industria_acesso,regiao_acesso,pode_vendas,pode_estoque,pode_visitas
+admin.demo,admin.demo@vertice.demo,admin,,,1,1,1
+gestor.demo,gestor.demo@vertice.demo,gestor,,,1,1,1
+cliente.aurora,cliente.aurora@vertice.demo,cliente,Aurora Foods,,1,1,0
+cliente.brisa,cliente.brisa@vertice.demo,cliente,Brisa Bebidas,,1,1,0
+promotor.sul,promotor.sul@vertice.demo,promotor,,Sul,0,0,1

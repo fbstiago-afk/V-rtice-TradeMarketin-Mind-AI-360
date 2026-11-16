@@ -1,0 +1,241 @@
+pdv_id,pdv,cidade,uf,regiao,formato,rede
+1,Loja 001 - Campinas,Campinas,SP,Sudeste,Supermercado,SuperMais
+2,Loja 002 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Rede BomPreço
+3,Loja 003 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Mercantil União
+4,Loja 004 - Curitiba,Curitiba,PR,Sul,Supermercado,HiperVida
+5,Loja 005 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Atacado Forte
+6,Loja 006 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,SuperMais
+7,Loja 007 - Salvador,Salvador,BA,Nordeste,Supermercado,Rede BomPreço
+8,Loja 008 - Recife,Recife,PE,Nordeste,Hipermercado,Mercantil União
+9,Loja 009 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,HiperVida
+10,Loja 010 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Atacado Forte
+11,Loja 011 - Manaus,Manaus,AM,Norte,Hipermercado,SuperMais
+12,Loja 012 - Belém,Belém,PA,Norte,Atacarejo,Rede BomPreço
+13,Loja 013 - Campinas,Campinas,SP,Sudeste,Supermercado,Mercantil União
+14,Loja 014 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,HiperVida
+15,Loja 015 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Atacado Forte
+16,Loja 016 - Curitiba,Curitiba,PR,Sul,Supermercado,SuperMais
+17,Loja 017 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Rede BomPreço
+18,Loja 018 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Mercantil União
+19,Loja 019 - Salvador,Salvador,BA,Nordeste,Supermercado,HiperVida
+20,Loja 020 - Recife,Recife,PE,Nordeste,Hipermercado,Atacado Forte
+21,Loja 021 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,SuperMais
+22,Loja 022 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Rede BomPreço
+23,Loja 023 - Manaus,Manaus,AM,Norte,Hipermercado,Mercantil União
+24,Loja 024 - Belém,Belém,PA,Norte,Atacarejo,HiperVida
+25,Loja 025 - Campinas,Campinas,SP,Sudeste,Supermercado,Atacado Forte
+26,Loja 026 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,SuperMais
+27,Loja 027 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Rede BomPreço
+28,Loja 028 - Curitiba,Curitiba,PR,Sul,Supermercado,Mercantil União
+29,Loja 029 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,HiperVida
+30,Loja 030 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Atacado Forte
+31,Loja 031 - Salvador,Salvador,BA,Nordeste,Supermercado,SuperMais
+32,Loja 032 - Recife,Recife,PE,Nordeste,Hipermercado,Rede BomPreço
+33,Loja 033 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Mercantil União
+34,Loja 034 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,HiperVida
+35,Loja 035 - Manaus,Manaus,AM,Norte,Hipermercado,Atacado Forte
+36,Loja 036 - Belém,Belém,PA,Norte,Atacarejo,SuperMais
+37,Loja 037 - Campinas,Campinas,SP,Sudeste,Supermercado,Rede BomPreço
+38,Loja 038 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Mercantil União
+39,Loja 039 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,HiperVida
+40,Loja 040 - Curitiba,Curitiba,PR,Sul,Supermercado,Atacado Forte
+41,Loja 041 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,SuperMais
+42,Loja 042 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Rede BomPreço
+43,Loja 043 - Salvador,Salvador,BA,Nordeste,Supermercado,Mercantil União
+44,Loja 044 - Recife,Recife,PE,Nordeste,Hipermercado,HiperVida
+45,Loja 045 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Atacado Forte
+46,Loja 046 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,SuperMais
+47,Loja 047 - Manaus,Manaus,AM,Norte,Hipermercado,Rede BomPreço
+48,Loja 048 - Belém,Belém,PA,Norte,Atacarejo,Mercantil União
+49,Loja 049 - Campinas,Campinas,SP,Sudeste,Supermercado,HiperVida
+50,Loja 050 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Atacado Forte
+51,Loja 051 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,SuperMais
+52,Loja 052 - Curitiba,Curitiba,PR,Sul,Supermercado,Rede BomPreço
+53,Loja 053 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Mercantil União
+54,Loja 054 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,HiperVida
+55,Loja 055 - Salvador,Salvador,BA,Nordeste,Supermercado,Atacado Forte
+56,Loja 056 - Recife,Recife,PE,Nordeste,Hipermercado,SuperMais
+57,Loja 057 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Rede BomPreço
+58,Loja 058 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Mercantil União
+59,Loja 059 - Manaus,Manaus,AM,Norte,Hipermercado,HiperVida
+60,Loja 060 - Belém,Belém,PA,Norte,Atacarejo,Atacado Forte
+61,Loja 061 - Campinas,Campinas,SP,Sudeste,Supermercado,SuperMais
+62,Loja 062 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Rede BomPreço
+63,Loja 063 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Mercantil União
+64,Loja 064 - Curitiba,Curitiba,PR,Sul,Supermercado,HiperVida
+65,Loja 065 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Atacado Forte
+66,Loja 066 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,SuperMais
+67,Loja 067 - Salvador,Salvador,BA,Nordeste,Supermercado,Rede BomPreço
+68,Loja 068 - Recife,Recife,PE,Nordeste,Hipermercado,Mercantil União
+69,Loja 069 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,HiperVida
+70,Loja 070 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Atacado Forte
+71,Loja 071 - Manaus,Manaus,AM,Norte,Hipermercado,SuperMais
+72,Loja 072 - Belém,Belém,PA,Norte,Atacarejo,Rede BomPreço
+73,Loja 073 - Campinas,Campinas,SP,Sudeste,Supermercado,Mercantil União
+74,Loja 074 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,HiperVida
+75,Loja 075 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Atacado Forte
+76,Loja 076 - Curitiba,Curitiba,PR,Sul,Supermercado,SuperMais
+77,Loja 077 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Rede BomPreço
+78,Loja 078 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Mercantil União
+79,Loja 079 - Salvador,Salvador,BA,Nordeste,Supermercado,HiperVida
+80,Loja 080 - Recife,Recife,PE,Nordeste,Hipermercado,Atacado Forte
+81,Loja 081 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,SuperMais
+82,Loja 082 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Rede BomPreço
+83,Loja 083 - Manaus,Manaus,AM,Norte,Hipermercado,Mercantil União
+84,Loja 084 - Belém,Belém,PA,Norte,Atacarejo,HiperVida
+85,Loja 085 - Campinas,Campinas,SP,Sudeste,Supermercado,Atacado Forte
+86,Loja 086 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,SuperMais
+87,Loja 087 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Rede BomPreço
+88,Loja 088 - Curitiba,Curitiba,PR,Sul,Supermercado,Mercantil União
+89,Loja 089 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,HiperVida
+90,Loja 090 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Atacado Forte
+91,Loja 091 - Salvador,Salvador,BA,Nordeste,Supermercado,SuperMais
+92,Loja 092 - Recife,Recife,PE,Nordeste,Hipermercado,Rede BomPreço
+93,Loja 093 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Mercantil União
+94,Loja 094 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,HiperVida
+95,Loja 095 - Manaus,Manaus,AM,Norte,Hipermercado,Atacado Forte
+96,Loja 096 - Belém,Belém,PA,Norte,Atacarejo,SuperMais
+97,Loja 097 - Campinas,Campinas,SP,Sudeste,Supermercado,Rede BomPreço
+98,Loja 098 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Mercantil União
+99,Loja 099 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,HiperVida
+100,Loja 100 - Curitiba,Curitiba,PR,Sul,Supermercado,Atacado Forte
+101,Loja 101 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,SuperMais
+102,Loja 102 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Rede BomPreço
+103,Loja 103 - Salvador,Salvador,BA,Nordeste,Supermercado,Mercantil União
+104,Loja 104 - Recife,Recife,PE,Nordeste,Hipermercado,HiperVida
+105,Loja 105 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Atacado Forte
+106,Loja 106 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,SuperMais
+107,Loja 107 - Manaus,Manaus,AM,Norte,Hipermercado,Rede BomPreço
+108,Loja 108 - Belém,Belém,PA,Norte,Atacarejo,Mercantil União
+109,Loja 109 - Campinas,Campinas,SP,Sudeste,Supermercado,HiperVida
+110,Loja 110 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Atacado Forte
+111,Loja 111 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,SuperMais
+112,Loja 112 - Curitiba,Curitiba,PR,Sul,Supermercado,Rede BomPreço
+113,Loja 113 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Mercantil União
+114,Loja 114 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,HiperVida
+115,Loja 115 - Salvador,Salvador,BA,Nordeste,Supermercado,Atacado Forte
+116,Loja 116 - Recife,Recife,PE,Nordeste,Hipermercado,SuperMais
+117,Loja 117 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Rede BomPreço
+118,Loja 118 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Mercantil União
+119,Loja 119 - Manaus,Manaus,AM,Norte,Hipermercado,HiperVida
+120,Loja 120 - Belém,Belém,PA,Norte,Atacarejo,Atacado Forte
+121,Loja 121 - Campinas,Campinas,SP,Sudeste,Supermercado,SuperMais
+122,Loja 122 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Rede BomPreço
+123,Loja 123 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Mercantil União
+124,Loja 124 - Curitiba,Curitiba,PR,Sul,Supermercado,HiperVida
+125,Loja 125 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Atacado Forte
+126,Loja 126 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,SuperMais
+127,Loja 127 - Salvador,Salvador,BA,Nordeste,Supermercado,Rede BomPreço
+128,Loja 128 - Recife,Recife,PE,Nordeste,Hipermercado,Mercantil União
+129,Loja 129 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,HiperVida
+130,Loja 130 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Atacado Forte
+131,Loja 131 - Manaus,Manaus,AM,Norte,Hipermercado,SuperMais
+132,Loja 132 - Belém,Belém,PA,Norte,Atacarejo,Rede BomPreço
+133,Loja 133 - Campinas,Campinas,SP,Sudeste,Supermercado,Mercantil União
+134,Loja 134 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,HiperVida
+135,Loja 135 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Atacado Forte
+136,Loja 136 - Curitiba,Curitiba,PR,Sul,Supermercado,SuperMais
+137,Loja 137 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Rede BomPreço
+138,Loja 138 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Mercantil União
+139,Loja 139 - Salvador,Salvador,BA,Nordeste,Supermercado,HiperVida
+140,Loja 140 - Recife,Recife,PE,Nordeste,Hipermercado,Atacado Forte
+141,Loja 141 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,SuperMais
+142,Loja 142 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Rede BomPreço
+143,Loja 143 - Manaus,Manaus,AM,Norte,Hipermercado,Mercantil União
+144,Loja 144 - Belém,Belém,PA,Norte,Atacarejo,HiperVida
+145,Loja 145 - Campinas,Campinas,SP,Sudeste,Supermercado,Atacado Forte
+146,Loja 146 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,SuperMais
+147,Loja 147 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Rede BomPreço
+148,Loja 148 - Curitiba,Curitiba,PR,Sul,Supermercado,Mercantil União
+149,Loja 149 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,HiperVida
+150,Loja 150 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Atacado Forte
+151,Loja 151 - Salvador,Salvador,BA,Nordeste,Supermercado,SuperMais
+152,Loja 152 - Recife,Recife,PE,Nordeste,Hipermercado,Rede BomPreço
+153,Loja 153 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Mercantil União
+154,Loja 154 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,HiperVida
+155,Loja 155 - Manaus,Manaus,AM,Norte,Hipermercado,Atacado Forte
+156,Loja 156 - Belém,Belém,PA,Norte,Atacarejo,SuperMais
+157,Loja 157 - Campinas,Campinas,SP,Sudeste,Supermercado,Rede BomPreço
+158,Loja 158 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Mercantil União
+159,Loja 159 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,HiperVida
+160,Loja 160 - Curitiba,Curitiba,PR,Sul,Supermercado,Atacado Forte
+161,Loja 161 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,SuperMais
+162,Loja 162 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Rede BomPreço
+163,Loja 163 - Salvador,Salvador,BA,Nordeste,Supermercado,Mercantil União
+164,Loja 164 - Recife,Recife,PE,Nordeste,Hipermercado,HiperVida
+165,Loja 165 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Atacado Forte
+166,Loja 166 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,SuperMais
+167,Loja 167 - Manaus,Manaus,AM,Norte,Hipermercado,Rede BomPreço
+168,Loja 168 - Belém,Belém,PA,Norte,Atacarejo,Mercantil União
+169,Loja 169 - Campinas,Campinas,SP,Sudeste,Supermercado,HiperVida
+170,Loja 170 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Atacado Forte
+171,Loja 171 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,SuperMais
+172,Loja 172 - Curitiba,Curitiba,PR,Sul,Supermercado,Rede BomPreço
+173,Loja 173 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Mercantil União
+174,Loja 174 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,HiperVida
+175,Loja 175 - Salvador,Salvador,BA,Nordeste,Supermercado,Atacado Forte
+176,Loja 176 - Recife,Recife,PE,Nordeste,Hipermercado,SuperMais
+177,Loja 177 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Rede BomPreço
+178,Loja 178 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Mercantil União
+179,Loja 179 - Manaus,Manaus,AM,Norte,Hipermercado,HiperVida
+180,Loja 180 - Belém,Belém,PA,Norte,Atacarejo,Atacado Forte
+181,Loja 181 - Campinas,Campinas,SP,Sudeste,Supermercado,SuperMais
+182,Loja 182 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Rede BomPreço
+183,Loja 183 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Mercantil União
+184,Loja 184 - Curitiba,Curitiba,PR,Sul,Supermercado,HiperVida
+185,Loja 185 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Atacado Forte
+186,Loja 186 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,SuperMais
+187,Loja 187 - Salvador,Salvador,BA,Nordeste,Supermercado,Rede BomPreço
+188,Loja 188 - Recife,Recife,PE,Nordeste,Hipermercado,Mercantil União
+189,Loja 189 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,HiperVida
+190,Loja 190 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Atacado Forte
+191,Loja 191 - Manaus,Manaus,AM,Norte,Hipermercado,SuperMais
+192,Loja 192 - Belém,Belém,PA,Norte,Atacarejo,Rede BomPreço
+193,Loja 193 - Campinas,Campinas,SP,Sudeste,Supermercado,Mercantil União
+194,Loja 194 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,HiperVida
+195,Loja 195 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Atacado Forte
+196,Loja 196 - Curitiba,Curitiba,PR,Sul,Supermercado,SuperMais
+197,Loja 197 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Rede BomPreço
+198,Loja 198 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Mercantil União
+199,Loja 199 - Salvador,Salvador,BA,Nordeste,Supermercado,HiperVida
+200,Loja 200 - Recife,Recife,PE,Nordeste,Hipermercado,Atacado Forte
+201,Loja 201 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,SuperMais
+202,Loja 202 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Rede BomPreço
+203,Loja 203 - Manaus,Manaus,AM,Norte,Hipermercado,Mercantil União
+204,Loja 204 - Belém,Belém,PA,Norte,Atacarejo,HiperVida
+205,Loja 205 - Campinas,Campinas,SP,Sudeste,Supermercado,Atacado Forte
+206,Loja 206 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,SuperMais
+207,Loja 207 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,Rede BomPreço
+208,Loja 208 - Curitiba,Curitiba,PR,Sul,Supermercado,Mercantil União
+209,Loja 209 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,HiperVida
+210,Loja 210 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Atacado Forte
+211,Loja 211 - Salvador,Salvador,BA,Nordeste,Supermercado,SuperMais
+212,Loja 212 - Recife,Recife,PE,Nordeste,Hipermercado,Rede BomPreço
+213,Loja 213 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Mercantil União
+214,Loja 214 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,HiperVida
+215,Loja 215 - Manaus,Manaus,AM,Norte,Hipermercado,Atacado Forte
+216,Loja 216 - Belém,Belém,PA,Norte,Atacarejo,SuperMais
+217,Loja 217 - Campinas,Campinas,SP,Sudeste,Supermercado,Rede BomPreço
+218,Loja 218 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Mercantil União
+219,Loja 219 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,HiperVida
+220,Loja 220 - Curitiba,Curitiba,PR,Sul,Supermercado,Atacado Forte
+221,Loja 221 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,SuperMais
+222,Loja 222 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,Rede BomPreço
+223,Loja 223 - Salvador,Salvador,BA,Nordeste,Supermercado,Mercantil União
+224,Loja 224 - Recife,Recife,PE,Nordeste,Hipermercado,HiperVida
+225,Loja 225 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Atacado Forte
+226,Loja 226 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,SuperMais
+227,Loja 227 - Manaus,Manaus,AM,Norte,Hipermercado,Rede BomPreço
+228,Loja 228 - Belém,Belém,PA,Norte,Atacarejo,Mercantil União
+229,Loja 229 - Campinas,Campinas,SP,Sudeste,Supermercado,HiperVida
+230,Loja 230 - São Paulo,São Paulo,SP,Sudeste,Hipermercado,Atacado Forte
+231,Loja 231 - Rio de Janeiro,Rio de Janeiro,RJ,Sudeste,Atacarejo,SuperMais
+232,Loja 232 - Curitiba,Curitiba,PR,Sul,Supermercado,Rede BomPreço
+233,Loja 233 - Porto Alegre,Porto Alegre,RS,Sul,Hipermercado,Mercantil União
+234,Loja 234 - Belo Horizonte,Belo Horizonte,MG,Sudeste,Atacarejo,HiperVida
+235,Loja 235 - Salvador,Salvador,BA,Nordeste,Supermercado,Atacado Forte
+236,Loja 236 - Recife,Recife,PE,Nordeste,Hipermercado,SuperMais
+237,Loja 237 - Goiânia,Goiânia,GO,Centro-Oeste,Atacarejo,Rede BomPreço
+238,Loja 238 - Brasília,Brasília,DF,Centro-Oeste,Supermercado,Mercantil União
+239,Loja 239 - Manaus,Manaus,AM,Norte,Hipermercado,HiperVida
+240,Loja 240 - Belém,Belém,PA,Norte,Atacarejo,Atacado Forte

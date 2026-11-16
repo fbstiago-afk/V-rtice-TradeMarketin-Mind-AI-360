@@ -1,0 +1,51 @@
+table fEstoque
+	lineageTag: 65bbbdb4-4018-d1a9-8a63-932eabaaabbf
+
+	column data
+		dataType: dateTime
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: a7692883-7f4f-8a2e-e865-313b7be3388e
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column pdv_id
+		dataType: int64
+		isHidden
+		lineageTag: 4a9d6bb0-fccc-e34b-afdd-225053c033c3
+		summarizeBy: none
+		sourceColumn: pdv_id
+
+	column produto_id
+		dataType: int64
+		isHidden
+		lineageTag: bdd9e837-22b5-43b7-fa8f-e52b65f55b8c
+		summarizeBy: none
+		sourceColumn: produto_id
+
+	column saldo
+		dataType: int64
+		isHidden
+		lineageTag: 4958e8d9-f8f3-e158-4687-3f93b65c7d71
+		summarizeBy: none
+		sourceColumn: saldo
+
+	column ruptura
+		dataType: int64
+		isHidden
+		lineageTag: e682199c-6b90-be0e-455a-1e40985c8ce8
+		summarizeBy: none
+		sourceColumn: ruptura
+
+	partition fEstoque = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fEstoque.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"data", type date}, {"pdv_id", Int64.Type}, {"produto_id", Int64.Type}, {"saldo", Int64.Type}, {"ruptura", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

@@ -1,0 +1,49 @@
+table dModelosIA
+	lineageTag: d66bab63-9745-3a18-bc18-b4942ed3729c
+
+	column modelo
+		dataType: string
+		lineageTag: 6ed5dbb1-a31b-1aee-17cf-67e2b7020156
+		summarizeBy: none
+		sourceColumn: modelo
+
+	column versao
+		dataType: string
+		lineageTag: ae33dbbf-b31a-5400-564b-5bb92e4fc544
+		summarizeBy: none
+		sourceColumn: versao
+
+	column modulo
+		dataType: string
+		lineageTag: 1708a0a5-d4f9-4732-4323-80a07c784d2e
+		summarizeBy: none
+		sourceColumn: modulo
+
+	column descricao
+		dataType: string
+		lineageTag: 7b9c6ffe-cdea-d36a-6137-51c6159092d3
+		summarizeBy: none
+		sourceColumn: descricao
+
+	column status
+		dataType: string
+		lineageTag: e5812cf1-7c17-17bf-1746-aabd1058e51e
+		summarizeBy: none
+		sourceColumn: status
+
+	column data_treinamento
+		dataType: string
+		lineageTag: 63680bd2-28a7-fe1d-30b9-402de13f40f8
+		summarizeBy: none
+		sourceColumn: data_treinamento
+
+	partition dModelosIA = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "dModelosIA.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"modelo", type text}, {"versao", type text}, {"modulo", type text}, {"descricao", type text}, {"status", type text}, {"data_treinamento", type text}}, "en-US")
+				in
+				    Tipos
+

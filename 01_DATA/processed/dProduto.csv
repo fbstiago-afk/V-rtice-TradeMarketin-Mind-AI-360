@@ -1,0 +1,351 @@
+produto_id,sku,produto,categoria,industria,preco_referencia,custo_unitario
+1,SKU0001,Produto 001,Mercearia,Aurora Foods,78.59,41.39
+2,SKU0002,Produto 002,Bebidas,Brisa Bebidas,78.33,36.92
+3,SKU0003,Produto 003,Higiene,VivaCare,21.57,10.49
+4,SKU0004,Produto 004,Limpeza,Aurora Foods,77.38,36.34
+5,SKU0005,Produto 005,Snacks,Brisa Bebidas,70.81,33.03
+6,SKU0006,Produto 006,Mercearia,VivaCare,14.52,9.34
+7,SKU0007,Produto 007,Bebidas,Aurora Foods,41.47,24.27
+8,SKU0008,Produto 008,Higiene,Brisa Bebidas,71.09,38.81
+9,SKU0009,Produto 009,Limpeza,VivaCare,43.53,30.43
+10,SKU0010,Produto 010,Snacks,Aurora Foods,17.11,9.26
+11,SKU0011,Produto 011,Mercearia,Brisa Bebidas,20.93,14.02
+12,SKU0012,Produto 012,Bebidas,VivaCare,65.37,40.05
+13,SKU0013,Produto 013,Higiene,Aurora Foods,79.87,39.96
+14,SKU0014,Produto 014,Limpeza,Brisa Bebidas,39.46,20.74
+15,SKU0015,Produto 015,Snacks,VivaCare,54.84,26.81
+16,SKU0016,Produto 016,Mercearia,Aurora Foods,48.51,25.96
+17,SKU0017,Produto 017,Bebidas,Brisa Bebidas,31.43,15.4
+18,SKU0018,Produto 018,Higiene,VivaCare,56.84,27.11
+19,SKU0019,Produto 019,Limpeza,Aurora Foods,38.84,18.61
+20,SKU0020,Produto 020,Snacks,Brisa Bebidas,19.17,10.42
+21,SKU0021,Produto 021,Mercearia,VivaCare,69.31,34.54
+22,SKU0022,Produto 022,Bebidas,Aurora Foods,57.94,38.63
+23,SKU0023,Produto 023,Higiene,Brisa Bebidas,22.63,10.71
+24,SKU0024,Produto 024,Limpeza,VivaCare,44.12,28.44
+25,SKU0025,Produto 025,Snacks,Aurora Foods,52.28,33.14
+26,SKU0026,Produto 026,Mercearia,Brisa Bebidas,68.18,39.13
+27,SKU0027,Produto 027,Bebidas,VivaCare,65.46,41.87
+28,SKU0028,Produto 028,Higiene,Aurora Foods,40.47,25.68
+29,SKU0029,Produto 029,Limpeza,Brisa Bebidas,58.27,28.32
+30,SKU0030,Produto 030,Snacks,VivaCare,7.38,4.09
+31,SKU0031,Produto 031,Mercearia,Aurora Foods,13.14,8.59
+32,SKU0032,Produto 032,Bebidas,Brisa Bebidas,73.9,39.97
+33,SKU0033,Produto 033,Higiene,VivaCare,50.07,29.05
+34,SKU0034,Produto 034,Limpeza,Aurora Foods,15.33,8.82
+35,SKU0035,Produto 035,Snacks,Brisa Bebidas,80.1,38.59
+36,SKU0036,Produto 036,Mercearia,VivaCare,6.45,3.42
+37,SKU0037,Produto 037,Bebidas,Aurora Foods,21.08,14.28
+38,SKU0038,Produto 038,Higiene,Brisa Bebidas,51.46,34.53
+39,SKU0039,Produto 039,Limpeza,VivaCare,43.83,28.67
+40,SKU0040,Produto 040,Snacks,Aurora Foods,25.33,16.95
+41,SKU0041,Produto 041,Mercearia,Brisa Bebidas,35.83,21.89
+42,SKU0042,Produto 042,Bebidas,VivaCare,84.75,50.5
+43,SKU0043,Produto 043,Higiene,Aurora Foods,25.44,16.46
+44,SKU0044,Produto 044,Limpeza,Brisa Bebidas,55.44,38.7
+45,SKU0045,Produto 045,Snacks,VivaCare,66.31,33.12
+46,SKU0046,Produto 046,Mercearia,Aurora Foods,55.46,32.1
+47,SKU0047,Produto 047,Bebidas,Brisa Bebidas,34.35,22.91
+48,SKU0048,Produto 048,Higiene,VivaCare,37.82,19.16
+49,SKU0049,Produto 049,Limpeza,Aurora Foods,74.73,40.1
+50,SKU0050,Produto 050,Snacks,Brisa Bebidas,29.82,20.45
+51,SKU0051,Produto 051,Mercearia,VivaCare,43.89,25.86
+52,SKU0052,Produto 052,Bebidas,Aurora Foods,47.02,22.24
+53,SKU0053,Produto 053,Higiene,Brisa Bebidas,35.88,24.26
+54,SKU0054,Produto 054,Limpeza,VivaCare,45.81,24.01
+55,SKU0055,Produto 055,Snacks,Aurora Foods,18.09,10.27
+56,SKU0056,Produto 056,Mercearia,Brisa Bebidas,57.46,26.12
+57,SKU0057,Produto 057,Bebidas,VivaCare,10.13,5.05
+58,SKU0058,Produto 058,Higiene,Aurora Foods,66.35,36.73
+59,SKU0059,Produto 059,Limpeza,Brisa Bebidas,65.63,31.6
+60,SKU0060,Produto 060,Snacks,VivaCare,66.25,31.17
+61,SKU0061,Produto 061,Mercearia,Aurora Foods,36.02,24.41
+62,SKU0062,Produto 062,Bebidas,Brisa Bebidas,66.83,32.23
+63,SKU0063,Produto 063,Higiene,VivaCare,28.0,19.03
+64,SKU0064,Produto 064,Limpeza,Aurora Foods,8.37,4.03
+65,SKU0065,Produto 065,Snacks,Brisa Bebidas,64.32,31.72
+66,SKU0066,Produto 066,Mercearia,VivaCare,26.23,15.14
+67,SKU0067,Produto 067,Bebidas,Aurora Foods,67.81,35.54
+68,SKU0068,Produto 068,Higiene,Brisa Bebidas,70.54,40.89
+69,SKU0069,Produto 069,Limpeza,VivaCare,65.68,38.31
+70,SKU0070,Produto 070,Snacks,Aurora Foods,11.25,6.09
+71,SKU0071,Produto 071,Mercearia,Brisa Bebidas,42.68,27.92
+72,SKU0072,Produto 072,Bebidas,VivaCare,72.18,45.6
+73,SKU0073,Produto 073,Higiene,Aurora Foods,46.43,22.64
+74,SKU0074,Produto 074,Limpeza,Brisa Bebidas,52.61,34.32
+75,SKU0075,Produto 075,Snacks,VivaCare,64.53,38.54
+76,SKU0076,Produto 076,Mercearia,Aurora Foods,13.45,6.34
+77,SKU0077,Produto 077,Bebidas,Brisa Bebidas,41.22,19.85
+78,SKU0078,Produto 078,Higiene,VivaCare,77.33,36.76
+79,SKU0079,Produto 079,Limpeza,Aurora Foods,75.82,42.45
+80,SKU0080,Produto 080,Snacks,Brisa Bebidas,58.57,34.41
+81,SKU0081,Produto 081,Mercearia,VivaCare,52.66,29.78
+82,SKU0082,Produto 082,Bebidas,Aurora Foods,62.09,40.05
+83,SKU0083,Produto 083,Higiene,Brisa Bebidas,73.66,34.49
+84,SKU0084,Produto 084,Limpeza,VivaCare,32.69,18.19
+85,SKU0085,Produto 085,Snacks,Aurora Foods,24.49,15.12
+86,SKU0086,Produto 086,Mercearia,Brisa Bebidas,33.45,21.01
+87,SKU0087,Produto 087,Bebidas,VivaCare,75.76,37.42
+88,SKU0088,Produto 088,Higiene,Aurora Foods,7.4,4.49
+89,SKU0089,Produto 089,Limpeza,Brisa Bebidas,57.59,30.66
+90,SKU0090,Produto 090,Snacks,VivaCare,7.43,4.39
+91,SKU0091,Produto 091,Mercearia,Aurora Foods,37.27,19.3
+92,SKU0092,Produto 092,Bebidas,Brisa Bebidas,83.22,49.3
+93,SKU0093,Produto 093,Higiene,VivaCare,20.03,13.81
+94,SKU0094,Produto 094,Limpeza,Aurora Foods,58.88,26.96
+95,SKU0095,Produto 095,Snacks,Brisa Bebidas,37.3,21.6
+96,SKU0096,Produto 096,Mercearia,VivaCare,53.57,33.27
+97,SKU0097,Produto 097,Bebidas,Aurora Foods,82.15,37.5
+98,SKU0098,Produto 098,Higiene,Brisa Bebidas,25.08,17.24
+99,SKU0099,Produto 099,Limpeza,VivaCare,64.82,39.21
+100,SKU0100,Produto 100,Snacks,Aurora Foods,58.95,31.73
+101,SKU0101,Produto 101,Mercearia,Brisa Bebidas,46.38,24.26
+102,SKU0102,Produto 102,Bebidas,VivaCare,27.13,14.86
+103,SKU0103,Produto 103,Higiene,Aurora Foods,36.39,19.06
+104,SKU0104,Produto 104,Limpeza,Brisa Bebidas,61.96,32.16
+105,SKU0105,Produto 105,Snacks,VivaCare,62.32,41.02
+106,SKU0106,Produto 106,Mercearia,Aurora Foods,10.93,6.47
+107,SKU0107,Produto 107,Bebidas,Brisa Bebidas,80.81,49.17
+108,SKU0108,Produto 108,Higiene,VivaCare,70.99,41.08
+109,SKU0109,Produto 109,Limpeza,Aurora Foods,19.61,10.72
+110,SKU0110,Produto 110,Snacks,Brisa Bebidas,63.7,32.94
+111,SKU0111,Produto 111,Mercearia,VivaCare,45.88,28.06
+112,SKU0112,Produto 112,Bebidas,Aurora Foods,40.11,20.55
+113,SKU0113,Produto 113,Higiene,Brisa Bebidas,61.89,40.11
+114,SKU0114,Produto 114,Limpeza,VivaCare,15.1,10.43
+115,SKU0115,Produto 115,Snacks,Aurora Foods,30.64,21.1
+116,SKU0116,Produto 116,Mercearia,Brisa Bebidas,38.9,25.21
+117,SKU0117,Produto 117,Bebidas,VivaCare,41.88,28.09
+118,SKU0118,Produto 118,Higiene,Aurora Foods,10.84,7.42
+119,SKU0119,Produto 119,Limpeza,Brisa Bebidas,35.04,18.92
+120,SKU0120,Produto 120,Snacks,VivaCare,47.91,21.95
+121,SKU0121,Produto 121,Mercearia,Aurora Foods,79.33,47.51
+122,SKU0122,Produto 122,Bebidas,Brisa Bebidas,45.4,23.87
+123,SKU0123,Produto 123,Higiene,VivaCare,9.32,5.45
+124,SKU0124,Produto 124,Limpeza,Aurora Foods,29.82,17.41
+125,SKU0125,Produto 125,Snacks,Brisa Bebidas,70.6,42.85
+126,SKU0126,Produto 126,Mercearia,VivaCare,66.67,41.93
+127,SKU0127,Produto 127,Bebidas,Aurora Foods,28.78,15.76
+128,SKU0128,Produto 128,Higiene,Brisa Bebidas,6.85,3.99
+129,SKU0129,Produto 129,Limpeza,VivaCare,39.72,18.9
+130,SKU0130,Produto 130,Snacks,Aurora Foods,41.42,28.0
+131,SKU0131,Produto 131,Mercearia,Brisa Bebidas,17.3,11.3
+132,SKU0132,Produto 132,Bebidas,VivaCare,6.09,3.94
+133,SKU0133,Produto 133,Higiene,Aurora Foods,13.22,6.95
+134,SKU0134,Produto 134,Limpeza,Brisa Bebidas,43.39,25.14
+135,SKU0135,Produto 135,Snacks,VivaCare,73.94,35.88
+136,SKU0136,Produto 136,Mercearia,Aurora Foods,58.34,38.3
+137,SKU0137,Produto 137,Bebidas,Brisa Bebidas,39.91,21.12
+138,SKU0138,Produto 138,Higiene,VivaCare,75.07,48.82
+139,SKU0139,Produto 139,Limpeza,Aurora Foods,15.29,9.69
+140,SKU0140,Produto 140,Snacks,Brisa Bebidas,52.79,35.55
+141,SKU0141,Produto 141,Mercearia,VivaCare,17.89,10.99
+142,SKU0142,Produto 142,Bebidas,Aurora Foods,50.57,33.23
+143,SKU0143,Produto 143,Higiene,Brisa Bebidas,24.07,15.98
+144,SKU0144,Produto 144,Limpeza,VivaCare,35.04,23.42
+145,SKU0145,Produto 145,Snacks,Aurora Foods,29.7,19.77
+146,SKU0146,Produto 146,Mercearia,Brisa Bebidas,28.47,15.27
+147,SKU0147,Produto 147,Bebidas,VivaCare,50.84,32.84
+148,SKU0148,Produto 148,Higiene,Aurora Foods,36.47,21.59
+149,SKU0149,Produto 149,Limpeza,Brisa Bebidas,51.59,29.16
+150,SKU0150,Produto 150,Snacks,VivaCare,66.47,34.03
+151,SKU0151,Produto 151,Mercearia,Aurora Foods,18.44,11.01
+152,SKU0152,Produto 152,Bebidas,Brisa Bebidas,84.99,48.88
+153,SKU0153,Produto 153,Higiene,VivaCare,23.62,14.01
+154,SKU0154,Produto 154,Limpeza,Aurora Foods,8.46,5.38
+155,SKU0155,Produto 155,Snacks,Brisa Bebidas,51.25,27.75
+156,SKU0156,Produto 156,Mercearia,VivaCare,54.16,30.76
+157,SKU0157,Produto 157,Bebidas,Aurora Foods,31.16,18.97
+158,SKU0158,Produto 158,Higiene,Brisa Bebidas,13.29,8.41
+159,SKU0159,Produto 159,Limpeza,VivaCare,8.67,5.89
+160,SKU0160,Produto 160,Snacks,Aurora Foods,75.39,35.95
+161,SKU0161,Produto 161,Mercearia,Brisa Bebidas,53.02,35.12
+162,SKU0162,Produto 162,Bebidas,VivaCare,84.5,57.7
+163,SKU0163,Produto 163,Higiene,Aurora Foods,24.23,11.42
+164,SKU0164,Produto 164,Limpeza,Brisa Bebidas,5.3,3.64
+165,SKU0165,Produto 165,Snacks,VivaCare,10.1,6.22
+166,SKU0166,Produto 166,Mercearia,Aurora Foods,38.07,26.18
+167,SKU0167,Produto 167,Bebidas,Brisa Bebidas,48.23,26.08
+168,SKU0168,Produto 168,Higiene,VivaCare,48.63,26.84
+169,SKU0169,Produto 169,Limpeza,Aurora Foods,44.68,20.21
+170,SKU0170,Produto 170,Snacks,Brisa Bebidas,17.34,11.26
+171,SKU0171,Produto 171,Mercearia,VivaCare,57.29,30.2
+172,SKU0172,Produto 172,Bebidas,Aurora Foods,41.33,25.16
+173,SKU0173,Produto 173,Higiene,Brisa Bebidas,75.27,42.65
+174,SKU0174,Produto 174,Limpeza,VivaCare,53.25,29.76
+175,SKU0175,Produto 175,Snacks,Aurora Foods,80.37,46.77
+176,SKU0176,Produto 176,Mercearia,Brisa Bebidas,75.96,47.93
+177,SKU0177,Produto 177,Bebidas,VivaCare,36.58,18.46
+178,SKU0178,Produto 178,Higiene,Aurora Foods,26.15,15.88
+179,SKU0179,Produto 179,Limpeza,Brisa Bebidas,34.25,18.23
+180,SKU0180,Produto 180,Snacks,VivaCare,42.39,27.59
+181,SKU0181,Produto 181,Mercearia,Aurora Foods,68.16,32.46
+182,SKU0182,Produto 182,Bebidas,Brisa Bebidas,41.91,26.33
+183,SKU0183,Produto 183,Higiene,VivaCare,22.82,10.55
+184,SKU0184,Produto 184,Limpeza,Aurora Foods,59.48,30.93
+185,SKU0185,Produto 185,Snacks,Brisa Bebidas,33.78,18.02
+186,SKU0186,Produto 186,Mercearia,VivaCare,42.93,20.18
+187,SKU0187,Produto 187,Bebidas,Aurora Foods,75.97,42.84
+188,SKU0188,Produto 188,Higiene,Brisa Bebidas,37.1,23.57
+189,SKU0189,Produto 189,Limpeza,VivaCare,34.22,19.01
+190,SKU0190,Produto 190,Snacks,Aurora Foods,60.77,41.57
+191,SKU0191,Produto 191,Mercearia,Brisa Bebidas,12.3,6.92
+192,SKU0192,Produto 192,Bebidas,VivaCare,31.9,17.04
+193,SKU0193,Produto 193,Higiene,Aurora Foods,60.05,39.39
+194,SKU0194,Produto 194,Limpeza,Brisa Bebidas,21.68,11.16
+195,SKU0195,Produto 195,Snacks,VivaCare,20.88,10.45
+196,SKU0196,Produto 196,Mercearia,Aurora Foods,43.51,29.47
+197,SKU0197,Produto 197,Bebidas,Brisa Bebidas,24.28,12.5
+198,SKU0198,Produto 198,Higiene,VivaCare,25.48,15.33
+199,SKU0199,Produto 199,Limpeza,Aurora Foods,24.82,12.76
+200,SKU0200,Produto 200,Snacks,Brisa Bebidas,45.78,31.02
+201,SKU0201,Produto 201,Mercearia,VivaCare,14.74,10.18
+202,SKU0202,Produto 202,Bebidas,Aurora Foods,8.95,5.88
+203,SKU0203,Produto 203,Higiene,Brisa Bebidas,5.84,3.15
+204,SKU0204,Produto 204,Limpeza,VivaCare,34.82,23.74
+205,SKU0205,Produto 205,Snacks,Aurora Foods,81.94,51.36
+206,SKU0206,Produto 206,Mercearia,Brisa Bebidas,42.25,29.4
+207,SKU0207,Produto 207,Bebidas,VivaCare,6.49,4.34
+208,SKU0208,Produto 208,Higiene,Aurora Foods,40.68,23.88
+209,SKU0209,Produto 209,Limpeza,Brisa Bebidas,84.27,58.89
+210,SKU0210,Produto 210,Snacks,VivaCare,81.53,40.62
+211,SKU0211,Produto 211,Mercearia,Aurora Foods,74.06,40.83
+212,SKU0212,Produto 212,Bebidas,Brisa Bebidas,79.59,38.5
+213,SKU0213,Produto 213,Higiene,VivaCare,14.98,8.12
+214,SKU0214,Produto 214,Limpeza,Aurora Foods,78.61,35.82
+215,SKU0215,Produto 215,Snacks,Brisa Bebidas,74.84,48.55
+216,SKU0216,Produto 216,Mercearia,VivaCare,9.53,6.59
+217,SKU0217,Produto 217,Bebidas,Aurora Foods,40.32,27.29
+218,SKU0218,Produto 218,Higiene,Brisa Bebidas,45.71,31.9
+219,SKU0219,Produto 219,Limpeza,VivaCare,84.69,57.25
+220,SKU0220,Produto 220,Snacks,Aurora Foods,74.08,36.56
+221,SKU0221,Produto 221,Mercearia,Brisa Bebidas,74.22,35.21
+222,SKU0222,Produto 222,Bebidas,VivaCare,31.97,16.75
+223,SKU0223,Produto 223,Higiene,Aurora Foods,48.98,24.22
+224,SKU0224,Produto 224,Limpeza,Brisa Bebidas,59.81,27.68
+225,SKU0225,Produto 225,Snacks,VivaCare,12.43,8.64
+226,SKU0226,Produto 226,Mercearia,Aurora Foods,18.59,9.52
+227,SKU0227,Produto 227,Bebidas,Brisa Bebidas,36.38,22.87
+228,SKU0228,Produto 228,Higiene,VivaCare,17.54,11.06
+229,SKU0229,Produto 229,Limpeza,Aurora Foods,70.29,42.48
+230,SKU0230,Produto 230,Snacks,Brisa Bebidas,72.53,50.43
+231,SKU0231,Produto 231,Mercearia,VivaCare,58.6,29.85
+232,SKU0232,Produto 232,Bebidas,Aurora Foods,72.11,49.67
+233,SKU0233,Produto 233,Higiene,Brisa Bebidas,56.93,36.51
+234,SKU0234,Produto 234,Limpeza,VivaCare,61.95,35.72
+235,SKU0235,Produto 235,Snacks,Aurora Foods,41.01,28.58
+236,SKU0236,Produto 236,Mercearia,Brisa Bebidas,73.83,36.16
+237,SKU0237,Produto 237,Bebidas,VivaCare,72.79,48.57
+238,SKU0238,Produto 238,Higiene,Aurora Foods,42.41,26.13
+239,SKU0239,Produto 239,Limpeza,Brisa Bebidas,47.31,32.44
+240,SKU0240,Produto 240,Snacks,VivaCare,43.2,20.52
+241,SKU0241,Produto 241,Mercearia,Aurora Foods,34.15,21.28
+242,SKU0242,Produto 242,Bebidas,Brisa Bebidas,27.8,14.47
+243,SKU0243,Produto 243,Higiene,VivaCare,18.29,9.68
+244,SKU0244,Produto 244,Limpeza,Aurora Foods,81.6,52.79
+245,SKU0245,Produto 245,Snacks,Brisa Bebidas,77.81,46.72
+246,SKU0246,Produto 246,Mercearia,VivaCare,75.99,43.02
+247,SKU0247,Produto 247,Bebidas,Aurora Foods,36.65,20.9
+248,SKU0248,Produto 248,Higiene,Brisa Bebidas,52.89,25.54
+249,SKU0249,Produto 249,Limpeza,VivaCare,35.16,20.66
+250,SKU0250,Produto 250,Snacks,Aurora Foods,25.74,12.23
+251,SKU0251,Produto 251,Mercearia,Brisa Bebidas,14.05,9.08
+252,SKU0252,Produto 252,Bebidas,VivaCare,48.3,30.23
+253,SKU0253,Produto 253,Higiene,Aurora Foods,18.92,12.91
+254,SKU0254,Produto 254,Limpeza,Brisa Bebidas,19.38,12.57
+255,SKU0255,Produto 255,Snacks,VivaCare,80.62,40.86
+256,SKU0256,Produto 256,Mercearia,Aurora Foods,54.09,37.66
+257,SKU0257,Produto 257,Bebidas,Brisa Bebidas,84.0,42.73
+258,SKU0258,Produto 258,Higiene,VivaCare,80.18,53.82
+259,SKU0259,Produto 259,Limpeza,Aurora Foods,5.08,3.41
+260,SKU0260,Produto 260,Snacks,Brisa Bebidas,42.6,22.15
+261,SKU0261,Produto 261,Mercearia,VivaCare,79.02,35.78
+262,SKU0262,Produto 262,Bebidas,Aurora Foods,55.3,35.91
+263,SKU0263,Produto 263,Higiene,Brisa Bebidas,43.44,26.42
+264,SKU0264,Produto 264,Limpeza,VivaCare,6.62,3.33
+265,SKU0265,Produto 265,Snacks,Aurora Foods,82.1,48.34
+266,SKU0266,Produto 266,Mercearia,Brisa Bebidas,74.8,41.28
+267,SKU0267,Produto 267,Bebidas,VivaCare,84.8,48.89
+268,SKU0268,Produto 268,Higiene,Aurora Foods,45.19,26.34
+269,SKU0269,Produto 269,Limpeza,Brisa Bebidas,47.15,24.03
+270,SKU0270,Produto 270,Snacks,VivaCare,42.37,22.1
+271,SKU0271,Produto 271,Mercearia,Aurora Foods,53.72,36.68
+272,SKU0272,Produto 272,Bebidas,Brisa Bebidas,52.97,30.55
+273,SKU0273,Produto 273,Higiene,VivaCare,38.84,19.63
+274,SKU0274,Produto 274,Limpeza,Aurora Foods,25.39,16.1
+275,SKU0275,Produto 275,Snacks,Brisa Bebidas,43.28,22.68
+276,SKU0276,Produto 276,Mercearia,VivaCare,56.61,38.25
+277,SKU0277,Produto 277,Bebidas,Aurora Foods,38.69,19.66
+278,SKU0278,Produto 278,Higiene,Brisa Bebidas,9.88,5.9
+279,SKU0279,Produto 279,Limpeza,VivaCare,38.8,18.05
+280,SKU0280,Produto 280,Snacks,Aurora Foods,60.43,41.62
+281,SKU0281,Produto 281,Mercearia,Brisa Bebidas,44.81,21.64
+282,SKU0282,Produto 282,Bebidas,VivaCare,35.44,17.4
+283,SKU0283,Produto 283,Higiene,Aurora Foods,18.19,12.16
+284,SKU0284,Produto 284,Limpeza,Brisa Bebidas,56.58,29.37
+285,SKU0285,Produto 285,Snacks,VivaCare,42.64,27.09
+286,SKU0286,Produto 286,Mercearia,Aurora Foods,74.99,51.16
+287,SKU0287,Produto 287,Bebidas,Brisa Bebidas,56.46,26.34
+288,SKU0288,Produto 288,Higiene,VivaCare,71.81,39.81
+289,SKU0289,Produto 289,Limpeza,Aurora Foods,39.75,23.75
+290,SKU0290,Produto 290,Snacks,Brisa Bebidas,31.63,14.29
+291,SKU0291,Produto 291,Mercearia,VivaCare,55.28,34.12
+292,SKU0292,Produto 292,Bebidas,Aurora Foods,30.89,20.72
+293,SKU0293,Produto 293,Higiene,Brisa Bebidas,51.24,31.92
+294,SKU0294,Produto 294,Limpeza,VivaCare,6.6,4.28
+295,SKU0295,Produto 295,Snacks,Aurora Foods,36.16,20.32
+296,SKU0296,Produto 296,Mercearia,Brisa Bebidas,84.57,44.83
+297,SKU0297,Produto 297,Bebidas,VivaCare,29.49,17.09
+298,SKU0298,Produto 298,Higiene,Aurora Foods,22.25,13.34
+299,SKU0299,Produto 299,Limpeza,Brisa Bebidas,79.92,48.7
+300,SKU0300,Produto 300,Snacks,VivaCare,68.36,31.23
+301,SKU0301,Produto 301,Mercearia,Aurora Foods,80.21,53.81
+302,SKU0302,Produto 302,Bebidas,Brisa Bebidas,30.99,21.3
+303,SKU0303,Produto 303,Higiene,VivaCare,74.46,35.86
+304,SKU0304,Produto 304,Limpeza,Aurora Foods,38.32,18.26
+305,SKU0305,Produto 305,Snacks,Brisa Bebidas,32.51,18.66
+306,SKU0306,Produto 306,Mercearia,VivaCare,56.55,32.35
+307,SKU0307,Produto 307,Bebidas,Aurora Foods,57.8,39.64
+308,SKU0308,Produto 308,Higiene,Brisa Bebidas,55.48,30.45
+309,SKU0309,Produto 309,Limpeza,VivaCare,44.3,25.87
+310,SKU0310,Produto 310,Snacks,Aurora Foods,11.11,7.04
+311,SKU0311,Produto 311,Mercearia,Brisa Bebidas,40.73,28.48
+312,SKU0312,Produto 312,Bebidas,VivaCare,69.86,33.4
+313,SKU0313,Produto 313,Higiene,Aurora Foods,14.11,8.14
+314,SKU0314,Produto 314,Limpeza,Brisa Bebidas,5.27,2.65
+315,SKU0315,Produto 315,Snacks,VivaCare,16.45,10.17
+316,SKU0316,Produto 316,Mercearia,Aurora Foods,56.12,30.49
+317,SKU0317,Produto 317,Bebidas,Brisa Bebidas,78.99,42.29
+318,SKU0318,Produto 318,Higiene,VivaCare,81.7,45.85
+319,SKU0319,Produto 319,Limpeza,Aurora Foods,72.12,43.92
+320,SKU0320,Produto 320,Snacks,Brisa Bebidas,51.65,28.07
+321,SKU0321,Produto 321,Mercearia,VivaCare,63.33,32.56
+322,SKU0322,Produto 322,Bebidas,Aurora Foods,64.83,42.28
+323,SKU0323,Produto 323,Higiene,Brisa Bebidas,84.97,48.17
+324,SKU0324,Produto 324,Limpeza,VivaCare,8.98,4.69
+325,SKU0325,Produto 325,Snacks,Aurora Foods,68.8,35.37
+326,SKU0326,Produto 326,Mercearia,Brisa Bebidas,65.31,43.9
+327,SKU0327,Produto 327,Bebidas,VivaCare,8.6,4.42
+328,SKU0328,Produto 328,Higiene,Aurora Foods,20.11,12.0
+329,SKU0329,Produto 329,Limpeza,Brisa Bebidas,24.47,13.17
+330,SKU0330,Produto 330,Snacks,VivaCare,44.55,22.26
+331,SKU0331,Produto 331,Mercearia,Aurora Foods,48.91,26.16
+332,SKU0332,Produto 332,Bebidas,Brisa Bebidas,57.07,37.47
+333,SKU0333,Produto 333,Higiene,VivaCare,78.48,49.38
+334,SKU0334,Produto 334,Limpeza,Aurora Foods,40.39,19.24
+335,SKU0335,Produto 335,Snacks,Brisa Bebidas,17.59,9.14
+336,SKU0336,Produto 336,Mercearia,VivaCare,9.48,6.29
+337,SKU0337,Produto 337,Bebidas,Aurora Foods,7.69,4.02
+338,SKU0338,Produto 338,Higiene,Brisa Bebidas,13.89,9.47
+339,SKU0339,Produto 339,Limpeza,VivaCare,28.23,18.2
+340,SKU0340,Produto 340,Snacks,Aurora Foods,41.41,19.62
+341,SKU0341,Produto 341,Mercearia,Brisa Bebidas,18.16,11.6
+342,SKU0342,Produto 342,Bebidas,VivaCare,69.5,42.25
+343,SKU0343,Produto 343,Higiene,Aurora Foods,34.08,15.64
+344,SKU0344,Produto 344,Limpeza,Brisa Bebidas,46.95,22.03
+345,SKU0345,Produto 345,Snacks,VivaCare,24.19,14.81
+346,SKU0346,Produto 346,Mercearia,Aurora Foods,81.16,42.63
+347,SKU0347,Produto 347,Bebidas,Brisa Bebidas,49.13,25.44
+348,SKU0348,Produto 348,Higiene,VivaCare,65.22,30.81
+349,SKU0349,Produto 349,Limpeza,Aurora Foods,77.32,50.3
+350,SKU0350,Produto 350,Snacks,Brisa Bebidas,30.14,16.79

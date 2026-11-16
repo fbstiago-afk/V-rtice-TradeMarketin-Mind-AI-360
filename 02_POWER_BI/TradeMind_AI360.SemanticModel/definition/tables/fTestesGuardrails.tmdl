@@ -1,0 +1,61 @@
+table fTestesGuardrails
+	lineageTag: f7921c4d-f8d4-e699-d8d4-d250ecc0f443
+
+	column cenario
+		dataType: string
+		lineageTag: 47520b64-88ec-824c-fcdb-589160c7edd2
+		summarizeBy: none
+		sourceColumn: cenario
+
+	column perfil
+		dataType: string
+		lineageTag: 5c1afb51-d2a9-460c-cb68-c30cdaf59042
+		summarizeBy: none
+		sourceColumn: perfil
+
+	column regra_aplicada
+		dataType: string
+		lineageTag: 6690f5a6-1b0b-6700-76a7-a71f908b2636
+		summarizeBy: none
+		sourceColumn: regra_aplicada
+
+	column resultado_esperado
+		dataType: string
+		lineageTag: d362e76f-89fc-a182-74c2-c993d197168e
+		summarizeBy: none
+		sourceColumn: resultado_esperado
+
+	column resultado_obtido
+		dataType: string
+		lineageTag: 43069b4a-d31d-8377-7ed8-6ab5654949b6
+		summarizeBy: none
+		sourceColumn: resultado_obtido
+
+	column status
+		dataType: string
+		lineageTag: 89e6b3f7-58ae-f5b3-947d-19f8573bb028
+		summarizeBy: none
+		sourceColumn: status
+
+	column timestamp
+		dataType: string
+		lineageTag: 0d70efbd-ceeb-1dcd-fd2a-76a1ec96b1f8
+		summarizeBy: none
+		sourceColumn: timestamp
+
+	column latencia_ms
+		dataType: int64
+		lineageTag: 505fe141-8ec7-25a0-0e31-d452b7269b18
+		summarizeBy: none
+		sourceColumn: latencia_ms
+
+	partition fTestesGuardrails = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fTestesGuardrails.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"cenario", type text}, {"perfil", type text}, {"regra_aplicada", type text}, {"resultado_esperado", type text}, {"resultado_obtido", type text}, {"status", type text}, {"timestamp", type text}, {"latencia_ms", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

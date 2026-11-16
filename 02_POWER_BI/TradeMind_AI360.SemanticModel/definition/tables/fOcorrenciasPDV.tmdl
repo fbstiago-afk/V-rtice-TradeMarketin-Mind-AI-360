@@ -1,0 +1,67 @@
+table fOcorrenciasPDV
+	lineageTag: e1a7953a-fa0a-6166-58c8-745ca3743d65
+
+	column ocorrencia_id
+		dataType: int64
+		isHidden
+		lineageTag: edf255c0-463e-f90b-44b8-34e57d5f3785
+		summarizeBy: none
+		sourceColumn: ocorrencia_id
+
+	column data
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 09f1e096-a45b-7813-4313-1fcdf40b7b48
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column pdv_id
+		dataType: int64
+		isHidden
+		lineageTag: b597bf13-5464-53c0-a43d-9d805ffcd1fc
+		summarizeBy: none
+		sourceColumn: pdv_id
+
+	column descricao
+		dataType: string
+		lineageTag: ff1c2fbe-4230-752b-f895-2778cd3e04ec
+		summarizeBy: none
+		sourceColumn: descricao
+
+	column categoria_prevista
+		dataType: string
+		lineageTag: cac957ca-3c83-b364-7c90-7bff82278a5e
+		summarizeBy: none
+		sourceColumn: categoria_prevista
+
+	column prioridade
+		dataType: string
+		lineageTag: ba892ed3-ad3b-3479-36d8-7504cfae7779
+		summarizeBy: none
+		sourceColumn: prioridade
+
+	column confianca
+		dataType: double
+		formatString: #,0.00
+		lineageTag: aea332c5-bc12-a219-0ab9-78a2fe2500c5
+		summarizeBy: none
+		sourceColumn: confianca
+
+	column sintetico
+		dataType: int64
+		lineageTag: 388d84b2-ef1d-3546-98a9-5333390cc1ee
+		summarizeBy: none
+		sourceColumn: sintetico
+
+	partition fOcorrenciasPDV = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fOcorrenciasPDV.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"ocorrencia_id", Int64.Type}, {"data", type date}, {"pdv_id", Int64.Type}, {"descricao", type text}, {"categoria_prevista", type text}, {"prioridade", type text}, {"confianca", type number}, {"sintetico", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

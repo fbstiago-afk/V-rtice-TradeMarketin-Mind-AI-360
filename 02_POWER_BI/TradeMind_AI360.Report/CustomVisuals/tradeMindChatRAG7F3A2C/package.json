@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0.0",
+  "author": {
+    "name": "Vertice TradeMind",
+    "email": "noreply@example.com"
+  },
+  "resources": [
+    {
+      "resourceId": "rId0",
+      "sourceType": 5,
+      "file": "resources/tradeMindChatRAG7F3A2C.pbiviz.json"
+    }
+  ],
+  "visual": {
+    "guid": "tradeMindChatRAG7F3A2C",
+    "name": "tradeMindChat",
+    "displayName": "TradeMind Chat RAG",
+    "version": "1.0.0.0",
+    "description": "Chat RAG conectado à API local do TradeMind AI 360",
+    "supportUrl": "https://localhost",
+    "gitHubUrl": "",
+    "visualClassName": "Visual"
+  },
+  "metadata": {
+    "pbivizjson": {
+      "resourceId": "rId0"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+table dCampanha
+	lineageTag: 146e2ba5-dceb-be78-8812-f943bd65dd87
+
+	column campanha_id
+		dataType: int64
+		isHidden
+		lineageTag: ebf2cd9c-0d56-c1cd-6dfd-5b9c1f05ac2c
+		summarizeBy: none
+		sourceColumn: campanha_id
+
+	column campanha
+		dataType: string
+		lineageTag: 3d9e827f-828a-3a5a-9a60-fc4f0dd5de2b
+		summarizeBy: none
+		sourceColumn: campanha
+
+	column industria_campanha
+		dataType: string
+		lineageTag: 26a42003-bc51-66e5-ac8e-8a5906ad1fe8
+		summarizeBy: none
+		sourceColumn: industria_campanha
+
+	column inicio
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: bb9ef004-61c0-66df-304f-177df57d51ef
+		summarizeBy: none
+		sourceColumn: inicio
+
+		variation Variação
+			isDefault
+			relationship: 09f26c87-fed8-4742-9a5d-56016bd4d555
+			defaultHierarchy: LocalDateTable_04196326-01f1-45fe-95f2-12de1bcf623a.'Hierarquia de datas'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fim
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: e77d4bbb-a27a-538b-a9b6-5623ce3bc3ab
+		summarizeBy: none
+		sourceColumn: fim
+
+		variation Variação
+			isDefault
+			relationship: d6794aa0-b4b4-46eb-91e1-6bc597f012de
+			defaultHierarchy: LocalDateTable_7e67a756-ba67-45ce-90be-82644a3da862.'Hierarquia de datas'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column orcamento
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ed065ac1-e424-74ee-507b-1fc44f9e914c
+		summarizeBy: sum
+		sourceColumn: orcamento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dCampanha = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "dCampanha.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"campanha_id", Int64.Type}, {"campanha", type text}, {"industria_campanha", type text}, {"inicio", type date}, {"fim", type date}, {"orcamento", type number}}, "en-US")
+				in
+				    Tipos
+

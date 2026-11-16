@@ -1,0 +1,306 @@
+entrada,categoria,template,split,sintetico
+saldo físico zero no PDV na loja Centro,ruptura,ruptura-0,treino,1
+saldo físico zero no PDV no PDV 12,ruptura,ruptura-0,treino,1
+saldo físico zero no PDV hoje pela manhã,ruptura,ruptura-0,treino,1
+saldo físico zero no PDV na visita de segunda,ruptura,ruptura-0,treino,1
+saldo físico zero no PDV na rede Norte,ruptura,ruptura-0,treino,1
+saldo físico zero no PDV no corredor 4,ruptura,ruptura-0,treino,1
+saldo físico zero no PDV segundo o promotor,ruptura,ruptura-0,treino,1
+saldo físico zero no PDV após reposição,ruptura,ruptura-0,treino,1
+saldo físico zero no PDV na unidade Sul,ruptura,ruptura-0,treino,1
+saldo físico zero no PDV no fim de semana,ruptura,ruptura-0,treino,1
+produto sem estoque na gôndola na loja Centro,ruptura,ruptura-1,treino,1
+produto sem estoque na gôndola no PDV 12,ruptura,ruptura-1,treino,1
+produto sem estoque na gôndola hoje pela manhã,ruptura,ruptura-1,treino,1
+produto sem estoque na gôndola na visita de segunda,ruptura,ruptura-1,treino,1
+produto sem estoque na gôndola na rede Norte,ruptura,ruptura-1,treino,1
+produto sem estoque na gôndola no corredor 4,ruptura,ruptura-1,treino,1
+produto sem estoque na gôndola segundo o promotor,ruptura,ruptura-1,treino,1
+produto sem estoque na gôndola após reposição,ruptura,ruptura-1,treino,1
+produto sem estoque na gôndola na unidade Sul,ruptura,ruptura-1,treino,1
+produto sem estoque na gôndola no fim de semana,ruptura,ruptura-1,treino,1
+gôndola vazia do SKU na loja Centro,ruptura,ruptura-2,treino,1
+gôndola vazia do SKU no PDV 12,ruptura,ruptura-2,treino,1
+gôndola vazia do SKU hoje pela manhã,ruptura,ruptura-2,treino,1
+gôndola vazia do SKU na visita de segunda,ruptura,ruptura-2,treino,1
+gôndola vazia do SKU na rede Norte,ruptura,ruptura-2,treino,1
+gôndola vazia do SKU no corredor 4,ruptura,ruptura-2,treino,1
+gôndola vazia do SKU segundo o promotor,ruptura,ruptura-2,treino,1
+gôndola vazia do SKU após reposição,ruptura,ruptura-2,treino,1
+gôndola vazia do SKU na unidade Sul,ruptura,ruptura-2,treino,1
+gôndola vazia do SKU no fim de semana,ruptura,ruptura-2,treino,1
+item em falta na loja na loja Centro,ruptura,ruptura-3,treino,1
+item em falta na loja no PDV 12,ruptura,ruptura-3,treino,1
+item em falta na loja hoje pela manhã,ruptura,ruptura-3,treino,1
+item em falta na loja na visita de segunda,ruptura,ruptura-3,treino,1
+item em falta na loja na rede Norte,ruptura,ruptura-3,treino,1
+item em falta na loja no corredor 4,ruptura,ruptura-3,treino,1
+item em falta na loja segundo o promotor,ruptura,ruptura-3,treino,1
+item em falta na loja após reposição,ruptura,ruptura-3,treino,1
+item em falta na loja na unidade Sul,ruptura,ruptura-3,treino,1
+item em falta na loja no fim de semana,ruptura,ruptura-3,treino,1
+não há unidades disponíveis na loja Centro,ruptura,ruptura-4,validacao,1
+não há unidades disponíveis no PDV 12,ruptura,ruptura-4,validacao,1
+não há unidades disponíveis hoje pela manhã,ruptura,ruptura-4,validacao,1
+não há unidades disponíveis na visita de segunda,ruptura,ruptura-4,validacao,1
+não há unidades disponíveis na rede Norte,ruptura,ruptura-4,validacao,1
+não há unidades disponíveis no corredor 4,ruptura,ruptura-4,validacao,1
+não há unidades disponíveis segundo o promotor,ruptura,ruptura-4,validacao,1
+não há unidades disponíveis após reposição,ruptura,ruptura-4,validacao,1
+não há unidades disponíveis na unidade Sul,ruptura,ruptura-4,validacao,1
+não há unidades disponíveis no fim de semana,ruptura,ruptura-4,validacao,1
+estoque zerado na área de venda na loja Centro,ruptura,ruptura-5,teste,1
+estoque zerado na área de venda no PDV 12,ruptura,ruptura-5,teste,1
+estoque zerado na área de venda hoje pela manhã,ruptura,ruptura-5,teste,1
+estoque zerado na área de venda na visita de segunda,ruptura,ruptura-5,teste,1
+estoque zerado na área de venda na rede Norte,ruptura,ruptura-5,teste,1
+estoque zerado na área de venda no corredor 4,ruptura,ruptura-5,teste,1
+estoque zerado na área de venda segundo o promotor,ruptura,ruptura-5,teste,1
+estoque zerado na área de venda após reposição,ruptura,ruptura-5,teste,1
+estoque zerado na área de venda na unidade Sul,ruptura,ruptura-5,teste,1
+estoque zerado na área de venda no fim de semana,ruptura,ruptura-5,teste,1
+preço na gôndola divergente da tabela na loja Centro,preco,preco-0,treino,1
+preço na gôndola divergente da tabela no PDV 12,preco,preco-0,treino,1
+preço na gôndola divergente da tabela hoje pela manhã,preco,preco-0,treino,1
+preço na gôndola divergente da tabela na visita de segunda,preco,preco-0,treino,1
+preço na gôndola divergente da tabela na rede Norte,preco,preco-0,treino,1
+preço na gôndola divergente da tabela no corredor 4,preco,preco-0,treino,1
+preço na gôndola divergente da tabela segundo o promotor,preco,preco-0,treino,1
+preço na gôndola divergente da tabela após reposição,preco,preco-0,treino,1
+preço na gôndola divergente da tabela na unidade Sul,preco,preco-0,treino,1
+preço na gôndola divergente da tabela no fim de semana,preco,preco-0,treino,1
+etiqueta com valor diferente na loja Centro,preco,preco-1,treino,1
+etiqueta com valor diferente no PDV 12,preco,preco-1,treino,1
+etiqueta com valor diferente hoje pela manhã,preco,preco-1,treino,1
+etiqueta com valor diferente na visita de segunda,preco,preco-1,treino,1
+etiqueta com valor diferente na rede Norte,preco,preco-1,treino,1
+etiqueta com valor diferente no corredor 4,preco,preco-1,treino,1
+etiqueta com valor diferente segundo o promotor,preco,preco-1,treino,1
+etiqueta com valor diferente após reposição,preco,preco-1,treino,1
+etiqueta com valor diferente na unidade Sul,preco,preco-1,treino,1
+etiqueta com valor diferente no fim de semana,preco,preco-1,treino,1
+preço acima do sugerido na loja Centro,preco,preco-2,treino,1
+preço acima do sugerido no PDV 12,preco,preco-2,treino,1
+preço acima do sugerido hoje pela manhã,preco,preco-2,treino,1
+preço acima do sugerido na visita de segunda,preco,preco-2,treino,1
+preço acima do sugerido na rede Norte,preco,preco-2,treino,1
+preço acima do sugerido no corredor 4,preco,preco-2,treino,1
+preço acima do sugerido segundo o promotor,preco,preco-2,treino,1
+preço acima do sugerido após reposição,preco,preco-2,treino,1
+preço acima do sugerido na unidade Sul,preco,preco-2,treino,1
+preço acima do sugerido no fim de semana,preco,preco-2,treino,1
+valor cobrado no caixa difere da etiqueta na loja Centro,preco,preco-3,treino,1
+valor cobrado no caixa difere da etiqueta no PDV 12,preco,preco-3,treino,1
+valor cobrado no caixa difere da etiqueta hoje pela manhã,preco,preco-3,treino,1
+valor cobrado no caixa difere da etiqueta na visita de segunda,preco,preco-3,treino,1
+valor cobrado no caixa difere da etiqueta na rede Norte,preco,preco-3,treino,1
+valor cobrado no caixa difere da etiqueta no corredor 4,preco,preco-3,treino,1
+valor cobrado no caixa difere da etiqueta segundo o promotor,preco,preco-3,treino,1
+valor cobrado no caixa difere da etiqueta após reposição,preco,preco-3,treino,1
+valor cobrado no caixa difere da etiqueta na unidade Sul,preco,preco-3,treino,1
+valor cobrado no caixa difere da etiqueta no fim de semana,preco,preco-3,treino,1
+precificação incorreta na loja Centro,preco,preco-4,validacao,1
+precificação incorreta no PDV 12,preco,preco-4,validacao,1
+precificação incorreta hoje pela manhã,preco,preco-4,validacao,1
+precificação incorreta na visita de segunda,preco,preco-4,validacao,1
+precificação incorreta na rede Norte,preco,preco-4,validacao,1
+precificação incorreta no corredor 4,preco,preco-4,validacao,1
+precificação incorreta segundo o promotor,preco,preco-4,validacao,1
+precificação incorreta após reposição,preco,preco-4,validacao,1
+precificação incorreta na unidade Sul,preco,preco-4,validacao,1
+precificação incorreta no fim de semana,preco,preco-4,validacao,1
+etiqueta de preço desatualizada na loja Centro,preco,preco-5,teste,1
+etiqueta de preço desatualizada no PDV 12,preco,preco-5,teste,1
+etiqueta de preço desatualizada hoje pela manhã,preco,preco-5,teste,1
+etiqueta de preço desatualizada na visita de segunda,preco,preco-5,teste,1
+etiqueta de preço desatualizada na rede Norte,preco,preco-5,teste,1
+etiqueta de preço desatualizada no corredor 4,preco,preco-5,teste,1
+etiqueta de preço desatualizada segundo o promotor,preco,preco-5,teste,1
+etiqueta de preço desatualizada após reposição,preco,preco-5,teste,1
+etiqueta de preço desatualizada na unidade Sul,preco,preco-5,teste,1
+etiqueta de preço desatualizada no fim de semana,preco,preco-5,teste,1
+exposição fora do planograma na loja Centro,execucao,execucao-0,treino,1
+exposição fora do planograma no PDV 12,execucao,execucao-0,treino,1
+exposição fora do planograma hoje pela manhã,execucao,execucao-0,treino,1
+exposição fora do planograma na visita de segunda,execucao,execucao-0,treino,1
+exposição fora do planograma na rede Norte,execucao,execucao-0,treino,1
+exposição fora do planograma no corredor 4,execucao,execucao-0,treino,1
+exposição fora do planograma segundo o promotor,execucao,execucao-0,treino,1
+exposição fora do planograma após reposição,execucao,execucao-0,treino,1
+exposição fora do planograma na unidade Sul,execucao,execucao-0,treino,1
+exposição fora do planograma no fim de semana,execucao,execucao-0,treino,1
+facings abaixo do acordado na loja Centro,execucao,execucao-1,treino,1
+facings abaixo do acordado no PDV 12,execucao,execucao-1,treino,1
+facings abaixo do acordado hoje pela manhã,execucao,execucao-1,treino,1
+facings abaixo do acordado na visita de segunda,execucao,execucao-1,treino,1
+facings abaixo do acordado na rede Norte,execucao,execucao-1,treino,1
+facings abaixo do acordado no corredor 4,execucao,execucao-1,treino,1
+facings abaixo do acordado segundo o promotor,execucao,execucao-1,treino,1
+facings abaixo do acordado após reposição,execucao,execucao-1,treino,1
+facings abaixo do acordado na unidade Sul,execucao,execucao-1,treino,1
+facings abaixo do acordado no fim de semana,execucao,execucao-1,treino,1
+produto posicionado na prateleira errada na loja Centro,execucao,execucao-2,treino,1
+produto posicionado na prateleira errada no PDV 12,execucao,execucao-2,treino,1
+produto posicionado na prateleira errada hoje pela manhã,execucao,execucao-2,treino,1
+produto posicionado na prateleira errada na visita de segunda,execucao,execucao-2,treino,1
+produto posicionado na prateleira errada na rede Norte,execucao,execucao-2,treino,1
+produto posicionado na prateleira errada no corredor 4,execucao,execucao-2,treino,1
+produto posicionado na prateleira errada segundo o promotor,execucao,execucao-2,treino,1
+produto posicionado na prateleira errada após reposição,execucao,execucao-2,treino,1
+produto posicionado na prateleira errada na unidade Sul,execucao,execucao-2,treino,1
+produto posicionado na prateleira errada no fim de semana,execucao,execucao-2,treino,1
+mix exposto incompleto na loja Centro,execucao,execucao-3,treino,1
+mix exposto incompleto no PDV 12,execucao,execucao-3,treino,1
+mix exposto incompleto hoje pela manhã,execucao,execucao-3,treino,1
+mix exposto incompleto na visita de segunda,execucao,execucao-3,treino,1
+mix exposto incompleto na rede Norte,execucao,execucao-3,treino,1
+mix exposto incompleto no corredor 4,execucao,execucao-3,treino,1
+mix exposto incompleto segundo o promotor,execucao,execucao-3,treino,1
+mix exposto incompleto após reposição,execucao,execucao-3,treino,1
+mix exposto incompleto na unidade Sul,execucao,execucao-3,treino,1
+mix exposto incompleto no fim de semana,execucao,execucao-3,treino,1
+layout de gôndola desorganizado na loja Centro,execucao,execucao-4,validacao,1
+layout de gôndola desorganizado no PDV 12,execucao,execucao-4,validacao,1
+layout de gôndola desorganizado hoje pela manhã,execucao,execucao-4,validacao,1
+layout de gôndola desorganizado na visita de segunda,execucao,execucao-4,validacao,1
+layout de gôndola desorganizado na rede Norte,execucao,execucao-4,validacao,1
+layout de gôndola desorganizado no corredor 4,execucao,execucao-4,validacao,1
+layout de gôndola desorganizado segundo o promotor,execucao,execucao-4,validacao,1
+layout de gôndola desorganizado após reposição,execucao,execucao-4,validacao,1
+layout de gôndola desorganizado na unidade Sul,execucao,execucao-4,validacao,1
+layout de gôndola desorganizado no fim de semana,execucao,execucao-4,validacao,1
+frentes do produto reduzidas na loja Centro,execucao,execucao-5,teste,1
+frentes do produto reduzidas no PDV 12,execucao,execucao-5,teste,1
+frentes do produto reduzidas hoje pela manhã,execucao,execucao-5,teste,1
+frentes do produto reduzidas na visita de segunda,execucao,execucao-5,teste,1
+frentes do produto reduzidas na rede Norte,execucao,execucao-5,teste,1
+frentes do produto reduzidas no corredor 4,execucao,execucao-5,teste,1
+frentes do produto reduzidas segundo o promotor,execucao,execucao-5,teste,1
+frentes do produto reduzidas após reposição,execucao,execucao-5,teste,1
+frentes do produto reduzidas na unidade Sul,execucao,execucao-5,teste,1
+frentes do produto reduzidas no fim de semana,execucao,execucao-5,teste,1
+material promocional ausente na loja Centro,campanha,campanha-0,treino,1
+material promocional ausente no PDV 12,campanha,campanha-0,treino,1
+material promocional ausente hoje pela manhã,campanha,campanha-0,treino,1
+material promocional ausente na visita de segunda,campanha,campanha-0,treino,1
+material promocional ausente na rede Norte,campanha,campanha-0,treino,1
+material promocional ausente no corredor 4,campanha,campanha-0,treino,1
+material promocional ausente segundo o promotor,campanha,campanha-0,treino,1
+material promocional ausente após reposição,campanha,campanha-0,treino,1
+material promocional ausente na unidade Sul,campanha,campanha-0,treino,1
+material promocional ausente no fim de semana,campanha,campanha-0,treino,1
+cartaz da campanha não instalado na loja Centro,campanha,campanha-1,treino,1
+cartaz da campanha não instalado no PDV 12,campanha,campanha-1,treino,1
+cartaz da campanha não instalado hoje pela manhã,campanha,campanha-1,treino,1
+cartaz da campanha não instalado na visita de segunda,campanha,campanha-1,treino,1
+cartaz da campanha não instalado na rede Norte,campanha,campanha-1,treino,1
+cartaz da campanha não instalado no corredor 4,campanha,campanha-1,treino,1
+cartaz da campanha não instalado segundo o promotor,campanha,campanha-1,treino,1
+cartaz da campanha não instalado após reposição,campanha,campanha-1,treino,1
+cartaz da campanha não instalado na unidade Sul,campanha,campanha-1,treino,1
+cartaz da campanha não instalado no fim de semana,campanha,campanha-1,treino,1
+ponta de gôndola da ação não montada na loja Centro,campanha,campanha-2,treino,1
+ponta de gôndola da ação não montada no PDV 12,campanha,campanha-2,treino,1
+ponta de gôndola da ação não montada hoje pela manhã,campanha,campanha-2,treino,1
+ponta de gôndola da ação não montada na visita de segunda,campanha,campanha-2,treino,1
+ponta de gôndola da ação não montada na rede Norte,campanha,campanha-2,treino,1
+ponta de gôndola da ação não montada no corredor 4,campanha,campanha-2,treino,1
+ponta de gôndola da ação não montada segundo o promotor,campanha,campanha-2,treino,1
+ponta de gôndola da ação não montada após reposição,campanha,campanha-2,treino,1
+ponta de gôndola da ação não montada na unidade Sul,campanha,campanha-2,treino,1
+ponta de gôndola da ação não montada no fim de semana,campanha,campanha-2,treino,1
+wobbler promocional faltando na loja Centro,campanha,campanha-3,treino,1
+wobbler promocional faltando no PDV 12,campanha,campanha-3,treino,1
+wobbler promocional faltando hoje pela manhã,campanha,campanha-3,treino,1
+wobbler promocional faltando na visita de segunda,campanha,campanha-3,treino,1
+wobbler promocional faltando na rede Norte,campanha,campanha-3,treino,1
+wobbler promocional faltando no corredor 4,campanha,campanha-3,treino,1
+wobbler promocional faltando segundo o promotor,campanha,campanha-3,treino,1
+wobbler promocional faltando após reposição,campanha,campanha-3,treino,1
+wobbler promocional faltando na unidade Sul,campanha,campanha-3,treino,1
+wobbler promocional faltando no fim de semana,campanha,campanha-3,treino,1
+display da promoção não entregue na loja Centro,campanha,campanha-4,validacao,1
+display da promoção não entregue no PDV 12,campanha,campanha-4,validacao,1
+display da promoção não entregue hoje pela manhã,campanha,campanha-4,validacao,1
+display da promoção não entregue na visita de segunda,campanha,campanha-4,validacao,1
+display da promoção não entregue na rede Norte,campanha,campanha-4,validacao,1
+display da promoção não entregue no corredor 4,campanha,campanha-4,validacao,1
+display da promoção não entregue segundo o promotor,campanha,campanha-4,validacao,1
+display da promoção não entregue após reposição,campanha,campanha-4,validacao,1
+display da promoção não entregue na unidade Sul,campanha,campanha-4,validacao,1
+display da promoção não entregue no fim de semana,campanha,campanha-4,validacao,1
+encarte da campanha não exposto na loja Centro,campanha,campanha-5,teste,1
+encarte da campanha não exposto no PDV 12,campanha,campanha-5,teste,1
+encarte da campanha não exposto hoje pela manhã,campanha,campanha-5,teste,1
+encarte da campanha não exposto na visita de segunda,campanha,campanha-5,teste,1
+encarte da campanha não exposto na rede Norte,campanha,campanha-5,teste,1
+encarte da campanha não exposto no corredor 4,campanha,campanha-5,teste,1
+encarte da campanha não exposto segundo o promotor,campanha,campanha-5,teste,1
+encarte da campanha não exposto após reposição,campanha,campanha-5,teste,1
+encarte da campanha não exposto na unidade Sul,campanha,campanha-5,teste,1
+encarte da campanha não exposto no fim de semana,campanha,campanha-5,teste,1
+queda de vendas sem evidência suficiente na loja Centro,investigacao,investigacao-0,treino,1
+queda de vendas sem evidência suficiente no PDV 12,investigacao,investigacao-0,treino,1
+queda de vendas sem evidência suficiente hoje pela manhã,investigacao,investigacao-0,treino,1
+queda de vendas sem evidência suficiente na visita de segunda,investigacao,investigacao-0,treino,1
+queda de vendas sem evidência suficiente na rede Norte,investigacao,investigacao-0,treino,1
+queda de vendas sem evidência suficiente no corredor 4,investigacao,investigacao-0,treino,1
+queda de vendas sem evidência suficiente segundo o promotor,investigacao,investigacao-0,treino,1
+queda de vendas sem evidência suficiente após reposição,investigacao,investigacao-0,treino,1
+queda de vendas sem evidência suficiente na unidade Sul,investigacao,investigacao-0,treino,1
+queda de vendas sem evidência suficiente no fim de semana,investigacao,investigacao-0,treino,1
+variação de sell-out sem causa identificada na loja Centro,investigacao,investigacao-1,treino,1
+variação de sell-out sem causa identificada no PDV 12,investigacao,investigacao-1,treino,1
+variação de sell-out sem causa identificada hoje pela manhã,investigacao,investigacao-1,treino,1
+variação de sell-out sem causa identificada na visita de segunda,investigacao,investigacao-1,treino,1
+variação de sell-out sem causa identificada na rede Norte,investigacao,investigacao-1,treino,1
+variação de sell-out sem causa identificada no corredor 4,investigacao,investigacao-1,treino,1
+variação de sell-out sem causa identificada segundo o promotor,investigacao,investigacao-1,treino,1
+variação de sell-out sem causa identificada após reposição,investigacao,investigacao-1,treino,1
+variação de sell-out sem causa identificada na unidade Sul,investigacao,investigacao-1,treino,1
+variação de sell-out sem causa identificada no fim de semana,investigacao,investigacao-1,treino,1
+reclamação genérica sem foto na loja Centro,investigacao,investigacao-2,treino,1
+reclamação genérica sem foto no PDV 12,investigacao,investigacao-2,treino,1
+reclamação genérica sem foto hoje pela manhã,investigacao,investigacao-2,treino,1
+reclamação genérica sem foto na visita de segunda,investigacao,investigacao-2,treino,1
+reclamação genérica sem foto na rede Norte,investigacao,investigacao-2,treino,1
+reclamação genérica sem foto no corredor 4,investigacao,investigacao-2,treino,1
+reclamação genérica sem foto segundo o promotor,investigacao,investigacao-2,treino,1
+reclamação genérica sem foto após reposição,investigacao,investigacao-2,treino,1
+reclamação genérica sem foto na unidade Sul,investigacao,investigacao-2,treino,1
+reclamação genérica sem foto no fim de semana,investigacao,investigacao-2,treino,1
+ocorrência informada sem detalhes na loja Centro,investigacao,investigacao-3,treino,1
+ocorrência informada sem detalhes no PDV 12,investigacao,investigacao-3,treino,1
+ocorrência informada sem detalhes hoje pela manhã,investigacao,investigacao-3,treino,1
+ocorrência informada sem detalhes na visita de segunda,investigacao,investigacao-3,treino,1
+ocorrência informada sem detalhes na rede Norte,investigacao,investigacao-3,treino,1
+ocorrência informada sem detalhes no corredor 4,investigacao,investigacao-3,treino,1
+ocorrência informada sem detalhes segundo o promotor,investigacao,investigacao-3,treino,1
+ocorrência informada sem detalhes após reposição,investigacao,investigacao-3,treino,1
+ocorrência informada sem detalhes na unidade Sul,investigacao,investigacao-3,treino,1
+ocorrência informada sem detalhes no fim de semana,investigacao,investigacao-3,treino,1
+suspeita sem registro de auditoria na loja Centro,investigacao,investigacao-4,validacao,1
+suspeita sem registro de auditoria no PDV 12,investigacao,investigacao-4,validacao,1
+suspeita sem registro de auditoria hoje pela manhã,investigacao,investigacao-4,validacao,1
+suspeita sem registro de auditoria na visita de segunda,investigacao,investigacao-4,validacao,1
+suspeita sem registro de auditoria na rede Norte,investigacao,investigacao-4,validacao,1
+suspeita sem registro de auditoria no corredor 4,investigacao,investigacao-4,validacao,1
+suspeita sem registro de auditoria segundo o promotor,investigacao,investigacao-4,validacao,1
+suspeita sem registro de auditoria após reposição,investigacao,investigacao-4,validacao,1
+suspeita sem registro de auditoria na unidade Sul,investigacao,investigacao-4,validacao,1
+suspeita sem registro de auditoria no fim de semana,investigacao,investigacao-4,validacao,1
+redução de giro sem dados de apoio na loja Centro,investigacao,investigacao-5,teste,1
+redução de giro sem dados de apoio no PDV 12,investigacao,investigacao-5,teste,1
+redução de giro sem dados de apoio hoje pela manhã,investigacao,investigacao-5,teste,1
+redução de giro sem dados de apoio na visita de segunda,investigacao,investigacao-5,teste,1
+redução de giro sem dados de apoio na rede Norte,investigacao,investigacao-5,teste,1
+redução de giro sem dados de apoio no corredor 4,investigacao,investigacao-5,teste,1
+redução de giro sem dados de apoio segundo o promotor,investigacao,investigacao-5,teste,1
+redução de giro sem dados de apoio após reposição,investigacao,investigacao-5,teste,1
+redução de giro sem dados de apoio na unidade Sul,investigacao,investigacao-5,teste,1
+redução de giro sem dados de apoio no fim de semana,investigacao,investigacao-5,teste,1
+saldo físico zero no PDV,ruptura,seed,treino,0
+preço na gôndola divergente da tabela,preco,seed,treino,0
+exposição fora do planograma,execucao,seed,treino,0
+material promocional ausente,campanha,seed,treino,0
+queda de vendas sem evidência suficiente,investigacao,seed,teste,0

@@ -1,0 +1,13 @@
+{
+  "venda_pdv_orfao": 0,
+  "venda_produto_orfao": 0,
+  "venda_duplicada": 0,
+  "venda_receita_negativa": 0,
+  "estoque_saldo_negativo": 0,
+  "estoque_ruptura_inconsistente": 0,
+  "visita_checklist_fora_0_100": 0,
+  "auditoria_visita_orfa": 0,
+  "pdv_com_venda": 240,
+  "skus_com_venda": 350,
+  "skus_auditados_estoque": 350
+}

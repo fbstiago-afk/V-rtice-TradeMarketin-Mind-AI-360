@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "bm_filtros_open_home"
+    },
+    {
+      "name": "bm_filtros_close_home"
+    },
+    {
+      "name": "bm_reset_home"
+    },
+    {
+      "name": "bm_pers_sell"
+    },
+    {
+      "name": "bm_pers_rup"
+    },
+    {
+      "name": "bm_pers_exe"
+    },
+    {
+      "name": "bm_pers_cmp"
+    },
+    {
+      "name": "bm_filtros_open_performance"
+    },
+    {
+      "name": "bm_filtros_close_performance"
+    },
+    {
+      "name": "bm_reset_performance"
+    },
+    {
+      "name": "bm_mod_rag"
+    },
+    {
+      "name": "bm_mod_ft"
+    },
+    {
+      "name": "bm_mod_gr"
+    },
+    {
+      "name": "bm_mod_ml"
+    },
+    {
+      "name": "bm_filtros_open_ailab"
+    },
+    {
+      "name": "bm_filtros_close_ailab"
+    },
+    {
+      "name": "bm_reset_ailab"
+    }
+  ]
+}

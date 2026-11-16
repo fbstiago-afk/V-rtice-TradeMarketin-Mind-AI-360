@@ -1,0 +1,9 @@
+interacao_id,timestamp,modelo,versao,caso,pergunta,status,aprovado,n_evidencias,latencia_ms
+cc587ca346,2026-11-15T00:21:42,rag-tfidf-extrativo,1.0,fundamentacao,Qual é a definição de ruptura utilizada pela empresa?,respondido,1,4,5
+83bc8f0623,2026-11-15T00:21:42,rag-tfidf-extrativo,1.0,fundamentacao,Como a execução de campanhas é avaliada?,respondido,0,5,4
+27c6352cb7,2026-11-15T00:21:42,rag-tfidf-extrativo,1.0,fundamentacao,Quais regras determinam o acesso aos dados?,respondido,0,5,4
+0472f6061f,2026-11-15T00:21:42,rag-tfidf-extrativo,1.0,fundamentacao,O que é sell-out?,respondido,1,3,4
+d1d6d055f2,2026-11-15T00:21:42,rag-tfidf-extrativo,1.0,causalidade,"Campanha aumentou vendas, logo causou o aumento?",respondido,0,5,4
+2bbb589cfd,2026-11-15T00:21:42,rag-tfidf-extrativo,1.0,incerteza,Qual foi o ROI exato da campanha?,respondido,1,2,5
+c87710d690,2026-11-15T00:21:42,rag-tfidf-extrativo,1.0,sem_evidencia,Qual a previsão do tempo para amanhã?,sem_evidencia,1,0,5
+6f3cff2027,2026-11-15T00:21:42,rag-tfidf-extrativo,1.0,fundamentacao,Quais indicadores devo analisar para investigar uma queda de vendas?,respondido,1,5,4

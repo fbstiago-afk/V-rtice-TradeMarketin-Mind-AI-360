@@ -1,0 +1,53 @@
+table fExecCampanha
+	lineageTag: 7e9eb1e7-cc6c-fc71-d2ea-b54cf9bafe76
+
+	column campanha_id
+		dataType: int64
+		isHidden
+		lineageTag: 80e832e4-682d-4e5b-e54d-1a64dc11846c
+		summarizeBy: none
+		sourceColumn: campanha_id
+
+	column pdv_id
+		dataType: int64
+		isHidden
+		lineageTag: 1188893d-c740-beef-00fa-7cc2b018020b
+		summarizeBy: none
+		sourceColumn: pdv_id
+
+	column data
+		dataType: dateTime
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: 8d184fde-3ca8-9f48-d264-87b7d346338b
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column custo
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: 7af9091e-bbff-0fd3-6d03-3c739ae8473e
+		summarizeBy: none
+		sourceColumn: custo
+
+	column execucao_pct
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: 84517ad1-27d4-6e91-f32a-7b2aec3e4b35
+		summarizeBy: none
+		sourceColumn: execucao_pct
+
+	partition fExecCampanha = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fExecCampanha.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"campanha_id", Int64.Type}, {"pdv_id", Int64.Type}, {"data", type date}, {"custo", type number}, {"execucao_pct", type number}}, "en-US")
+				in
+				    Tipos
+

@@ -1,0 +1,30 @@
+interacao_id,rank,documento_id,documento,versao,trecho,score
+cc587ca346,1,1,Manual de execução de gôndola,1.0,Ruptura é identificada quando o saldo físico auditado é zero.,0.5208
+cc587ca346,2,101,Procedimento: investigação de queda de vendas,1.0,Em seguida verifique a ruptura semanal observada dos SKUs afetados.,0.5121
+cc587ca346,3,3,Glossário de indicadores,1.0,Ruptura semanal é a proporção de combinações PDV-SKU auditadas com saldo zero.,0.5064
+cc587ca346,4,101,Procedimento: investigação de queda de vendas,1.0,"Uma queda sem ruptura, sem falha de execução e sem desvio de preço deve ser registrada como ocorrência sem evidência suficiente.",0.4895
+83bc8f0623,1,102,Metodologia: avaliação da execução de campanhas,1.0,A execução de campanhas é avaliada pelo percentual de execução registrado em cada PDV participante e pelo custo executado.,0.7053
+83bc8f0623,2,102,Metodologia: avaliação da execução de campanhas,1.0,A avaliação de execução não mede impacto em vendas.,0.4065
+83bc8f0623,3,102,Metodologia: avaliação da execução de campanhas,1.0,Para estimar efeito incremental é necessário comparar lojas teste e controle e ajustar sazonalidade.,0.3447
+83bc8f0623,4,4,Campanhas e incrementalidade,1.0,Correlação não comprova causalidade.,0.1884
+83bc8f0623,5,4,Campanhas e incrementalidade,1.0,Comparar lojas teste e controle e ajustar sazonalidade antes de atribuir crescimento à campanha.,0.1781
+27c6352cb7,1,103,Política: regras de acesso por perfil,1.0,As regras de acesso aos dados são definidas por perfil.,0.7512
+27c6352cb7,2,2,Política de acesso a dados,1.0,Dados pessoais não devem aparecer nas respostas.,0.2956
+27c6352cb7,3,2,Política de acesso a dados,1.0,Promotores só podem consultar sua região.,0.2639
+27c6352cb7,4,103,Política: regras de acesso por perfil,1.0,"Gestor acessa vendas, estoque, visitas e documentos.",0.2542
+27c6352cb7,5,2,Política de acesso a dados,1.0,Clientes industriais só podem consultar seus próprios SKUs e campanhas.,0.253
+0472f6061f,1,3,Glossário de indicadores,1.0,Sell-out é a venda do varejo ao consumidor.,0.6318
+0472f6061f,2,105,Nota: limitações da amostra,1.0,O sell-out é amostrado e não representa o faturamento total da rede.,0.5952
+0472f6061f,3,101,Procedimento: investigação de queda de vendas,1.0,"Para investigar uma queda de vendas, analise primeiro o sell-out monitorado comparado ao mesmo período do ano anterior.",0.5519
+d1d6d055f2,1,4,Campanhas e incrementalidade,1.0,Comparar lojas teste e controle e ajustar sazonalidade antes de atribuir crescimento à campanha.,0.3803
+d1d6d055f2,2,103,Política: regras de acesso por perfil,1.0,"Gestor acessa vendas, estoque, visitas e documentos.",0.2094
+d1d6d055f2,3,103,Política: regras de acesso por perfil,1.0,"Administrador acessa vendas, estoque, visitas, documentos e usuários.",0.2043
+d1d6d055f2,4,102,Metodologia: avaliação da execução de campanhas,1.0,A avaliação de execução não mede impacto em vendas.,0.2024
+d1d6d055f2,5,101,Procedimento: investigação de queda de vendas,1.0,"Para investigar uma queda de vendas, analise primeiro o sell-out monitorado comparado ao mesmo período do ano anterior.",0.1995
+2bbb589cfd,1,3,Glossário de indicadores,1.0,ROI exige definição explícita de incrementalidade e margem.,0.3161
+2bbb589cfd,2,4,Campanhas e incrementalidade,1.0,Comparar lojas teste e controle e ajustar sazonalidade antes de atribuir crescimento à campanha.,0.3044
+6f3cff2027,1,101,Procedimento: investigação de queda de vendas,1.0,"Para investigar uma queda de vendas, analise primeiro o sell-out monitorado comparado ao mesmo período do ano anterior.",0.5497
+6f3cff2027,2,101,Procedimento: investigação de queda de vendas,1.0,"Uma queda sem ruptura, sem falha de execução e sem desvio de preço deve ser registrada como ocorrência sem evidência suficiente.",0.2813
+6f3cff2027,3,101,Procedimento: investigação de queda de vendas,1.0,Por fim compare o preço de gôndola com o preço do concorrente.,0.2779
+6f3cff2027,4,101,Procedimento: investigação de queda de vendas,1.0,Em seguida verifique a ruptura semanal observada dos SKUs afetados.,0.2765
+6f3cff2027,5,101,Procedimento: investigação de queda de vendas,1.0,"Depois confira a conformidade de execução, o planograma e o material de PDV nas visitas.",0.2757

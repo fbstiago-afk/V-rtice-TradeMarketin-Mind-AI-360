@@ -1,0 +1,38 @@
+table dPromotor
+	lineageTag: df8fd9ef-f49b-dff9-7615-3416ad73fdce
+
+	column promotor_id
+		dataType: int64
+		isHidden
+		lineageTag: 9613af88-467c-8156-d7ab-da001d8911fe
+		summarizeBy: none
+		sourceColumn: promotor_id
+
+	column promotor
+		dataType: string
+		lineageTag: 968ca7d0-a9b9-486f-d07e-7b1338d4e533
+		summarizeBy: none
+		sourceColumn: promotor
+
+	column regiao_promotor
+		dataType: string
+		lineageTag: beea1882-e4d5-acbc-57bb-c45005326e8f
+		summarizeBy: none
+		sourceColumn: regiao_promotor
+
+	column ativo
+		dataType: int64
+		lineageTag: e137cc95-e210-5dc6-a1e7-72b515419603
+		summarizeBy: none
+		sourceColumn: ativo
+
+	partition dPromotor = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "dPromotor.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"promotor_id", Int64.Type}, {"promotor", type text}, {"regiao_promotor", type text}, {"ativo", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

@@ -1,0 +1,74 @@
+table fAvaliacoesLLM
+	lineageTag: bb73e8ea-49a2-c9a0-4709-b2463aea0d30
+
+	column interacao_id
+		dataType: string
+		isHidden
+		lineageTag: 0a8f7195-88b4-d004-719a-e98124ee4ab8
+		summarizeBy: none
+		sourceColumn: interacao_id
+
+	column timestamp
+		dataType: string
+		lineageTag: b06fcde0-2cf0-7e36-f3c6-92ef384eb585
+		summarizeBy: none
+		sourceColumn: timestamp
+
+	column modelo
+		dataType: string
+		lineageTag: 98b58d5f-8b57-6e90-3532-a4fca179eaf6
+		summarizeBy: none
+		sourceColumn: modelo
+
+	column versao
+		dataType: string
+		lineageTag: 4d8957a3-8d3a-75c6-d43f-679d74775d1a
+		summarizeBy: none
+		sourceColumn: versao
+
+	column caso
+		dataType: string
+		lineageTag: 11b25432-e5c8-8b50-1420-0e20c758c100
+		summarizeBy: none
+		sourceColumn: caso
+
+	column pergunta
+		dataType: string
+		lineageTag: 2349c281-7ab5-8878-9c74-e587f87d236a
+		summarizeBy: none
+		sourceColumn: pergunta
+
+	column status
+		dataType: string
+		lineageTag: a9678b87-1803-5d71-2446-fa516c4961d1
+		summarizeBy: none
+		sourceColumn: status
+
+	column aprovado
+		dataType: int64
+		lineageTag: b22b8ab0-708c-f5f2-44d6-30ffb6477cb2
+		summarizeBy: none
+		sourceColumn: aprovado
+
+	column n_evidencias
+		dataType: int64
+		lineageTag: f770c5b9-7b31-fe67-a759-46f2fe4ab4c2
+		summarizeBy: none
+		sourceColumn: n_evidencias
+
+	column latencia_ms
+		dataType: int64
+		lineageTag: af6f56d1-974e-3d7f-1a2f-fdeca02de686
+		summarizeBy: none
+		sourceColumn: latencia_ms
+
+	partition fAvaliacoesLLM = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fAvaliacoesLLM.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"interacao_id", type text}, {"timestamp", type text}, {"modelo", type text}, {"versao", type text}, {"caso", type text}, {"pergunta", type text}, {"status", type text}, {"aprovado", Int64.Type}, {"n_evidencias", Int64.Type}, {"latencia_ms", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

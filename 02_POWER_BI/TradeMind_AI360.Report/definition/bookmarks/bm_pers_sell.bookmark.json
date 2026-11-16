@@ -1,0 +1,132 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Perspectiva · Sell-out",
+  "name": "bm_pers_sell",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "p_sell_line",
+      "p_sell_rank",
+      "pers_on_sell",
+      "p_rup_line",
+      "p_rup_heat",
+      "p_exe_bar",
+      "p_exe_rank",
+      "p_cmp_bar",
+      "p_cmp_tab",
+      "pers_on_rup",
+      "pers_on_exe",
+      "pers_on_cmp"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "performance",
+    "sections": {
+      "performance": {
+        "visualContainers": {
+          "p_sell_line": {
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {}
+            }
+          },
+          "p_sell_rank": {
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {}
+            }
+          },
+          "pers_on_sell": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "p_rup_line": {
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "p_rup_heat": {
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "p_exe_bar": {
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "p_exe_rank": {
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "p_cmp_bar": {
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "p_cmp_tab": {
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "pers_on_rup": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "pers_on_exe": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "pers_on_cmp": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

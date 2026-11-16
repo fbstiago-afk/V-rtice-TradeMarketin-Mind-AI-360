@@ -1,0 +1,56 @@
+table fInteracoesIA
+	lineageTag: 01aa26af-5cb4-2df3-cc2f-bd67ce73ee3f
+
+	column interacao_id
+		dataType: string
+		isHidden
+		lineageTag: 06372970-ab67-9c84-b449-d449e9081fca
+		summarizeBy: none
+		sourceColumn: interacao_id
+
+	column timestamp
+		dataType: string
+		lineageTag: 00878fdc-e011-1caa-cb9d-d135637867e6
+		summarizeBy: none
+		sourceColumn: timestamp
+
+	column usuario
+		dataType: string
+		lineageTag: 9bf5dfb7-950d-0b50-636d-1d3ffd9c47f8
+		summarizeBy: none
+		sourceColumn: usuario
+
+	column pergunta
+		dataType: string
+		lineageTag: 0534db10-8d14-3645-1783-05ceb2288de8
+		summarizeBy: none
+		sourceColumn: pergunta
+
+	column status
+		dataType: string
+		lineageTag: e1066eb1-b4c4-50d8-6281-fcede188ed23
+		summarizeBy: none
+		sourceColumn: status
+
+	column resposta
+		dataType: string
+		lineageTag: 191f8584-c84f-1ebc-e9a1-1090738786ae
+		summarizeBy: none
+		sourceColumn: resposta
+
+	column latencia_ms
+		dataType: int64
+		lineageTag: 97d2e7fc-266a-8eb6-26a8-42b6abc7aa71
+		summarizeBy: none
+		sourceColumn: latencia_ms
+
+	partition fInteracoesIA = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fInteracoesIA.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"interacao_id", type text}, {"timestamp", type text}, {"usuario", type text}, {"pergunta", type text}, {"status", type text}, {"resposta", type text}, {"latencia_ms", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

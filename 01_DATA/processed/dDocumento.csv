@@ -1,0 +1,10 @@
+documento_id,titulo,tipo,industria_id,versao,origem,n_trechos
+1,Manual de execução de gôndola,manual,0,1.0,original,2
+2,Política de acesso a dados,politica,0,1.0,original,3
+3,Glossário de indicadores,glossario,0,1.0,original,4
+4,Campanhas e incrementalidade,metodologia,0,1.0,original,2
+101,Procedimento: investigação de queda de vendas,procedimento,0,1.0,complementar-projeto,5
+102,Metodologia: avaliação da execução de campanhas,metodologia,0,1.0,complementar-projeto,3
+103,Política: regras de acesso por perfil,politica,0,1.0,complementar-projeto,6
+104,Glossário: conformidade e planograma,glossario,0,1.0,complementar-projeto,3
+105,Nota: limitações da amostra,metodologia,0,1.0,complementar-projeto,4

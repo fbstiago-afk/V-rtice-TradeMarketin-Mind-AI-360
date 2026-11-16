@@ -1,0 +1,56 @@
+table fExperimentosML
+	lineageTag: 71c00778-522c-5480-e192-94cb4366afc6
+
+	column experimento
+		dataType: string
+		lineageTag: f1282683-f435-86b5-432a-35e10052afb6
+		summarizeBy: none
+		sourceColumn: experimento
+
+	column modelo
+		dataType: string
+		lineageTag: 799831d1-89d3-e373-7134-c59369a8f647
+		summarizeBy: none
+		sourceColumn: modelo
+
+	column versao
+		dataType: string
+		lineageTag: a93d9689-74c2-4f21-5a10-4d8fe5361e70
+		summarizeBy: none
+		sourceColumn: versao
+
+	column timestamp
+		dataType: string
+		lineageTag: 2e2e64ee-f67b-c1a3-8ad6-31d2a486fe11
+		summarizeBy: none
+		sourceColumn: timestamp
+
+	column metrica
+		dataType: string
+		lineageTag: 501e2a5a-6f1b-d825-668b-61de5d3c7a8a
+		summarizeBy: none
+		sourceColumn: metrica
+
+	column valor
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e8be46cf-fdc9-3893-9938-5718e9d70887
+		summarizeBy: none
+		sourceColumn: valor
+
+	column status
+		dataType: string
+		lineageTag: 9b4607f1-c5e9-9545-9e6c-bf6de9a95919
+		summarizeBy: none
+		sourceColumn: status
+
+	partition fExperimentosML = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fExperimentosML.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"experimento", type text}, {"modelo", type text}, {"versao", type text}, {"timestamp", type text}, {"metrica", type text}, {"valor", type number}, {"status", type text}}, "en-US")
+				in
+				    Tipos
+

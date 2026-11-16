@@ -1,0 +1,69 @@
+table dUsuarioAcesso
+	lineageTag: 6af2e5b7-df81-3780-3d23-83e9491e42af
+
+	column login
+		dataType: string
+		isHidden
+		lineageTag: 462aced6-60cb-a3b8-0db2-718eb6fcf37d
+		summarizeBy: none
+		sourceColumn: login
+
+	column upn
+		dataType: string
+		isHidden
+		lineageTag: ca821621-3929-1441-7c3f-99970172911c
+		summarizeBy: none
+		sourceColumn: upn
+
+	column perfil
+		dataType: string
+		isHidden
+		lineageTag: 0945ad41-30de-1750-bae4-5414ad91ede7
+		summarizeBy: none
+		sourceColumn: perfil
+
+	column industria_acesso
+		dataType: string
+		isHidden
+		lineageTag: 8a831421-c33e-533f-3064-0722bc963ec2
+		summarizeBy: none
+		sourceColumn: industria_acesso
+
+	column regiao_acesso
+		dataType: string
+		isHidden
+		lineageTag: 2a9e1edd-06bb-cc4b-13bb-c3ea3b5e4897
+		summarizeBy: none
+		sourceColumn: regiao_acesso
+
+	column pode_vendas
+		dataType: int64
+		isHidden
+		lineageTag: cb26dd01-068a-bf54-422d-9a1b7df6c1b5
+		summarizeBy: none
+		sourceColumn: pode_vendas
+
+	column pode_estoque
+		dataType: int64
+		isHidden
+		lineageTag: b5b8ffeb-6ceb-d545-c881-76fc49afc057
+		summarizeBy: none
+		sourceColumn: pode_estoque
+
+	column pode_visitas
+		dataType: int64
+		isHidden
+		lineageTag: 691656fe-0732-0e1e-ee52-72ddc3687b56
+		summarizeBy: none
+		sourceColumn: pode_visitas
+
+	partition dUsuarioAcesso = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "dUsuarioAcesso.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"login", type text}, {"upn", type text}, {"perfil", type text}, {"industria_acesso", type text}, {"regiao_acesso", type text}, {"pode_vendas", Int64.Type}, {"pode_estoque", Int64.Type}, {"pode_visitas", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

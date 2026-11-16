@@ -1,0 +1,49 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["_Medidas","dCalendario","dPDV","dProduto","dPromotor","dCampanha","fVenda","fEstoque","fVisita","fAuditoria","fExecCampanha","fMeta","dDocumento","dModelosIA","fExperimentosML","fTestesGuardrails","fAvaliacoesLLM","fRecuperacaoRAG","fInteracoesIA","fComparadorModelos","fOcorrenciasPDV","fMonitorRuptura","dUsuarioAcesso","PastaDados"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table _Medidas
+ref table dCalendario
+ref table dPDV
+ref table dProduto
+ref table dPromotor
+ref table dCampanha
+ref table fVenda
+ref table fEstoque
+ref table fVisita
+ref table fAuditoria
+ref table fExecCampanha
+ref table fMeta
+ref table dDocumento
+ref table dModelosIA
+ref table fExperimentosML
+ref table fTestesGuardrails
+ref table fAvaliacoesLLM
+ref table fRecuperacaoRAG
+ref table fInteracoesIA
+ref table fComparadorModelos
+ref table fOcorrenciasPDV
+ref table fMonitorRuptura
+ref table dUsuarioAcesso
+ref table DateTableTemplate_84d85d7a-7102-4f24-9fcc-ca4392ca52ba
+ref table LocalDateTable_04196326-01f1-45fe-95f2-12de1bcf623a
+ref table LocalDateTable_7e67a756-ba67-45ce-90be-82644a3da862
+ref table LocalDateTable_66febe56-4db1-47f2-b86d-ec9fc45d6a7a
+
+ref role 'Acesso por Usuário (dinâmico)'
+ref role 'Demo · Cliente Aurora Foods'
+ref role 'Demo · Promotor Sul'
+
+ref cultureInfo pt-BR
+

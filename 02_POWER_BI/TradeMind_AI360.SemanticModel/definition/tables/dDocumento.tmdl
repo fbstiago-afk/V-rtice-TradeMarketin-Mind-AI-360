@@ -1,0 +1,57 @@
+table dDocumento
+	lineageTag: ce25b592-bc5c-6696-23f6-dac74fba8752
+
+	column documento_id
+		dataType: int64
+		isHidden
+		lineageTag: 31a3186f-f2f7-2bf1-0ccb-4d68d4a96f8f
+		summarizeBy: none
+		sourceColumn: documento_id
+
+	column titulo
+		dataType: string
+		lineageTag: 86c3fa72-53a5-642a-84b6-64da3ca993d1
+		summarizeBy: none
+		sourceColumn: titulo
+
+	column tipo
+		dataType: string
+		lineageTag: e12c2deb-6d83-024b-46d4-c945201ec34e
+		summarizeBy: none
+		sourceColumn: tipo
+
+	column industria_id
+		dataType: int64
+		isHidden
+		lineageTag: 2ffdec6c-311f-46ed-e40f-46912b1a7c27
+		summarizeBy: none
+		sourceColumn: industria_id
+
+	column versao
+		dataType: string
+		lineageTag: eaa3b732-293d-5290-5e66-0cf12dac94cf
+		summarizeBy: none
+		sourceColumn: versao
+
+	column origem
+		dataType: string
+		lineageTag: 9e16aba9-87a7-401a-015b-4a5300dcc578
+		summarizeBy: none
+		sourceColumn: origem
+
+	column n_trechos
+		dataType: int64
+		lineageTag: ad705d01-a22f-5ca7-1214-544f3e6fe639
+		summarizeBy: none
+		sourceColumn: n_trechos
+
+	partition dDocumento = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "dDocumento.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"documento_id", Int64.Type}, {"titulo", type text}, {"tipo", type text}, {"industria_id", Int64.Type}, {"versao", type text}, {"origem", type text}, {"n_trechos", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

@@ -1,0 +1,66 @@
+table fVisita
+	lineageTag: 1707fd61-4fe7-b3f1-87e7-394d66b4e317
+
+	column visita_id
+		dataType: int64
+		isHidden
+		lineageTag: c9c83029-c6c6-afc5-4178-b4206b5f8222
+		summarizeBy: none
+		sourceColumn: visita_id
+
+	column data
+		dataType: dateTime
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: d0ada264-e08c-4004-64f5-c2d03f3af8b6
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column pdv_id
+		dataType: int64
+		isHidden
+		lineageTag: 4e1b3246-4c3e-1bc0-498e-09649572010a
+		summarizeBy: none
+		sourceColumn: pdv_id
+
+	column promotor_id
+		dataType: int64
+		isHidden
+		lineageTag: c7aacf38-ac0c-4ddd-7ef7-2bf8a825dd84
+		summarizeBy: none
+		sourceColumn: promotor_id
+
+	column duracao_min
+		dataType: int64
+		isHidden
+		lineageTag: de9eddda-55e5-e5e8-99ba-352657c14f37
+		summarizeBy: none
+		sourceColumn: duracao_min
+
+	column checklist_pct
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: 4a582b25-0656-06dc-d65a-d6ba468b08aa
+		summarizeBy: none
+		sourceColumn: checklist_pct
+
+	column observacao
+		dataType: string
+		isHidden
+		lineageTag: f04c7c3b-0de4-d960-89e8-8a35a99a5616
+		summarizeBy: none
+		sourceColumn: observacao
+
+	partition fVisita = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fVisita.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"visita_id", Int64.Type}, {"data", type date}, {"pdv_id", Int64.Type}, {"promotor_id", Int64.Type}, {"duracao_min", Int64.Type}, {"checklist_pct", type number}, {"observacao", type text}}, "en-US")
+				in
+				    Tipos
+

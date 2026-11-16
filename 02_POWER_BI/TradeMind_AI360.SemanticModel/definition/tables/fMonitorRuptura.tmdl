@@ -1,0 +1,45 @@
+table fMonitorRuptura
+	lineageTag: 0aea48dd-30b0-854c-cc07-b87401b60150
+
+	column mes
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 14a2b44e-2b95-c360-8882-0b171d3f2876
+		summarizeBy: none
+		sourceColumn: mes
+
+		variation Variação
+			isDefault
+			relationship: f5f55539-cb45-42c4-a708-2b466f0a94f1
+			defaultHierarchy: LocalDateTable_66febe56-4db1-47f2-b86d-ec9fc45d6a7a.'Hierarquia de datas'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column prob_media_prevista
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a9490c0f-3168-4b60-7790-8687621a84bf
+		summarizeBy: sum
+		sourceColumn: prob_media_prevista
+
+		annotation SummarizationSetBy = Automatic
+
+	column taxa_observada
+		dataType: double
+		formatString: #,0.00
+		lineageTag: c0c34ea7-b5e0-10e7-9ebe-43da339f402e
+		summarizeBy: sum
+		sourceColumn: taxa_observada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fMonitorRuptura = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fMonitorRuptura.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"mes", type date}, {"prob_media_prevista", type number}, {"taxa_observada", type number}}, "en-US")
+				in
+				    Tipos
+

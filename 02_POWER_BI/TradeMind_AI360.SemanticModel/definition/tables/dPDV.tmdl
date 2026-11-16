@@ -1,0 +1,56 @@
+table dPDV
+	lineageTag: 7be1c124-6179-b6f0-56a2-3d5bdf7129f0
+
+	column pdv_id
+		dataType: int64
+		isHidden
+		lineageTag: 1f88b59b-1920-894d-e2d1-719736e952fe
+		summarizeBy: none
+		sourceColumn: pdv_id
+
+	column pdv
+		dataType: string
+		lineageTag: c0851593-6091-18e2-763a-f53aa651f6b0
+		summarizeBy: none
+		sourceColumn: pdv
+
+	column cidade
+		dataType: string
+		lineageTag: f5099881-c42a-690e-5bd2-f6baf9ae8ab3
+		summarizeBy: none
+		sourceColumn: cidade
+
+	column uf
+		dataType: string
+		lineageTag: 232e883a-64bb-893d-dffc-1e54ae009e25
+		summarizeBy: none
+		sourceColumn: uf
+
+	column regiao
+		dataType: string
+		lineageTag: d7115254-c16e-7067-3e13-227b65f2064e
+		summarizeBy: none
+		sourceColumn: regiao
+
+	column formato
+		dataType: string
+		lineageTag: 6bd9b7e8-fcd8-05b5-8ae5-b895c2f84dd3
+		summarizeBy: none
+		sourceColumn: formato
+
+	column rede
+		dataType: string
+		lineageTag: b830ab32-3585-579d-11fd-d331a3ca70fb
+		summarizeBy: none
+		sourceColumn: rede
+
+	partition dPDV = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "dPDV.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"pdv_id", Int64.Type}, {"pdv", type text}, {"cidade", type text}, {"uf", type text}, {"regiao", type text}, {"formato", type text}, {"rede", type text}}, "en-US")
+				in
+				    Tipos
+

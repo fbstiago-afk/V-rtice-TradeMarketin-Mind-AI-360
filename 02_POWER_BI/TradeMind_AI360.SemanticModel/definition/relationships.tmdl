@@ -1,0 +1,99 @@
+relationship e78c34eb-cfc7-3c8d-690c-dbd1c53af61c
+	fromColumn: fVenda.data
+	toColumn: dCalendario.Data
+
+relationship 4a06029d-3707-9368-b2a8-0b9a499eadee
+	fromColumn: fVenda.pdv_id
+	toColumn: dPDV.pdv_id
+
+relationship 36d54faa-c37f-d75f-ffa0-95a9f7e2f4a7
+	fromColumn: fEstoque.data
+	toColumn: dCalendario.Data
+
+relationship 00db0e7e-e453-cc17-fe06-b2b403ac3656
+	fromColumn: fEstoque.pdv_id
+	toColumn: dPDV.pdv_id
+
+relationship 7a7ef04a-e820-60e2-ede2-51e50d44a751
+	fromColumn: fVisita.data
+	toColumn: dCalendario.Data
+
+relationship 1410e5ac-3b05-a54e-3902-50461947f8dd
+	fromColumn: fVisita.pdv_id
+	toColumn: dPDV.pdv_id
+
+relationship 3f09290a-8888-db5a-4181-eb3ad9c63e2f
+	fromColumn: fAuditoria.data
+	toColumn: dCalendario.Data
+
+relationship a3e9ee48-5755-7aa8-61c2-c076c14aee3d
+	fromColumn: fAuditoria.pdv_id
+	toColumn: dPDV.pdv_id
+
+relationship b445ff07-a406-39f0-8c8f-751aeb812f8d
+	fromColumn: fExecCampanha.data
+	toColumn: dCalendario.Data
+
+relationship 278bcd7d-a498-28ff-7701-2dedfcc3a45d
+	fromColumn: fExecCampanha.pdv_id
+	toColumn: dPDV.pdv_id
+
+relationship 3070bb62-3572-ca1c-d1f4-a689b11e214f
+	fromColumn: fMeta.data
+	toColumn: dCalendario.Data
+
+relationship 12cb7f62-1123-5c2d-b947-4317fd8de86f
+	fromColumn: fMeta.pdv_id
+	toColumn: dPDV.pdv_id
+
+relationship c1f38b04-12a9-3768-66c3-7532ee40ddae
+	fromColumn: fOcorrenciasPDV.data
+	toColumn: dCalendario.Data
+
+relationship a2c59c40-f184-7743-e6bc-faac1eac6e1a
+	fromColumn: fOcorrenciasPDV.pdv_id
+	toColumn: dPDV.pdv_id
+
+relationship 36e11a5f-e590-e723-7d06-50a2b746ca66
+	fromColumn: fVenda.produto_id
+	toColumn: dProduto.produto_id
+
+relationship db998190-3fff-7355-8aaf-ba0800c58d17
+	fromColumn: fEstoque.produto_id
+	toColumn: dProduto.produto_id
+
+relationship 0f18e6ef-94a6-7efb-c549-08181dc51831
+	fromColumn: fAuditoria.produto_id
+	toColumn: dProduto.produto_id
+
+relationship 6c6c8f39-2356-4e09-1c74-cae1d8109c4a
+	fromColumn: fVisita.promotor_id
+	toColumn: dPromotor.promotor_id
+
+relationship 9c0ae048-3206-b169-e177-f73d5abda90b
+	fromColumn: fAuditoria.promotor_id
+	toColumn: dPromotor.promotor_id
+
+relationship e8355146-9eea-82a8-54e1-aa08bdcb77f9
+	fromColumn: fExecCampanha.campanha_id
+	toColumn: dCampanha.campanha_id
+
+relationship 82ff68b7-0ec9-c202-d0be-599d066524ab
+	fromColumn: fRecuperacaoRAG.interacao_id
+	toColumn: fAvaliacoesLLM.interacao_id
+
+relationship 09f26c87-fed8-4742-9a5d-56016bd4d555
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dCampanha.inicio
+	toColumn: LocalDateTable_04196326-01f1-45fe-95f2-12de1bcf623a.Date
+
+relationship d6794aa0-b4b4-46eb-91e1-6bc597f012de
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dCampanha.fim
+	toColumn: LocalDateTable_7e67a756-ba67-45ce-90be-82644a3da862.Date
+
+relationship f5f55539-cb45-42c4-a708-2b466f0a94f1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fMonitorRuptura.mes
+	toColumn: LocalDateTable_66febe56-4db1-47f2-b86d-ec9fc45d6a7a.Date
+

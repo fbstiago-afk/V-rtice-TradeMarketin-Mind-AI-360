@@ -1,0 +1,50 @@
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis na loja Centro"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis no PDV 12"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis hoje pela manhã"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis na visita de segunda"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis na rede Norte"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis no corredor 4"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis segundo o promotor"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis após reposição"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis na unidade Sul"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: não há unidades disponíveis no fim de semana"}, {"role": "assistant", "content": "{\"categoria\": \"ruptura\", \"prioridade\": \"alta\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta na loja Centro"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta no PDV 12"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta hoje pela manhã"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta na visita de segunda"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta na rede Norte"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta no corredor 4"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta segundo o promotor"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta após reposição"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta na unidade Sul"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: precificação incorreta no fim de semana"}, {"role": "assistant", "content": "{\"categoria\": \"preco\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado na loja Centro"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado no PDV 12"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado hoje pela manhã"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado na visita de segunda"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado na rede Norte"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado no corredor 4"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado segundo o promotor"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado após reposição"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado na unidade Sul"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: layout de gôndola desorganizado no fim de semana"}, {"role": "assistant", "content": "{\"categoria\": \"execucao\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue na loja Centro"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue no PDV 12"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue hoje pela manhã"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue na visita de segunda"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue na rede Norte"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue no corredor 4"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue segundo o promotor"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue após reposição"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue na unidade Sul"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: display da promoção não entregue no fim de semana"}, {"role": "assistant", "content": "{\"categoria\": \"campanha\", \"prioridade\": \"media\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria na loja Centro"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria no PDV 12"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria hoje pela manhã"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria na visita de segunda"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria na rede Norte"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria no corredor 4"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria segundo o promotor"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria após reposição"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria na unidade Sul"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}
+{"messages": [{"role": "user", "content": "Classifique: suspeita sem registro de auditoria no fim de semana"}, {"role": "assistant", "content": "{\"categoria\": \"investigacao\", \"prioridade\": \"indeterminada\"}"}]}

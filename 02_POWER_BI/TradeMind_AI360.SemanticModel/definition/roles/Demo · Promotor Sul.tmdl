@@ -1,0 +1,13 @@
+role 'Demo · Promotor Sul'
+	modelPermission: read
+
+	tablePermission dPDV = [regiao] = "Sul"
+
+	tablePermission fVenda = FALSE()
+
+	tablePermission fEstoque = FALSE()
+
+	tablePermission dUsuarioAcesso = FALSE()
+
+	annotation PBI_Id = a5f5f0febc4cdf9dbc691b1109b1fe98
+

@@ -1,0 +1,49 @@
+table fComparadorModelos
+	lineageTag: 10bca7d6-5bd5-4cbc-337a-e2c6ff278c7b
+
+	column entrada
+		dataType: string
+		lineageTag: 92371eb0-9f4e-d028-032d-44820c6b56d0
+		summarizeBy: none
+		sourceColumn: entrada
+
+	column esperado
+		dataType: string
+		lineageTag: 3a97b24b-60e1-e53f-188a-fc0057be1ab9
+		summarizeBy: none
+		sourceColumn: esperado
+
+	column base
+		dataType: string
+		lineageTag: 7f930225-e1a9-8898-c40a-1e8a83676f6f
+		summarizeBy: none
+		sourceColumn: base
+
+	column especializado
+		dataType: string
+		lineageTag: ad0eee16-f977-f1cd-57ee-9e62b9ffe48a
+		summarizeBy: none
+		sourceColumn: especializado
+
+	column acerto_base
+		dataType: int64
+		lineageTag: 83531f98-bf21-d413-3e6d-5e080db91bcb
+		summarizeBy: none
+		sourceColumn: acerto_base
+
+	column acerto_especializado
+		dataType: int64
+		lineageTag: 1312ccbf-4aa1-2c92-943b-279881679570
+		summarizeBy: none
+		sourceColumn: acerto_especializado
+
+	partition fComparadorModelos = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fComparadorModelos.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"entrada", type text}, {"esperado", type text}, {"base", type text}, {"especializado", type text}, {"acerto_base", Int64.Type}, {"acerto_especializado", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

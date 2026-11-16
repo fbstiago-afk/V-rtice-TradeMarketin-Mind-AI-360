@@ -1,0 +1,52 @@
+entrada,esperado,base,especializado,acerto_base,acerto_especializado
+encarte da campanha não exposto após reposição,campanha,campanha,campanha,1,1
+encarte da campanha não exposto hoje pela manhã,campanha,campanha,campanha,1,1
+encarte da campanha não exposto na loja Centro,campanha,campanha,campanha,1,1
+encarte da campanha não exposto na rede Norte,campanha,campanha,campanha,1,1
+encarte da campanha não exposto na unidade Sul,campanha,campanha,campanha,1,1
+encarte da campanha não exposto na visita de segunda,campanha,campanha,campanha,1,1
+encarte da campanha não exposto no PDV 12,campanha,campanha,campanha,1,1
+encarte da campanha não exposto no corredor 4,campanha,campanha,campanha,1,1
+encarte da campanha não exposto no fim de semana,campanha,campanha,campanha,1,1
+encarte da campanha não exposto segundo o promotor,campanha,campanha,campanha,1,1
+estoque zerado na área de venda após reposição,ruptura,ruptura,ruptura,1,1
+estoque zerado na área de venda hoje pela manhã,ruptura,ruptura,ruptura,1,1
+estoque zerado na área de venda na loja Centro,ruptura,ruptura,ruptura,1,1
+estoque zerado na área de venda na rede Norte,ruptura,ruptura,ruptura,1,1
+estoque zerado na área de venda na unidade Sul,ruptura,ruptura,ruptura,1,1
+estoque zerado na área de venda na visita de segunda,ruptura,ruptura,ruptura,1,1
+estoque zerado na área de venda no PDV 12,ruptura,ruptura,ruptura,1,1
+estoque zerado na área de venda no corredor 4,ruptura,ruptura,ruptura,1,1
+estoque zerado na área de venda no fim de semana,ruptura,ruptura,ruptura,1,1
+estoque zerado na área de venda segundo o promotor,ruptura,ruptura,ruptura,1,1
+etiqueta de preço desatualizada após reposição,preco,preco,preco,1,1
+etiqueta de preço desatualizada hoje pela manhã,preco,preco,preco,1,1
+etiqueta de preço desatualizada na loja Centro,preco,preco,preco,1,1
+etiqueta de preço desatualizada na rede Norte,preco,preco,preco,1,1
+etiqueta de preço desatualizada na unidade Sul,preco,preco,preco,1,1
+etiqueta de preço desatualizada na visita de segunda,preco,preco,preco,1,1
+etiqueta de preço desatualizada no PDV 12,preco,preco,preco,1,1
+etiqueta de preço desatualizada no corredor 4,preco,preco,preco,1,1
+etiqueta de preço desatualizada no fim de semana,preco,preco,preco,1,1
+etiqueta de preço desatualizada segundo o promotor,preco,preco,preco,1,1
+frentes do produto reduzidas após reposição,execucao,investigacao,execucao,0,1
+frentes do produto reduzidas hoje pela manhã,execucao,investigacao,ruptura,0,0
+frentes do produto reduzidas na loja Centro,execucao,investigacao,ruptura,0,0
+frentes do produto reduzidas na rede Norte,execucao,investigacao,ruptura,0,0
+frentes do produto reduzidas na unidade Sul,execucao,investigacao,ruptura,0,0
+frentes do produto reduzidas na visita de segunda,execucao,investigacao,ruptura,0,0
+frentes do produto reduzidas no PDV 12,execucao,investigacao,ruptura,0,0
+frentes do produto reduzidas no corredor 4,execucao,investigacao,ruptura,0,0
+frentes do produto reduzidas no fim de semana,execucao,investigacao,ruptura,0,0
+frentes do produto reduzidas segundo o promotor,execucao,investigacao,ruptura,0,0
+queda de vendas sem evidência suficiente,investigacao,investigacao,investigacao,1,1
+redução de giro sem dados de apoio após reposição,investigacao,investigacao,investigacao,1,1
+redução de giro sem dados de apoio hoje pela manhã,investigacao,investigacao,investigacao,1,1
+redução de giro sem dados de apoio na loja Centro,investigacao,investigacao,ruptura,1,0
+redução de giro sem dados de apoio na rede Norte,investigacao,investigacao,investigacao,1,1
+redução de giro sem dados de apoio na unidade Sul,investigacao,investigacao,investigacao,1,1
+redução de giro sem dados de apoio na visita de segunda,investigacao,investigacao,investigacao,1,1
+redução de giro sem dados de apoio no PDV 12,investigacao,investigacao,investigacao,1,1
+redução de giro sem dados de apoio no corredor 4,investigacao,investigacao,investigacao,1,1
+redução de giro sem dados de apoio no fim de semana,investigacao,investigacao,investigacao,1,1
+redução de giro sem dados de apoio segundo o promotor,investigacao,investigacao,investigacao,1,1

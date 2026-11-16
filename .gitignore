@@ -1,0 +1,20 @@
+# Segredos e artefatos locais
+04_API/.secret
+__pycache__/
+*.pyc
+
+# Estado local do Power BI Desktop
+**/.pbi/
+*.abf
+
+# Dados regeneráveis (ver README: build.py -> build_star.py)
+base trademind/trademind_ai360.sqlite
+01_DATA/processed/fVenda.csv
+01_DATA/processed/fEstoque.csv
+01_DATA/processed/fAuditoria.csv
+01_DATA/processed/fVisita.csv
+
+# Build do visual personalizado
+05_CUSTOM_VISUAL/node_modules/
+05_CUSTOM_VISUAL/.tmp/
+05_CUSTOM_VISUAL/dist/

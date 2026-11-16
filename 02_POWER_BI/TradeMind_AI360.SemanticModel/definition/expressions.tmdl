@@ -1,0 +1,3 @@
+expression PastaDados = "E:\Projetos BI\20 - TradeMind AI 360\01_DATA\processed\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 7b68ca65-5775-7907-c6d0-1d058781d177
+

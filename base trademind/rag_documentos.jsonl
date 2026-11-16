@@ -1,0 +1,4 @@
+{"documento_id": 1, "tipo": "manual", "texto": "Ruptura é identificada quando o saldo físico auditado é zero. Planograma deve respeitar posicionamento e quantidade de facings aprovados."}
+{"documento_id": 2, "tipo": "politica", "texto": "Clientes industriais só podem consultar seus próprios SKUs e campanhas. Promotores só podem consultar sua região. Dados pessoais não devem aparecer nas respostas."}
+{"documento_id": 3, "tipo": "glossario", "texto": "Sell-out é a venda do varejo ao consumidor. Ruptura semanal é a proporção de combinações PDV-SKU auditadas com saldo zero. Execução é a conformidade do checklist. ROI exige definição explícita de incrementalidade e margem."}
+{"documento_id": 4, "tipo": "metodologia", "texto": "Comparar lojas teste e controle e ajustar sazonalidade antes de atribuir crescimento à campanha. Correlação não comprova causalidade."}

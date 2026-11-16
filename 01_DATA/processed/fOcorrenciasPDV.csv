@@ -1,0 +1,601 @@
+ocorrencia_id,data,pdv_id,descricao,categoria_prevista,prioridade,confianca,sintetico
+1,2026-02-27,7,display da promoção não entregue na loja Centro,campanha,media,0.497,1
+2,2026-05-21,63,suspeita sem registro de auditoria na visita de segunda,investigacao,indeterminada,0.326,1
+3,2026-03-13,189,frentes do produto reduzidas na unidade Sul,ruptura,alta,0.341,1
+4,2026-10-07,23,etiqueta de preço desatualizada na visita de segunda,preco,media,0.747,1
+5,2026-08-05,9,layout de gôndola desorganizado na rede Norte,ruptura,alta,0.464,1
+6,2026-02-17,56,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+7,2026-09-16,155,frentes do produto reduzidas no fim de semana,ruptura,alta,0.387,1
+8,2026-10-15,51,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+9,2026-10-07,108,suspeita sem registro de auditoria na loja Centro,ruptura,alta,0.409,1
+10,2026-08-18,151,frentes do produto reduzidas na unidade Sul,ruptura,alta,0.341,1
+11,2026-01-04,195,encarte da campanha não exposto no corredor 4,campanha,media,0.479,1
+12,2026-08-05,88,frentes do produto reduzidas na loja Centro,ruptura,alta,0.454,1
+13,2026-03-21,56,encarte da campanha não exposto no corredor 4,campanha,media,0.479,1
+14,2026-06-22,27,suspeita sem registro de auditoria segundo o promotor,ruptura,alta,0.306,1
+15,2026-07-14,25,etiqueta de preço desatualizada no PDV 12,preco,media,0.827,1
+16,2026-06-26,155,redução de giro sem dados de apoio no corredor 4,investigacao,indeterminada,0.359,1
+17,2026-01-23,187,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+18,2026-10-02,32,não há unidades disponíveis após reposição,execucao,media,0.26,1
+19,2026-02-10,142,redução de giro sem dados de apoio na unidade Sul,investigacao,indeterminada,0.342,1
+20,2026-11-13,227,encarte da campanha não exposto após reposição,campanha,media,0.432,1
+21,2026-10-23,50,redução de giro sem dados de apoio segundo o promotor,investigacao,indeterminada,0.3,1
+22,2026-02-05,12,display da promoção não entregue no fim de semana,campanha,media,0.524,1
+23,2026-04-27,198,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+24,2026-02-10,219,encarte da campanha não exposto após reposição,campanha,media,0.432,1
+25,2026-02-21,98,frentes do produto reduzidas no fim de semana,ruptura,alta,0.387,1
+26,2026-08-21,163,encarte da campanha não exposto no corredor 4,campanha,media,0.479,1
+27,2026-03-25,95,redução de giro sem dados de apoio segundo o promotor,investigacao,indeterminada,0.3,1
+28,2026-04-18,172,redução de giro sem dados de apoio no corredor 4,investigacao,indeterminada,0.359,1
+29,2026-02-06,156,encarte da campanha não exposto na rede Norte,campanha,media,0.507,1
+30,2026-03-29,137,display da promoção não entregue na loja Centro,campanha,media,0.497,1
+31,2026-05-06,42,suspeita sem registro de auditoria hoje pela manhã,ruptura,alta,0.307,1
+32,2026-07-14,70,não há unidades disponíveis na unidade Sul,campanha,media,0.266,1
+33,2026-10-13,57,display da promoção não entregue na loja Centro,campanha,media,0.497,1
+34,2026-06-16,216,display da promoção não entregue segundo o promotor,campanha,media,0.554,1
+35,2026-01-29,59,suspeita sem registro de auditoria após reposição,investigacao,indeterminada,0.338,1
+36,2026-06-11,103,estoque zerado na área de venda na rede Norte,ruptura,alta,0.58,1
+37,2026-02-03,55,encarte da campanha não exposto na rede Norte,campanha,media,0.507,1
+38,2026-06-11,55,layout de gôndola desorganizado no PDV 12,ruptura,alta,0.593,1
+39,2026-09-13,102,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+40,2026-08-23,37,display da promoção não entregue no PDV 12,campanha,media,0.567,1
+41,2026-03-13,64,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+42,2026-10-15,138,suspeita sem registro de auditoria na rede Norte,investigacao,indeterminada,0.339,1
+43,2026-10-27,110,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+44,2026-07-24,93,layout de gôndola desorganizado na visita de segunda,ruptura,alta,0.473,1
+45,2026-03-12,131,frentes do produto reduzidas na unidade Sul,ruptura,alta,0.341,1
+46,2026-02-16,194,precificação incorreta hoje pela manhã,investigacao,indeterminada,0.327,1
+47,2026-02-26,40,estoque zerado na área de venda segundo o promotor,ruptura,alta,0.566,1
+48,2026-03-23,203,layout de gôndola desorganizado no fim de semana,ruptura,alta,0.493,1
+49,2026-08-05,153,display da promoção não entregue segundo o promotor,campanha,media,0.554,1
+50,2026-07-17,98,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+51,2026-08-28,136,layout de gôndola desorganizado no corredor 4,ruptura,alta,0.442,1
+52,2026-10-11,221,encarte da campanha não exposto hoje pela manhã,campanha,media,0.516,1
+53,2026-02-28,175,estoque zerado na área de venda no PDV 12,ruptura,alta,0.686,1
+54,2026-05-17,197,precificação incorreta após reposição,investigacao,indeterminada,0.346,1
+55,2026-06-24,29,display da promoção não entregue no PDV 12,campanha,media,0.567,1
+56,2026-08-11,41,encarte da campanha não exposto após reposição,campanha,media,0.432,1
+57,2026-01-02,185,não há unidades disponíveis após reposição,execucao,media,0.26,1
+58,2026-05-15,129,suspeita sem registro de auditoria no PDV 12,ruptura,alta,0.42,1
+59,2026-04-02,130,suspeita sem registro de auditoria segundo o promotor,ruptura,alta,0.306,1
+60,2026-06-02,216,etiqueta de preço desatualizada na visita de segunda,preco,media,0.747,1
+61,2026-09-17,156,display da promoção não entregue na loja Centro,campanha,media,0.497,1
+62,2026-03-20,96,frentes do produto reduzidas no corredor 4,ruptura,alta,0.332,1
+63,2026-03-24,139,suspeita sem registro de auditoria segundo o promotor,ruptura,alta,0.306,1
+64,2026-09-29,236,suspeita sem registro de auditoria na unidade Sul,investigacao,indeterminada,0.34,1
+65,2026-11-03,83,estoque zerado na área de venda na loja Centro,ruptura,alta,0.665,1
+66,2026-01-10,29,precificação incorreta no PDV 12,investigacao,indeterminada,0.35,1
+67,2026-06-07,62,redução de giro sem dados de apoio segundo o promotor,investigacao,indeterminada,0.3,1
+68,2026-05-04,225,estoque zerado na área de venda após reposição,ruptura,alta,0.512,1
+69,2026-02-10,22,layout de gôndola desorganizado no PDV 12,ruptura,alta,0.593,1
+70,2026-09-06,209,suspeita sem registro de auditoria hoje pela manhã,ruptura,alta,0.307,1
+71,2026-09-30,197,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+72,2026-03-07,169,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+73,2026-10-09,43,não há unidades disponíveis no fim de semana,campanha,media,0.25,1
+74,2026-09-28,224,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+75,2026-08-05,55,layout de gôndola desorganizado segundo o promotor,ruptura,alta,0.436,1
+76,2026-04-13,183,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+77,2026-07-24,172,encarte da campanha não exposto no fim de semana,campanha,media,0.491,1
+78,2026-07-11,113,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+79,2026-08-20,31,precificação incorreta no corredor 4,investigacao,indeterminada,0.364,1
+80,2026-04-26,17,encarte da campanha não exposto no PDV 12,campanha,media,0.509,1
+81,2026-01-11,151,redução de giro sem dados de apoio na visita de segunda,investigacao,indeterminada,0.343,1
+82,2026-04-28,151,precificação incorreta no fim de semana,investigacao,indeterminada,0.458,1
+83,2026-01-04,19,frentes do produto reduzidas na unidade Sul,ruptura,alta,0.341,1
+84,2026-01-31,59,display da promoção não entregue no fim de semana,campanha,media,0.524,1
+85,2026-01-17,221,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+86,2026-02-06,132,redução de giro sem dados de apoio hoje pela manhã,investigacao,indeterminada,0.3,1
+87,2026-05-23,172,encarte da campanha não exposto na loja Centro,campanha,media,0.491,1
+88,2026-04-20,139,precificação incorreta no PDV 12,investigacao,indeterminada,0.35,1
+89,2026-10-20,148,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+90,2026-05-05,201,não há unidades disponíveis no fim de semana,campanha,media,0.25,1
+91,2026-07-28,49,não há unidades disponíveis no fim de semana,campanha,media,0.25,1
+92,2026-02-19,169,etiqueta de preço desatualizada hoje pela manhã,preco,media,0.782,1
+93,2026-07-01,109,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+94,2026-08-28,222,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+95,2026-01-28,173,suspeita sem registro de auditoria hoje pela manhã,ruptura,alta,0.307,1
+96,2026-02-20,16,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+97,2026-06-23,205,não há unidades disponíveis na loja Centro,ruptura,alta,0.276,1
+98,2026-05-08,50,etiqueta de preço desatualizada na visita de segunda,preco,media,0.747,1
+99,2026-10-02,115,frentes do produto reduzidas na rede Norte,ruptura,alta,0.353,1
+100,2026-08-05,47,etiqueta de preço desatualizada após reposição,preco,media,0.736,1
+101,2026-08-25,64,encarte da campanha não exposto no corredor 4,campanha,media,0.479,1
+102,2026-08-15,207,estoque zerado na área de venda no fim de semana,ruptura,alta,0.602,1
+103,2026-02-20,13,precificação incorreta no fim de semana,investigacao,indeterminada,0.458,1
+104,2026-10-04,215,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+105,2026-02-17,238,estoque zerado na área de venda no PDV 12,ruptura,alta,0.686,1
+106,2026-05-02,43,suspeita sem registro de auditoria no corredor 4,investigacao,indeterminada,0.358,1
+107,2026-09-06,124,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+108,2026-07-25,232,frentes do produto reduzidas após reposição,execucao,media,0.352,1
+109,2026-03-26,98,estoque zerado na área de venda após reposição,ruptura,alta,0.512,1
+110,2026-07-19,68,estoque zerado na área de venda na loja Centro,ruptura,alta,0.665,1
+111,2026-08-21,74,suspeita sem registro de auditoria no fim de semana,investigacao,indeterminada,0.391,1
+112,2026-10-12,170,não há unidades disponíveis na visita de segunda,campanha,media,0.263,1
+113,2026-09-07,40,suspeita sem registro de auditoria na loja Centro,ruptura,alta,0.409,1
+114,2026-06-01,56,frentes do produto reduzidas na rede Norte,ruptura,alta,0.353,1
+115,2026-10-24,189,estoque zerado na área de venda após reposição,ruptura,alta,0.512,1
+116,2026-02-01,192,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+117,2026-01-30,13,redução de giro sem dados de apoio na loja Centro,ruptura,alta,0.297,1
+118,2026-09-02,129,layout de gôndola desorganizado na visita de segunda,ruptura,alta,0.473,1
+119,2026-03-22,15,precificação incorreta segundo o promotor,investigacao,indeterminada,0.332,1
+120,2026-02-11,218,precificação incorreta na rede Norte,investigacao,indeterminada,0.376,1
+121,2026-02-05,153,frentes do produto reduzidas na visita de segunda,ruptura,alta,0.382,1
+122,2026-05-01,104,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+123,2026-10-19,64,etiqueta de preço desatualizada no corredor 4,preco,media,0.829,1
+124,2026-11-01,11,layout de gôndola desorganizado na visita de segunda,ruptura,alta,0.473,1
+125,2026-02-11,108,layout de gôndola desorganizado na unidade Sul,ruptura,alta,0.438,1
+126,2026-10-26,145,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+127,2026-06-11,240,precificação incorreta no corredor 4,investigacao,indeterminada,0.364,1
+128,2026-04-15,172,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+129,2026-06-10,62,suspeita sem registro de auditoria na loja Centro,ruptura,alta,0.409,1
+130,2026-07-22,34,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+131,2026-06-03,118,display da promoção não entregue na rede Norte,campanha,media,0.568,1
+132,2026-02-07,3,redução de giro sem dados de apoio na loja Centro,ruptura,alta,0.297,1
+133,2026-10-16,26,não há unidades disponíveis após reposição,execucao,media,0.26,1
+134,2026-10-03,55,estoque zerado na área de venda no fim de semana,ruptura,alta,0.602,1
+135,2026-05-16,34,precificação incorreta na visita de segunda,investigacao,indeterminada,0.386,1
+136,2026-02-05,226,redução de giro sem dados de apoio na rede Norte,investigacao,indeterminada,0.339,1
+137,2026-07-09,73,encarte da campanha não exposto no PDV 12,campanha,media,0.509,1
+138,2026-08-13,214,frentes do produto reduzidas na loja Centro,ruptura,alta,0.454,1
+139,2026-06-04,157,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+140,2026-09-28,3,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+141,2026-10-11,77,display da promoção não entregue na rede Norte,campanha,media,0.568,1
+142,2026-02-23,225,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+143,2026-05-16,30,etiqueta de preço desatualizada após reposição,preco,media,0.736,1
+144,2026-10-11,40,etiqueta de preço desatualizada na visita de segunda,preco,media,0.747,1
+145,2026-05-25,155,encarte da campanha não exposto na rede Norte,campanha,media,0.507,1
+146,2026-06-25,53,frentes do produto reduzidas segundo o promotor,ruptura,alta,0.345,1
+147,2026-05-16,130,display da promoção não entregue segundo o promotor,campanha,media,0.554,1
+148,2026-05-09,232,precificação incorreta no PDV 12,investigacao,indeterminada,0.35,1
+149,2026-02-17,163,estoque zerado na área de venda segundo o promotor,ruptura,alta,0.566,1
+150,2026-05-22,12,não há unidades disponíveis na visita de segunda,campanha,media,0.263,1
+151,2026-06-20,198,estoque zerado na área de venda na loja Centro,ruptura,alta,0.665,1
+152,2026-05-15,42,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+153,2026-08-15,142,suspeita sem registro de auditoria na visita de segunda,investigacao,indeterminada,0.326,1
+154,2026-08-07,144,display da promoção não entregue no fim de semana,campanha,media,0.524,1
+155,2026-02-27,20,estoque zerado na área de venda no PDV 12,ruptura,alta,0.686,1
+156,2026-03-18,140,display da promoção não entregue após reposição,campanha,media,0.497,1
+157,2026-07-09,150,estoque zerado na área de venda na rede Norte,ruptura,alta,0.58,1
+158,2026-03-17,111,precificação incorreta no fim de semana,investigacao,indeterminada,0.458,1
+159,2026-01-22,79,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+160,2026-01-21,231,redução de giro sem dados de apoio segundo o promotor,investigacao,indeterminada,0.3,1
+161,2026-04-18,175,redução de giro sem dados de apoio no corredor 4,investigacao,indeterminada,0.359,1
+162,2026-02-22,91,encarte da campanha não exposto no PDV 12,campanha,media,0.509,1
+163,2026-10-14,227,suspeita sem registro de auditoria na unidade Sul,investigacao,indeterminada,0.34,1
+164,2026-11-14,192,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+165,2026-05-02,222,etiqueta de preço desatualizada no fim de semana,preco,media,0.768,1
+166,2026-04-01,226,frentes do produto reduzidas na loja Centro,ruptura,alta,0.454,1
+167,2026-01-13,46,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+168,2026-06-20,201,suspeita sem registro de auditoria na visita de segunda,investigacao,indeterminada,0.326,1
+169,2026-05-08,69,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+170,2026-02-25,98,frentes do produto reduzidas na loja Centro,ruptura,alta,0.454,1
+171,2026-08-29,57,estoque zerado na área de venda na rede Norte,ruptura,alta,0.58,1
+172,2026-08-24,90,frentes do produto reduzidas no corredor 4,ruptura,alta,0.332,1
+173,2026-04-27,58,encarte da campanha não exposto no fim de semana,campanha,media,0.491,1
+174,2026-04-09,103,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+175,2026-05-23,222,redução de giro sem dados de apoio hoje pela manhã,investigacao,indeterminada,0.3,1
+176,2026-05-23,90,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+177,2026-09-18,103,display da promoção não entregue no PDV 12,campanha,media,0.567,1
+178,2026-10-02,85,display da promoção não entregue no corredor 4,campanha,media,0.52,1
+179,2026-03-01,225,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+180,2026-04-02,149,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+181,2026-01-20,28,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+182,2026-08-11,89,layout de gôndola desorganizado no corredor 4,ruptura,alta,0.442,1
+183,2026-06-10,112,suspeita sem registro de auditoria hoje pela manhã,ruptura,alta,0.307,1
+184,2026-09-19,30,layout de gôndola desorganizado segundo o promotor,ruptura,alta,0.436,1
+185,2026-10-23,49,redução de giro sem dados de apoio no fim de semana,investigacao,indeterminada,0.398,1
+186,2026-01-23,182,encarte da campanha não exposto hoje pela manhã,campanha,media,0.516,1
+187,2026-01-01,134,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+188,2026-04-11,94,precificação incorreta após reposição,investigacao,indeterminada,0.346,1
+189,2026-02-05,171,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+190,2026-06-10,170,redução de giro sem dados de apoio hoje pela manhã,investigacao,indeterminada,0.3,1
+191,2026-06-03,130,etiqueta de preço desatualizada no corredor 4,preco,media,0.829,1
+192,2026-07-29,84,encarte da campanha não exposto no fim de semana,campanha,media,0.491,1
+193,2026-06-01,142,não há unidades disponíveis na loja Centro,ruptura,alta,0.276,1
+194,2026-04-09,108,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+195,2026-07-14,174,display da promoção não entregue na rede Norte,campanha,media,0.568,1
+196,2026-03-31,158,suspeita sem registro de auditoria na rede Norte,investigacao,indeterminada,0.339,1
+197,2026-06-04,104,layout de gôndola desorganizado no PDV 12,ruptura,alta,0.593,1
+198,2026-01-01,78,precificação incorreta no fim de semana,investigacao,indeterminada,0.458,1
+199,2026-04-18,111,encarte da campanha não exposto segundo o promotor,campanha,media,0.545,1
+200,2026-10-24,156,suspeita sem registro de auditoria no fim de semana,investigacao,indeterminada,0.391,1
+201,2026-06-14,120,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+202,2026-08-15,173,não há unidades disponíveis no corredor 4,campanha,media,0.252,1
+203,2026-09-19,122,frentes do produto reduzidas após reposição,execucao,media,0.352,1
+204,2026-03-28,169,suspeita sem registro de auditoria na visita de segunda,investigacao,indeterminada,0.326,1
+205,2026-05-26,132,etiqueta de preço desatualizada na loja Centro,preco,media,0.797,1
+206,2026-11-14,86,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+207,2026-05-01,173,etiqueta de preço desatualizada no PDV 12,preco,media,0.827,1
+208,2026-04-26,207,encarte da campanha não exposto no fim de semana,campanha,media,0.491,1
+209,2026-03-17,7,frentes do produto reduzidas no corredor 4,ruptura,alta,0.332,1
+210,2026-05-06,122,estoque zerado na área de venda no corredor 4,ruptura,alta,0.564,1
+211,2026-02-07,117,layout de gôndola desorganizado após reposição,ruptura,alta,0.398,1
+212,2026-10-22,50,não há unidades disponíveis hoje pela manhã,campanha,media,0.309,1
+213,2026-07-16,127,suspeita sem registro de auditoria na loja Centro,ruptura,alta,0.409,1
+214,2026-05-05,38,não há unidades disponíveis na loja Centro,ruptura,alta,0.276,1
+215,2026-01-03,229,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+216,2026-02-24,200,suspeita sem registro de auditoria no corredor 4,investigacao,indeterminada,0.358,1
+217,2026-04-23,46,não há unidades disponíveis na visita de segunda,campanha,media,0.263,1
+218,2026-09-23,119,display da promoção não entregue na unidade Sul,campanha,media,0.554,1
+219,2026-10-13,64,estoque zerado na área de venda segundo o promotor,ruptura,alta,0.566,1
+220,2026-08-22,35,etiqueta de preço desatualizada no corredor 4,preco,media,0.829,1
+221,2026-09-29,144,não há unidades disponíveis na unidade Sul,campanha,media,0.266,1
+222,2026-06-12,194,layout de gôndola desorganizado no corredor 4,ruptura,alta,0.442,1
+223,2026-11-10,209,não há unidades disponíveis no corredor 4,campanha,media,0.252,1
+224,2026-09-16,110,suspeita sem registro de auditoria no PDV 12,ruptura,alta,0.42,1
+225,2026-08-17,230,precificação incorreta no fim de semana,investigacao,indeterminada,0.458,1
+226,2026-09-01,116,frentes do produto reduzidas na loja Centro,ruptura,alta,0.454,1
+227,2026-05-07,216,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+228,2026-05-22,197,display da promoção não entregue na loja Centro,campanha,media,0.497,1
+229,2026-09-24,125,suspeita sem registro de auditoria na unidade Sul,investigacao,indeterminada,0.34,1
+230,2026-05-03,71,layout de gôndola desorganizado no fim de semana,ruptura,alta,0.493,1
+231,2026-02-09,183,não há unidades disponíveis no corredor 4,campanha,media,0.252,1
+232,2026-05-01,70,encarte da campanha não exposto segundo o promotor,campanha,media,0.545,1
+233,2026-06-13,229,redução de giro sem dados de apoio hoje pela manhã,investigacao,indeterminada,0.3,1
+234,2026-02-11,36,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+235,2026-04-29,99,etiqueta de preço desatualizada no fim de semana,preco,media,0.768,1
+236,2026-03-20,181,display da promoção não entregue após reposição,campanha,media,0.497,1
+237,2026-02-02,107,frentes do produto reduzidas após reposição,execucao,media,0.352,1
+238,2026-06-19,139,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+239,2026-08-01,16,não há unidades disponíveis na unidade Sul,campanha,media,0.266,1
+240,2026-08-04,100,frentes do produto reduzidas segundo o promotor,ruptura,alta,0.345,1
+241,2026-10-27,179,suspeita sem registro de auditoria após reposição,investigacao,indeterminada,0.338,1
+242,2026-10-22,98,estoque zerado na área de venda hoje pela manhã,ruptura,alta,0.562,1
+243,2026-01-04,91,precificação incorreta na loja Centro,investigacao,indeterminada,0.334,1
+244,2026-07-19,219,encarte da campanha não exposto na unidade Sul,campanha,media,0.508,1
+245,2026-10-03,192,não há unidades disponíveis hoje pela manhã,campanha,media,0.309,1
+246,2026-10-07,205,suspeita sem registro de auditoria na visita de segunda,investigacao,indeterminada,0.326,1
+247,2026-04-23,125,layout de gôndola desorganizado segundo o promotor,ruptura,alta,0.436,1
+248,2026-05-20,112,frentes do produto reduzidas na unidade Sul,ruptura,alta,0.341,1
+249,2026-01-15,100,precificação incorreta no PDV 12,investigacao,indeterminada,0.35,1
+250,2026-07-27,186,redução de giro sem dados de apoio na visita de segunda,investigacao,indeterminada,0.343,1
+251,2026-08-28,236,frentes do produto reduzidas no PDV 12,ruptura,alta,0.452,1
+252,2026-10-01,7,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+253,2026-10-31,145,queda de vendas sem evidência suficiente,investigacao,indeterminada,0.961,1
+254,2026-01-14,22,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+255,2026-08-08,35,display da promoção não entregue no PDV 12,campanha,media,0.567,1
+256,2026-04-04,13,não há unidades disponíveis na unidade Sul,campanha,media,0.266,1
+257,2026-07-14,84,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+258,2026-08-21,84,frentes do produto reduzidas após reposição,execucao,media,0.352,1
+259,2026-07-14,72,redução de giro sem dados de apoio na visita de segunda,investigacao,indeterminada,0.343,1
+260,2026-08-04,65,suspeita sem registro de auditoria no corredor 4,investigacao,indeterminada,0.358,1
+261,2026-08-29,5,etiqueta de preço desatualizada na loja Centro,preco,media,0.797,1
+262,2026-10-04,14,suspeita sem registro de auditoria na rede Norte,investigacao,indeterminada,0.339,1
+263,2026-04-25,167,redução de giro sem dados de apoio na rede Norte,investigacao,indeterminada,0.339,1
+264,2026-01-21,194,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+265,2026-05-07,52,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+266,2026-03-20,62,estoque zerado na área de venda hoje pela manhã,ruptura,alta,0.562,1
+267,2026-08-31,172,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+268,2026-10-16,56,etiqueta de preço desatualizada na rede Norte,preco,media,0.817,1
+269,2026-05-12,197,não há unidades disponíveis na unidade Sul,campanha,media,0.266,1
+270,2026-03-27,156,redução de giro sem dados de apoio após reposição,investigacao,indeterminada,0.309,1
+271,2026-02-28,200,layout de gôndola desorganizado segundo o promotor,ruptura,alta,0.436,1
+272,2026-06-09,28,frentes do produto reduzidas na loja Centro,ruptura,alta,0.454,1
+273,2026-01-14,238,layout de gôndola desorganizado na visita de segunda,ruptura,alta,0.473,1
+274,2026-10-22,174,encarte da campanha não exposto no fim de semana,campanha,media,0.491,1
+275,2026-07-23,184,redução de giro sem dados de apoio na unidade Sul,investigacao,indeterminada,0.342,1
+276,2026-02-08,152,frentes do produto reduzidas no corredor 4,ruptura,alta,0.332,1
+277,2026-05-05,27,display da promoção não entregue após reposição,campanha,media,0.497,1
+278,2026-06-04,218,display da promoção não entregue na unidade Sul,campanha,media,0.554,1
+279,2026-11-04,207,display da promoção não entregue segundo o promotor,campanha,media,0.554,1
+280,2026-10-17,201,etiqueta de preço desatualizada no corredor 4,preco,media,0.829,1
+281,2026-06-27,137,estoque zerado na área de venda no corredor 4,ruptura,alta,0.564,1
+282,2026-07-09,18,não há unidades disponíveis na visita de segunda,campanha,media,0.263,1
+283,2026-06-24,4,precificação incorreta na visita de segunda,investigacao,indeterminada,0.386,1
+284,2026-09-08,28,não há unidades disponíveis hoje pela manhã,campanha,media,0.309,1
+285,2026-07-05,163,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+286,2026-03-20,112,não há unidades disponíveis após reposição,execucao,media,0.26,1
+287,2026-09-25,167,frentes do produto reduzidas hoje pela manhã,ruptura,alta,0.348,1
+288,2026-11-12,207,encarte da campanha não exposto na rede Norte,campanha,media,0.507,1
+289,2026-09-05,120,precificação incorreta após reposição,investigacao,indeterminada,0.346,1
+290,2026-10-31,69,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+291,2026-05-06,213,redução de giro sem dados de apoio no PDV 12,investigacao,indeterminada,0.306,1
+292,2026-05-23,226,etiqueta de preço desatualizada no PDV 12,preco,media,0.827,1
+293,2026-05-05,193,não há unidades disponíveis segundo o promotor,campanha,media,0.324,1
+294,2026-10-19,157,não há unidades disponíveis na unidade Sul,campanha,media,0.266,1
+295,2026-07-14,87,display da promoção não entregue na rede Norte,campanha,media,0.568,1
+296,2026-09-11,218,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+297,2026-04-04,125,redução de giro sem dados de apoio no PDV 12,investigacao,indeterminada,0.306,1
+298,2026-07-01,205,frentes do produto reduzidas após reposição,execucao,media,0.352,1
+299,2026-06-24,72,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+300,2026-05-22,143,layout de gôndola desorganizado no corredor 4,ruptura,alta,0.442,1
+301,2026-09-22,49,estoque zerado na área de venda no PDV 12,ruptura,alta,0.686,1
+302,2026-05-04,185,etiqueta de preço desatualizada na loja Centro,preco,media,0.797,1
+303,2026-09-08,143,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+304,2026-05-04,177,suspeita sem registro de auditoria segundo o promotor,ruptura,alta,0.306,1
+305,2026-09-09,115,não há unidades disponíveis no fim de semana,campanha,media,0.25,1
+306,2026-02-17,76,estoque zerado na área de venda hoje pela manhã,ruptura,alta,0.562,1
+307,2026-07-27,178,frentes do produto reduzidas na unidade Sul,ruptura,alta,0.341,1
+308,2026-06-06,170,encarte da campanha não exposto no PDV 12,campanha,media,0.509,1
+309,2026-07-08,122,layout de gôndola desorganizado na visita de segunda,ruptura,alta,0.473,1
+310,2026-09-29,89,precificação incorreta no fim de semana,investigacao,indeterminada,0.458,1
+311,2026-10-09,85,não há unidades disponíveis na visita de segunda,campanha,media,0.263,1
+312,2026-08-21,70,redução de giro sem dados de apoio no corredor 4,investigacao,indeterminada,0.359,1
+313,2026-05-09,60,encarte da campanha não exposto no fim de semana,campanha,media,0.491,1
+314,2026-04-09,81,etiqueta de preço desatualizada no corredor 4,preco,media,0.829,1
+315,2026-10-02,196,etiqueta de preço desatualizada no corredor 4,preco,media,0.829,1
+316,2026-04-05,50,display da promoção não entregue após reposição,campanha,media,0.497,1
+317,2026-09-05,71,frentes do produto reduzidas após reposição,execucao,media,0.352,1
+318,2026-10-29,195,suspeita sem registro de auditoria no PDV 12,ruptura,alta,0.42,1
+319,2026-11-02,73,precificação incorreta segundo o promotor,investigacao,indeterminada,0.332,1
+320,2026-04-10,76,etiqueta de preço desatualizada hoje pela manhã,preco,media,0.782,1
+321,2026-07-04,46,frentes do produto reduzidas no fim de semana,ruptura,alta,0.387,1
+322,2026-01-08,182,encarte da campanha não exposto na unidade Sul,campanha,media,0.508,1
+323,2026-03-06,71,precificação incorreta após reposição,investigacao,indeterminada,0.346,1
+324,2026-01-28,142,estoque zerado na área de venda no corredor 4,ruptura,alta,0.564,1
+325,2026-03-06,164,encarte da campanha não exposto após reposição,campanha,media,0.432,1
+326,2026-09-09,27,suspeita sem registro de auditoria no corredor 4,investigacao,indeterminada,0.358,1
+327,2026-10-21,73,estoque zerado na área de venda no PDV 12,ruptura,alta,0.686,1
+328,2026-09-03,113,não há unidades disponíveis no fim de semana,campanha,media,0.25,1
+329,2026-04-05,14,redução de giro sem dados de apoio na visita de segunda,investigacao,indeterminada,0.343,1
+330,2026-09-02,30,encarte da campanha não exposto hoje pela manhã,campanha,media,0.516,1
+331,2026-07-25,126,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+332,2026-10-23,162,estoque zerado na área de venda no fim de semana,ruptura,alta,0.602,1
+333,2026-01-28,39,display da promoção não entregue segundo o promotor,campanha,media,0.554,1
+334,2026-10-16,78,etiqueta de preço desatualizada no fim de semana,preco,media,0.768,1
+335,2026-05-08,31,etiqueta de preço desatualizada na loja Centro,preco,media,0.797,1
+336,2026-08-02,156,layout de gôndola desorganizado na loja Centro,ruptura,alta,0.572,1
+337,2026-11-13,58,layout de gôndola desorganizado no corredor 4,ruptura,alta,0.442,1
+338,2026-09-25,98,suspeita sem registro de auditoria na unidade Sul,investigacao,indeterminada,0.34,1
+339,2026-08-15,77,não há unidades disponíveis segundo o promotor,campanha,media,0.324,1
+340,2026-08-08,79,layout de gôndola desorganizado na rede Norte,ruptura,alta,0.464,1
+341,2026-11-14,16,layout de gôndola desorganizado no PDV 12,ruptura,alta,0.593,1
+342,2026-02-20,196,layout de gôndola desorganizado após reposição,ruptura,alta,0.398,1
+343,2026-04-19,68,frentes do produto reduzidas segundo o promotor,ruptura,alta,0.345,1
+344,2026-02-11,41,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+345,2026-03-30,142,encarte da campanha não exposto na loja Centro,campanha,media,0.491,1
+346,2026-03-22,1,estoque zerado na área de venda no fim de semana,ruptura,alta,0.602,1
+347,2026-08-19,177,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+348,2026-08-29,75,layout de gôndola desorganizado no corredor 4,ruptura,alta,0.442,1
+349,2026-04-29,74,estoque zerado na área de venda na rede Norte,ruptura,alta,0.58,1
+350,2026-05-25,180,display da promoção não entregue no fim de semana,campanha,media,0.524,1
+351,2026-02-06,176,não há unidades disponíveis após reposição,execucao,media,0.26,1
+352,2026-05-16,202,frentes do produto reduzidas no fim de semana,ruptura,alta,0.387,1
+353,2026-10-29,170,layout de gôndola desorganizado no fim de semana,ruptura,alta,0.493,1
+354,2026-08-06,30,frentes do produto reduzidas no corredor 4,ruptura,alta,0.332,1
+355,2026-04-26,166,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+356,2026-05-17,212,etiqueta de preço desatualizada no fim de semana,preco,media,0.768,1
+357,2026-02-06,16,etiqueta de preço desatualizada na unidade Sul,preco,media,0.788,1
+358,2026-06-07,153,frentes do produto reduzidas no PDV 12,ruptura,alta,0.452,1
+359,2026-10-19,236,suspeita sem registro de auditoria na rede Norte,investigacao,indeterminada,0.339,1
+360,2026-08-13,32,encarte da campanha não exposto segundo o promotor,campanha,media,0.545,1
+361,2026-06-05,180,não há unidades disponíveis na unidade Sul,campanha,media,0.266,1
+362,2026-05-20,129,não há unidades disponíveis na loja Centro,ruptura,alta,0.276,1
+363,2026-09-10,113,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+364,2026-11-03,11,etiqueta de preço desatualizada na loja Centro,preco,media,0.797,1
+365,2026-06-15,155,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+366,2026-01-14,24,encarte da campanha não exposto hoje pela manhã,campanha,media,0.516,1
+367,2026-10-22,151,frentes do produto reduzidas no fim de semana,ruptura,alta,0.387,1
+368,2026-05-18,148,estoque zerado na área de venda hoje pela manhã,ruptura,alta,0.562,1
+369,2026-03-31,121,estoque zerado na área de venda no corredor 4,ruptura,alta,0.564,1
+370,2026-08-15,235,precificação incorreta no corredor 4,investigacao,indeterminada,0.364,1
+371,2026-04-03,150,encarte da campanha não exposto no corredor 4,campanha,media,0.479,1
+372,2026-09-09,24,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+373,2026-06-28,105,não há unidades disponíveis no fim de semana,campanha,media,0.25,1
+374,2026-06-14,172,redução de giro sem dados de apoio hoje pela manhã,investigacao,indeterminada,0.3,1
+375,2026-03-24,85,etiqueta de preço desatualizada na visita de segunda,preco,media,0.747,1
+376,2026-09-11,74,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+377,2026-07-25,209,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+378,2026-10-09,10,suspeita sem registro de auditoria segundo o promotor,ruptura,alta,0.306,1
+379,2026-02-15,81,não há unidades disponíveis após reposição,execucao,media,0.26,1
+380,2026-06-15,30,encarte da campanha não exposto hoje pela manhã,campanha,media,0.516,1
+381,2026-07-26,222,suspeita sem registro de auditoria após reposição,investigacao,indeterminada,0.338,1
+382,2026-01-01,169,precificação incorreta na rede Norte,investigacao,indeterminada,0.376,1
+383,2026-08-25,106,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+384,2026-04-07,133,estoque zerado na área de venda segundo o promotor,ruptura,alta,0.566,1
+385,2026-09-13,161,redução de giro sem dados de apoio segundo o promotor,investigacao,indeterminada,0.3,1
+386,2026-01-27,53,não há unidades disponíveis no corredor 4,campanha,media,0.252,1
+387,2026-10-09,34,encarte da campanha não exposto na rede Norte,campanha,media,0.507,1
+388,2026-08-13,226,encarte da campanha não exposto segundo o promotor,campanha,media,0.545,1
+389,2026-09-06,32,display da promoção não entregue na unidade Sul,campanha,media,0.554,1
+390,2026-11-08,205,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+391,2026-03-23,80,encarte da campanha não exposto na loja Centro,campanha,media,0.491,1
+392,2026-01-08,142,precificação incorreta no fim de semana,investigacao,indeterminada,0.458,1
+393,2026-02-17,58,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+394,2026-08-25,31,etiqueta de preço desatualizada na rede Norte,preco,media,0.817,1
+395,2026-03-20,128,display da promoção não entregue no PDV 12,campanha,media,0.567,1
+396,2026-05-30,131,suspeita sem registro de auditoria na loja Centro,ruptura,alta,0.409,1
+397,2026-05-20,107,display da promoção não entregue no fim de semana,campanha,media,0.524,1
+398,2026-08-30,63,precificação incorreta na loja Centro,investigacao,indeterminada,0.334,1
+399,2026-10-10,38,não há unidades disponíveis após reposição,execucao,media,0.26,1
+400,2026-04-08,236,redução de giro sem dados de apoio no fim de semana,investigacao,indeterminada,0.398,1
+401,2026-09-18,192,layout de gôndola desorganizado no corredor 4,ruptura,alta,0.442,1
+402,2026-02-05,71,etiqueta de preço desatualizada após reposição,preco,media,0.736,1
+403,2026-08-01,88,suspeita sem registro de auditoria após reposição,investigacao,indeterminada,0.338,1
+404,2026-09-17,69,suspeita sem registro de auditoria no fim de semana,investigacao,indeterminada,0.391,1
+405,2026-05-25,186,estoque zerado na área de venda na loja Centro,ruptura,alta,0.665,1
+406,2026-10-28,149,encarte da campanha não exposto na unidade Sul,campanha,media,0.508,1
+407,2026-09-08,222,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+408,2026-08-17,138,etiqueta de preço desatualizada no fim de semana,preco,media,0.768,1
+409,2026-06-26,86,precificação incorreta na loja Centro,investigacao,indeterminada,0.334,1
+410,2026-10-06,97,precificação incorreta no fim de semana,investigacao,indeterminada,0.458,1
+411,2026-06-14,223,não há unidades disponíveis após reposição,execucao,media,0.26,1
+412,2026-05-03,147,frentes do produto reduzidas na rede Norte,ruptura,alta,0.353,1
+413,2026-04-30,220,redução de giro sem dados de apoio no fim de semana,investigacao,indeterminada,0.398,1
+414,2026-07-30,12,suspeita sem registro de auditoria na unidade Sul,investigacao,indeterminada,0.34,1
+415,2026-08-31,181,redução de giro sem dados de apoio na loja Centro,ruptura,alta,0.297,1
+416,2026-07-17,170,redução de giro sem dados de apoio na unidade Sul,investigacao,indeterminada,0.342,1
+417,2026-03-19,127,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+418,2026-03-06,129,estoque zerado na área de venda na rede Norte,ruptura,alta,0.58,1
+419,2026-06-19,223,layout de gôndola desorganizado na rede Norte,ruptura,alta,0.464,1
+420,2026-08-14,26,etiqueta de preço desatualizada hoje pela manhã,preco,media,0.782,1
+421,2026-08-22,4,precificação incorreta segundo o promotor,investigacao,indeterminada,0.332,1
+422,2026-03-15,105,suspeita sem registro de auditoria no PDV 12,ruptura,alta,0.42,1
+423,2026-03-21,20,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+424,2026-05-16,87,não há unidades disponíveis no fim de semana,campanha,media,0.25,1
+425,2026-07-23,167,layout de gôndola desorganizado na unidade Sul,ruptura,alta,0.438,1
+426,2026-06-18,219,etiqueta de preço desatualizada na loja Centro,preco,media,0.797,1
+427,2026-10-01,98,display da promoção não entregue no corredor 4,campanha,media,0.52,1
+428,2026-09-07,224,redução de giro sem dados de apoio na loja Centro,ruptura,alta,0.297,1
+429,2026-01-19,159,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+430,2026-05-01,162,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+431,2026-05-28,59,display da promoção não entregue segundo o promotor,campanha,media,0.554,1
+432,2026-02-16,112,suspeita sem registro de auditoria na rede Norte,investigacao,indeterminada,0.339,1
+433,2026-02-21,114,etiqueta de preço desatualizada hoje pela manhã,preco,media,0.782,1
+434,2026-06-03,232,frentes do produto reduzidas no PDV 12,ruptura,alta,0.452,1
+435,2026-01-24,84,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+436,2026-05-31,92,estoque zerado na área de venda após reposição,ruptura,alta,0.512,1
+437,2026-08-09,38,redução de giro sem dados de apoio após reposição,investigacao,indeterminada,0.309,1
+438,2026-09-29,106,encarte da campanha não exposto no PDV 12,campanha,media,0.509,1
+439,2026-04-03,44,layout de gôndola desorganizado no PDV 12,ruptura,alta,0.593,1
+440,2026-02-10,157,frentes do produto reduzidas hoje pela manhã,ruptura,alta,0.348,1
+441,2026-11-14,175,redução de giro sem dados de apoio na unidade Sul,investigacao,indeterminada,0.342,1
+442,2026-09-12,234,encarte da campanha não exposto na loja Centro,campanha,media,0.491,1
+443,2026-03-15,60,layout de gôndola desorganizado na visita de segunda,ruptura,alta,0.473,1
+444,2026-05-11,118,não há unidades disponíveis na unidade Sul,campanha,media,0.266,1
+445,2026-01-05,231,encarte da campanha não exposto hoje pela manhã,campanha,media,0.516,1
+446,2026-05-28,174,não há unidades disponíveis na unidade Sul,campanha,media,0.266,1
+447,2026-03-22,19,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+448,2026-06-26,151,não há unidades disponíveis no corredor 4,campanha,media,0.252,1
+449,2026-08-06,177,encarte da campanha não exposto na unidade Sul,campanha,media,0.508,1
+450,2026-08-22,217,encarte da campanha não exposto hoje pela manhã,campanha,media,0.516,1
+451,2026-04-12,99,encarte da campanha não exposto na unidade Sul,campanha,media,0.508,1
+452,2026-02-24,61,precificação incorreta na loja Centro,investigacao,indeterminada,0.334,1
+453,2026-10-20,92,redução de giro sem dados de apoio na unidade Sul,investigacao,indeterminada,0.342,1
+454,2026-06-01,180,layout de gôndola desorganizado hoje pela manhã,ruptura,alta,0.43,1
+455,2026-01-12,213,encarte da campanha não exposto após reposição,campanha,media,0.432,1
+456,2026-07-22,71,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+457,2026-10-17,222,estoque zerado na área de venda no PDV 12,ruptura,alta,0.686,1
+458,2026-01-26,234,display da promoção não entregue segundo o promotor,campanha,media,0.554,1
+459,2026-09-12,214,layout de gôndola desorganizado segundo o promotor,ruptura,alta,0.436,1
+460,2026-04-28,156,encarte da campanha não exposto segundo o promotor,campanha,media,0.545,1
+461,2026-04-23,163,redução de giro sem dados de apoio no corredor 4,investigacao,indeterminada,0.359,1
+462,2026-11-14,65,frentes do produto reduzidas na rede Norte,ruptura,alta,0.353,1
+463,2026-03-12,161,display da promoção não entregue no corredor 4,campanha,media,0.52,1
+464,2026-01-21,80,etiqueta de preço desatualizada hoje pela manhã,preco,media,0.782,1
+465,2026-08-14,9,suspeita sem registro de auditoria no fim de semana,investigacao,indeterminada,0.391,1
+466,2026-07-06,188,layout de gôndola desorganizado na visita de segunda,ruptura,alta,0.473,1
+467,2026-02-16,233,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+468,2026-06-17,192,encarte da campanha não exposto após reposição,campanha,media,0.432,1
+469,2026-03-31,52,não há unidades disponíveis hoje pela manhã,campanha,media,0.309,1
+470,2026-10-04,225,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+471,2026-09-29,129,redução de giro sem dados de apoio segundo o promotor,investigacao,indeterminada,0.3,1
+472,2026-03-26,66,encarte da campanha não exposto na rede Norte,campanha,media,0.507,1
+473,2026-06-01,192,precificação incorreta na loja Centro,investigacao,indeterminada,0.334,1
+474,2026-02-28,120,redução de giro sem dados de apoio na visita de segunda,investigacao,indeterminada,0.343,1
+475,2026-03-14,194,estoque zerado na área de venda no fim de semana,ruptura,alta,0.602,1
+476,2026-07-23,217,frentes do produto reduzidas na unidade Sul,ruptura,alta,0.341,1
+477,2026-07-07,24,layout de gôndola desorganizado na loja Centro,ruptura,alta,0.572,1
+478,2026-01-08,68,queda de vendas sem evidência suficiente,investigacao,indeterminada,0.961,1
+479,2026-03-05,117,precificação incorreta após reposição,investigacao,indeterminada,0.346,1
+480,2026-05-15,150,redução de giro sem dados de apoio após reposição,investigacao,indeterminada,0.309,1
+481,2026-07-10,28,redução de giro sem dados de apoio na unidade Sul,investigacao,indeterminada,0.342,1
+482,2026-04-30,121,display da promoção não entregue no corredor 4,campanha,media,0.52,1
+483,2026-11-14,227,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+484,2026-06-17,235,layout de gôndola desorganizado na loja Centro,ruptura,alta,0.572,1
+485,2026-04-24,166,layout de gôndola desorganizado após reposição,ruptura,alta,0.398,1
+486,2026-08-26,233,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+487,2026-06-04,167,display da promoção não entregue na unidade Sul,campanha,media,0.554,1
+488,2026-03-01,36,não há unidades disponíveis no PDV 12,campanha,media,0.264,1
+489,2026-01-20,78,estoque zerado na área de venda no corredor 4,ruptura,alta,0.564,1
+490,2026-03-01,25,precificação incorreta hoje pela manhã,investigacao,indeterminada,0.327,1
+491,2026-10-03,35,encarte da campanha não exposto na loja Centro,campanha,media,0.491,1
+492,2026-08-21,95,redução de giro sem dados de apoio no fim de semana,investigacao,indeterminada,0.398,1
+493,2026-10-04,108,display da promoção não entregue na rede Norte,campanha,media,0.568,1
+494,2026-03-21,227,layout de gôndola desorganizado na rede Norte,ruptura,alta,0.464,1
+495,2026-02-20,214,não há unidades disponíveis hoje pela manhã,campanha,media,0.309,1
+496,2026-11-12,105,precificação incorreta no PDV 12,investigacao,indeterminada,0.35,1
+497,2026-01-17,177,encarte da campanha não exposto no corredor 4,campanha,media,0.479,1
+498,2026-04-22,114,redução de giro sem dados de apoio após reposição,investigacao,indeterminada,0.309,1
+499,2026-05-01,219,não há unidades disponíveis no corredor 4,campanha,media,0.252,1
+500,2026-02-20,176,redução de giro sem dados de apoio segundo o promotor,investigacao,indeterminada,0.3,1
+501,2026-10-06,231,redução de giro sem dados de apoio após reposição,investigacao,indeterminada,0.309,1
+502,2026-07-03,16,display da promoção não entregue no PDV 12,campanha,media,0.567,1
+503,2026-05-22,49,queda de vendas sem evidência suficiente,investigacao,indeterminada,0.961,1
+504,2026-08-21,24,etiqueta de preço desatualizada no corredor 4,preco,media,0.829,1
+505,2026-04-19,165,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+506,2026-11-02,6,display da promoção não entregue na loja Centro,campanha,media,0.497,1
+507,2026-06-20,63,estoque zerado na área de venda segundo o promotor,ruptura,alta,0.566,1
+508,2026-10-17,53,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+509,2026-10-11,54,estoque zerado na área de venda na unidade Sul,ruptura,alta,0.558,1
+510,2026-04-21,209,layout de gôndola desorganizado na rede Norte,ruptura,alta,0.464,1
+511,2026-06-18,199,frentes do produto reduzidas no fim de semana,ruptura,alta,0.387,1
+512,2026-11-02,1,etiqueta de preço desatualizada na unidade Sul,preco,media,0.788,1
+513,2026-03-16,34,encarte da campanha não exposto no corredor 4,campanha,media,0.479,1
+514,2026-05-09,205,precificação incorreta na unidade Sul,investigacao,indeterminada,0.375,1
+515,2026-02-26,170,frentes do produto reduzidas hoje pela manhã,ruptura,alta,0.348,1
+516,2026-03-09,4,estoque zerado na área de venda na visita de segunda,ruptura,alta,0.571,1
+517,2026-05-02,151,redução de giro sem dados de apoio no corredor 4,investigacao,indeterminada,0.359,1
+518,2026-01-09,45,redução de giro sem dados de apoio no PDV 12,investigacao,indeterminada,0.306,1
+519,2026-01-27,33,encarte da campanha não exposto na visita de segunda,campanha,media,0.495,1
+520,2026-08-04,135,suspeita sem registro de auditoria na visita de segunda,investigacao,indeterminada,0.326,1
+521,2026-02-02,122,etiqueta de preço desatualizada na rede Norte,preco,media,0.817,1
+522,2026-07-05,132,não há unidades disponíveis segundo o promotor,campanha,media,0.324,1
+523,2026-02-25,116,layout de gôndola desorganizado na rede Norte,ruptura,alta,0.464,1
+524,2026-04-24,158,precificação incorreta na visita de segunda,investigacao,indeterminada,0.386,1
+525,2026-09-24,78,estoque zerado na área de venda no corredor 4,ruptura,alta,0.564,1
+526,2026-01-16,16,não há unidades disponíveis após reposição,execucao,media,0.26,1
+527,2026-07-25,110,precificação incorreta na loja Centro,investigacao,indeterminada,0.334,1
+528,2026-02-25,126,display da promoção não entregue segundo o promotor,campanha,media,0.554,1
+529,2026-08-16,19,suspeita sem registro de auditoria na loja Centro,ruptura,alta,0.409,1
+530,2026-06-14,156,etiqueta de preço desatualizada na loja Centro,preco,media,0.797,1
+531,2026-02-03,33,etiqueta de preço desatualizada na unidade Sul,preco,media,0.788,1
+532,2026-10-27,141,encarte da campanha não exposto no corredor 4,campanha,media,0.479,1
+533,2026-06-16,98,suspeita sem registro de auditoria na loja Centro,ruptura,alta,0.409,1
+534,2026-09-29,76,layout de gôndola desorganizado no corredor 4,ruptura,alta,0.442,1
+535,2026-09-16,155,não há unidades disponíveis após reposição,execucao,media,0.26,1
+536,2026-02-20,204,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+537,2026-02-28,219,display da promoção não entregue na unidade Sul,campanha,media,0.554,1
+538,2026-10-10,185,display da promoção não entregue hoje pela manhã,campanha,media,0.579,1
+539,2026-08-09,116,frentes do produto reduzidas após reposição,execucao,media,0.352,1
+540,2026-07-31,87,frentes do produto reduzidas no fim de semana,ruptura,alta,0.387,1
+541,2026-07-24,107,não há unidades disponíveis após reposição,execucao,media,0.26,1
+542,2026-02-18,81,suspeita sem registro de auditoria hoje pela manhã,ruptura,alta,0.307,1
+543,2026-06-10,171,não há unidades disponíveis na visita de segunda,campanha,media,0.263,1
+544,2026-07-11,40,encarte da campanha não exposto hoje pela manhã,campanha,media,0.516,1
+545,2026-08-31,18,display da promoção não entregue segundo o promotor,campanha,media,0.554,1
+546,2026-02-13,24,etiqueta de preço desatualizada no PDV 12,preco,media,0.827,1
+547,2026-02-19,191,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+548,2026-07-10,208,suspeita sem registro de auditoria na visita de segunda,investigacao,indeterminada,0.326,1
+549,2026-10-12,16,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+550,2026-10-15,144,layout de gôndola desorganizado na rede Norte,ruptura,alta,0.464,1
+551,2026-03-04,106,redução de giro sem dados de apoio hoje pela manhã,investigacao,indeterminada,0.3,1
+552,2026-08-05,223,redução de giro sem dados de apoio no corredor 4,investigacao,indeterminada,0.359,1
+553,2026-01-27,74,suspeita sem registro de auditoria no PDV 12,ruptura,alta,0.42,1
+554,2026-06-09,91,layout de gôndola desorganizado no corredor 4,ruptura,alta,0.442,1
+555,2026-10-23,130,etiqueta de preço desatualizada na visita de segunda,preco,media,0.747,1
+556,2026-03-21,169,frentes do produto reduzidas após reposição,execucao,media,0.352,1
+557,2026-04-25,217,precificação incorreta na loja Centro,investigacao,indeterminada,0.334,1
+558,2026-06-29,217,etiqueta de preço desatualizada na visita de segunda,preco,media,0.747,1
+559,2026-07-08,30,layout de gôndola desorganizado na loja Centro,ruptura,alta,0.572,1
+560,2026-05-23,147,suspeita sem registro de auditoria segundo o promotor,ruptura,alta,0.306,1
+561,2026-08-08,217,frentes do produto reduzidas na unidade Sul,ruptura,alta,0.341,1
+562,2026-11-11,173,layout de gôndola desorganizado na loja Centro,ruptura,alta,0.572,1
+563,2026-10-13,7,display da promoção não entregue no PDV 12,campanha,media,0.567,1
+564,2026-05-17,8,layout de gôndola desorganizado segundo o promotor,ruptura,alta,0.436,1
+565,2026-05-20,180,frentes do produto reduzidas na visita de segunda,ruptura,alta,0.382,1
+566,2026-06-08,236,suspeita sem registro de auditoria segundo o promotor,ruptura,alta,0.306,1
+567,2026-06-29,2,redução de giro sem dados de apoio na visita de segunda,investigacao,indeterminada,0.343,1
+568,2026-03-15,145,frentes do produto reduzidas na visita de segunda,ruptura,alta,0.382,1
+569,2026-07-25,18,display da promoção não entregue na visita de segunda,campanha,media,0.505,1
+570,2026-01-16,24,etiqueta de preço desatualizada na unidade Sul,preco,media,0.788,1
+571,2026-09-29,56,suspeita sem registro de auditoria na rede Norte,investigacao,indeterminada,0.339,1
+572,2026-08-03,117,redução de giro sem dados de apoio na unidade Sul,investigacao,indeterminada,0.342,1
+573,2026-03-22,95,redução de giro sem dados de apoio na visita de segunda,investigacao,indeterminada,0.343,1
+574,2026-06-16,199,encarte da campanha não exposto no fim de semana,campanha,media,0.491,1
+575,2026-11-02,22,layout de gôndola desorganizado no PDV 12,ruptura,alta,0.593,1
+576,2026-03-21,41,estoque zerado na área de venda segundo o promotor,ruptura,alta,0.566,1
+577,2026-11-13,13,suspeita sem registro de auditoria no corredor 4,investigacao,indeterminada,0.358,1
+578,2026-02-11,70,display da promoção não entregue no corredor 4,campanha,media,0.52,1
+579,2026-08-06,125,não há unidades disponíveis no corredor 4,campanha,media,0.252,1
+580,2026-08-15,107,layout de gôndola desorganizado segundo o promotor,ruptura,alta,0.436,1
+581,2026-04-21,194,encarte da campanha não exposto na rede Norte,campanha,media,0.507,1
+582,2026-02-28,89,precificação incorreta na rede Norte,investigacao,indeterminada,0.376,1
+583,2026-02-26,73,não há unidades disponíveis na rede Norte,campanha,media,0.285,1
+584,2026-10-31,125,display da promoção não entregue no corredor 4,campanha,media,0.52,1
+585,2026-06-07,12,precificação incorreta segundo o promotor,investigacao,indeterminada,0.332,1
+586,2026-07-22,154,frentes do produto reduzidas na unidade Sul,ruptura,alta,0.341,1
+587,2026-01-04,53,estoque zerado na área de venda após reposição,ruptura,alta,0.512,1
+588,2026-04-19,197,encarte da campanha não exposto na unidade Sul,campanha,media,0.508,1
+589,2026-05-11,75,etiqueta de preço desatualizada após reposição,preco,media,0.736,1
+590,2026-03-03,2,redução de giro sem dados de apoio no PDV 12,investigacao,indeterminada,0.306,1
+591,2026-08-09,45,precificação incorreta hoje pela manhã,investigacao,indeterminada,0.327,1
+592,2026-07-14,137,etiqueta de preço desatualizada segundo o promotor,preco,media,0.767,1
+593,2026-04-28,129,display da promoção não entregue no fim de semana,campanha,media,0.524,1
+594,2026-07-01,19,layout de gôndola desorganizado na loja Centro,ruptura,alta,0.572,1
+595,2026-01-22,112,queda de vendas sem evidência suficiente,investigacao,indeterminada,0.961,1
+596,2026-08-24,236,estoque zerado na área de venda hoje pela manhã,ruptura,alta,0.562,1
+597,2026-06-10,148,estoque zerado na área de venda no fim de semana,ruptura,alta,0.602,1
+598,2026-10-21,104,não há unidades disponíveis na visita de segunda,campanha,media,0.263,1
+599,2026-08-02,75,display da promoção não entregue no fim de semana,campanha,media,0.524,1
+600,2026-07-27,6,etiqueta de preço desatualizada na rede Norte,preco,media,0.817,1

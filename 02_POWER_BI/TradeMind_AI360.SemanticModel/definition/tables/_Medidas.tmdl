@@ -1,0 +1,995 @@
+table _Medidas
+	lineageTag: c2456cac-c5c3-8ea1-a107-1eee3edb33a5
+
+	measure Sell-out = SUM(fVenda[receita])
+		formatString: "R$" #,0
+		displayFolder: 01 Vendas
+		lineageTag: 9e0a8098-6292-9fbd-dfac-c5c7c581b498
+
+	measure Unidades = SUM(fVenda[unidades])
+		formatString: #,0
+		displayFolder: 01 Vendas
+		lineageTag: 0b1927a6-162d-01fc-e18b-9d7588654919
+
+	measure 'Preço Médio' = DIVIDE([Sell-out], [Unidades])
+		formatString: "R$" #,0.00
+		displayFolder: 01 Vendas
+		lineageTag: 69c789a6-d46e-a7f7-bd12-32b4b41b3a4c
+
+	measure 'Sell-out AA' = CALCULATE([Sell-out], SAMEPERIODLASTYEAR(dCalendario[Data]))
+		formatString: "R$" #,0
+		displayFolder: 01 Vendas
+		lineageTag: b729e650-6e2e-9d3d-9b66-a3c00645a10e
+
+	measure 'Sell-out Var %' = VAR c = CALCULATE([Sell-out], KEEPFILTERS(FILTER(ALL(dCalendario[Data]), dCalendario[Data] >= EDATE(CALCULATE(MIN(fVenda[data]), REMOVEFILTERS()), 12)))) VAR a = CALCULATE([Sell-out AA], KEEPFILTERS(FILTER(ALL(dCalendario[Data]), dCalendario[Data] >= EDATE(CALCULATE(MIN(fVenda[data]), REMOVEFILTERS()), 12)))) RETURN IF(NOT ISBLANK(a) && NOT ISBLANK(c), DIVIDE(c - a, a))
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 01 Vendas
+		lineageTag: 337e0672-6431-b723-8568-c0315379a268
+
+	measure 'Unidades AA' = CALCULATE([Unidades], SAMEPERIODLASTYEAR(dCalendario[Data]))
+		formatString: #,0
+		displayFolder: 01 Vendas
+		lineageTag: 1c2822ae-bceb-ae85-7da2-5c4ea44b58ae
+
+	measure 'Unidades Var %' = VAR c = CALCULATE([Unidades], KEEPFILTERS(FILTER(ALL(dCalendario[Data]), dCalendario[Data] >= EDATE(CALCULATE(MIN(fVenda[data]), REMOVEFILTERS()), 12)))) VAR a = CALCULATE([Unidades AA], KEEPFILTERS(FILTER(ALL(dCalendario[Data]), dCalendario[Data] >= EDATE(CALCULATE(MIN(fVenda[data]), REMOVEFILTERS()), 12)))) RETURN IF(NOT ISBLANK(a) && NOT ISBLANK(c), DIVIDE(c - a, a))
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 01 Vendas
+		lineageTag: 2448fce5-c974-b268-5909-d7d2eb31def8
+
+	measure 'PDVs Monitorados' = DISTINCTCOUNT(fVenda[pdv_id])
+		formatString: #,0
+		displayFolder: 01 Vendas
+		lineageTag: 0de3175e-67bc-e8d1-141b-049f9e52a13f
+
+	measure 'PDVs Cadastrados' = COUNTROWS(dPDV)
+		formatString: #,0
+		displayFolder: 01 Vendas
+		lineageTag: 05f026ae-b436-96ad-ab06-79064246318b
+
+	measure 'Meta Receita (amostra)' = SUM(fMeta[meta_receita])
+		formatString: "R$" #,0
+		displayFolder: 01 Vendas
+		lineageTag: 15cc1740-4683-8db3-0982-91e427e9b763
+
+	measure 'Atingimento Meta (amostra) %' = DIVIDE([Sell-out], [Meta Receita (amostra)])
+		formatString: 0.0%
+		displayFolder: 01 Vendas
+		lineageTag: d1b12e75-99a9-c12a-c48e-964d39cc7227
+
+	measure 'Ruptura %' = AVERAGE(fEstoque[ruptura])
+		formatString: 0.0%
+		displayFolder: 02 Ruptura
+		lineageTag: 21048d5e-1d7b-d0fb-9ecc-129937bb068f
+
+	measure 'Observações Estoque' = COUNTROWS(fEstoque)
+		formatString: #,0
+		displayFolder: 02 Ruptura
+		lineageTag: 57469a65-8b7d-b385-a78a-d0b739c115ed
+
+	measure 'Observações com Ruptura' = SUM(fEstoque[ruptura])
+		formatString: #,0
+		displayFolder: 02 Ruptura
+		lineageTag: dbd05ca0-c8d8-dd63-7ca7-b0c8568676db
+
+	measure 'Ruptura AA' = CALCULATE([Ruptura %], SAMEPERIODLASTYEAR(dCalendario[Data]))
+		formatString: 0.0%
+		displayFolder: 02 Ruptura
+		lineageTag: 5b90fa93-0789-323b-9b69-29289a377364
+
+	measure 'Ruptura Var pp' = VAR c = CALCULATE([Ruptura %], KEEPFILTERS(FILTER(ALL(dCalendario[Data]), dCalendario[Data] >= EDATE(CALCULATE(MIN(fVenda[data]), REMOVEFILTERS()), 12)))) VAR a = CALCULATE([Ruptura AA], KEEPFILTERS(FILTER(ALL(dCalendario[Data]), dCalendario[Data] >= EDATE(CALCULATE(MIN(fVenda[data]), REMOVEFILTERS()), 12)))) RETURN IF(NOT ISBLANK(a) && NOT ISBLANK(c), c - a)
+		formatString: +0.00%;-0.00%
+		displayFolder: 02 Ruptura
+		lineageTag: d1881d86-9764-0d74-3675-1a4d0f043dc2
+
+	measure 'SKUs com Ruptura' = CALCULATE(DISTINCTCOUNT(fEstoque[produto_id]), fEstoque[ruptura] = 1)
+		formatString: #,0
+		displayFolder: 02 Ruptura
+		lineageTag: 433ced7b-9c9a-7569-e5e9-76a72f374409
+
+	measure 'Conformidade Checklist %' = DIVIDE(AVERAGE(fVisita[checklist_pct]), 100)
+		formatString: 0.0%
+		displayFolder: 03 Execução
+		lineageTag: 62fac4c8-0469-d78d-1fe5-2d3fc60fd7c6
+
+	measure 'Conformidade AA' = CALCULATE([Conformidade Checklist %], SAMEPERIODLASTYEAR(dCalendario[Data]))
+		formatString: 0.0%
+		displayFolder: 03 Execução
+		lineageTag: fd82d1fd-d636-7af0-7f8a-02c79d9647e0
+
+	measure 'Conformidade Var pp' = VAR c = CALCULATE([Conformidade Checklist %], KEEPFILTERS(FILTER(ALL(dCalendario[Data]), dCalendario[Data] >= EDATE(CALCULATE(MIN(fVenda[data]), REMOVEFILTERS()), 12)))) VAR a = CALCULATE([Conformidade AA], KEEPFILTERS(FILTER(ALL(dCalendario[Data]), dCalendario[Data] >= EDATE(CALCULATE(MIN(fVenda[data]), REMOVEFILTERS()), 12)))) RETURN IF(NOT ISBLANK(a) && NOT ISBLANK(c), c - a)
+		formatString: +0.00%;-0.00%
+		displayFolder: 03 Execução
+		lineageTag: 8161782e-0c97-d69b-84d4-1ccd3c5266c4
+
+	measure Visitas = COUNTROWS(fVisita)
+		formatString: #,0
+		displayFolder: 03 Execução
+		lineageTag: 6ea5901c-dce4-ae62-580b-ef1579e54db9
+
+	measure 'Duração Média Visita (min)' = AVERAGE(fVisita[duracao_min])
+		formatString: 0.0
+		displayFolder: 03 Execução
+		lineageTag: 394b1cab-e7b9-ad5a-67cc-5f6462447862
+
+	measure 'Planograma OK %' = AVERAGE(fAuditoria[planograma_ok])
+		formatString: 0.0%
+		displayFolder: 03 Execução
+		lineageTag: 3755159d-8c88-2234-ab9b-cd3bb62fc242
+
+	measure 'Material PDV OK %' = AVERAGE(fAuditoria[material_pdv_ok])
+		formatString: 0.0%
+		displayFolder: 03 Execução
+		lineageTag: d542efa0-b200-1e28-9a58-6ca05c2b830e
+
+	measure 'Índice Preço vs Concorrente' = DIVIDE(SUM(fAuditoria[preco_gondola]), SUM(fAuditoria[preco_concorrente]))
+		formatString: 0.00
+		displayFolder: 03 Execução
+		lineageTag: a22bb0c3-4a2d-0df8-6945-082654fc48d8
+
+	measure Auditorias = COUNTROWS(fAuditoria)
+		formatString: #,0
+		displayFolder: 03 Execução
+		lineageTag: 97a40876-7888-ca99-8c72-ef9c814b359e
+
+	measure 'Execução Campanha %' = DIVIDE(AVERAGE(fExecCampanha[execucao_pct]), 100)
+		formatString: 0.0%
+		displayFolder: 04 Campanhas
+		lineageTag: 38482d65-6b1b-0480-1a93-6345a0972c42
+
+	measure 'Custo Campanhas' = SUM(fExecCampanha[custo])
+		formatString: "R$" #,0
+		displayFolder: 04 Campanhas
+		lineageTag: 6ab1e7a3-f5a0-19d0-2c41-f9906ca12e8c
+
+	measure 'Orçamento Campanhas' = SUM(dCampanha[orcamento])
+		formatString: "R$" #,0
+		displayFolder: 04 Campanhas
+		lineageTag: b10de7de-edf1-93b9-49e9-f11ca1fd382d
+
+	measure 'Custo por p.p. Execução' = DIVIDE([Custo Campanhas], [Execução Campanha %] * 100)
+		formatString: "R$" #,0
+		displayFolder: 04 Campanhas
+		lineageTag: fc9b0d5b-119b-d59b-3cc2-5cba0ad7a444
+
+	measure 'PDVs com Campanha' = DISTINCTCOUNT(fExecCampanha[pdv_id])
+		formatString: #,0
+		displayFolder: 04 Campanhas
+		lineageTag: ef85072f-64e7-745f-de38-b1e20d4f3057
+
+	measure 'Índice Atenção' = IF(NOT ISBLANK([Ruptura %]), [Ruptura %] * (1 - COALESCE([Conformidade Checklist %], 0.8)))
+		formatString: 0.0000
+		displayFolder: 05 Priorização
+		lineageTag: bcbaa2d8-9b8f-6125-7e0f-16e1a8f6ca38
+
+	measure 'Score Atenção' = IF(NOT ISBLANK([Índice Atenção]), [Índice Atenção] * 1000)
+		formatString: 0.0
+		displayFolder: 05 Priorização
+		lineageTag: 8acd642b-44e1-f8d4-e93c-784013abb813
+
+	measure 'Ruptura Média Geral' = CALCULATE([Ruptura %], ALLSELECTED(dPDV))
+		formatString: 0.0%
+		displayFolder: 05 Priorização
+		lineageTag: 01835e83-88b5-7450-b85d-755af9f0b8e4
+
+	measure Prioridade =
+			VAR r = RANKX(ALLSELECTED(dPDV[pdv]), [Índice Atenção], , DESC)
+			RETURN IF(ISBLANK([Índice Atenção]), BLANK(), IF(r <= 10, "P1 · Alta", IF(r <= 40, "P2 · Média", "P3 · Monitorar")))
+		displayFolder: 05 Priorização
+		lineageTag: 53d10612-e140-fc96-c9c2-c3ab7cacca41
+
+	measure 'Ação Investigativa (hipótese)' =
+			VAR ru = [Ruptura %] VAR ck = [Conformidade Checklist %] VAR mg = [Ruptura Média Geral]
+			RETURN IF(ISBLANK(ru), BLANK(),
+			    IF(ru > mg * 1.15, "Checar reposição e pedido",
+			    IF(ck < 0.8, "Revisar checklist com promotor",
+			    IF([Planograma OK %] < 0.6, "Auditar planograma", "Monitorar"))))
+		displayFolder: 05 Priorização
+		lineageTag: 68822fc6-70b9-88b1-905a-f267b7db3348
+
+	measure 'SVG KPI Sell-out' =
+			VAR _v = [Sell-out]
+			VAR _txt = FORMAT(DIVIDE(_v, 1000000), "R$ #,0.00") & " mi"
+			VAR _d = [Sell-out Var %]
+			VAR _dtxt = IF(ISBLANK(_d), "sem base comparável", IF(_d >= 0, "▲ ", "▼ ") & FORMAT(ABS(_d), "0.0%") & " vs ano ant.")
+			VAR _dcol = IF(ISBLANK(_d), "#64748B", IF(_d >= 0, "#16856A", "#C85B60"))
+			VAR _t = FILTER(TOPN(12, ADDCOLUMNS(VALUES(dCalendario[AnoMes]), "@v", [Sell-out]), dCalendario[AnoMes], DESC), NOT ISBLANK([@v]))
+			VAR _n = COUNTROWS(_t) VAR _mn = MINX(_t, [@v]) VAR _mx = MAXX(_t, [@v])
+			VAR _pts = CONCATENATEX(_t,
+			    VAR i = RANKX(_t, dCalendario[AnoMes], , ASC)
+			    RETURN FORMAT(300 + (i - 1) * 150 / MAX(_n - 1, 1), "0") & "," & FORMAT(118 - DIVIDE([@v] - _mn, _mx - _mn, 0.5) * 46, "0"), " ", dCalendario[AnoMes], ASC)
+			VAR _spark = IF(_n >= 2, "<polyline points='" & _pts & "' fill='none' stroke='#06436E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><text x='450' y='146' text-anchor='end' font-size='12' fill='#64748B'>últimos " & _n & " meses</text>", "")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160' viewBox='0 0 470 160' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='468' height='158' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(20,20)'><rect width='40' height='40' rx='12' fill='#06436E' fill-opacity='0.12'/><path d='M8 26 L16 18 L22 22 L32 12' fill='none' stroke='#06436E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><path d='M26 12 H32 V18' fill='none' stroke='#06436E' stroke-width='3' stroke-linecap='round'/></g>"
+			    & "<text x='72' y='38' font-size='16' font-weight='600' fill='#1B3044'>Sell-out monitorado</text>"
+			    & "<text x='72' y='56' font-size='13' fill='#64748B'>" & "amostra de SKUs monitorados" & "</text>"
+			    & "<text x='22' y='112' font-size='38' font-weight='700' fill='#082746'>" & _txt & "</text>"
+			    & "<text x='22' y='142' font-size='14' font-weight='600' fill='" & _dcol & "'>" & _dtxt & "</text>"
+			    & _spark & "</svg>"
+			VAR _empty = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160'><rect x='1' y='1' width='468' height='158' rx='16' fill='#F1F5F9' stroke='#E6EDF3'/><text x='235' y='86' text-anchor='middle' font-family='Segoe UI' font-size='16' fill='#64748B'>Sell-out monitorado: sem dados no contexto</text></svg>"
+			RETURN IF(ISBLANK(_v), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_empty, "%", "%25"), "#", "%23"), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 341356c3-9460-0f03-a525-497b1080c1d9
+		dataCategory: ImageUrl
+
+	measure 'SVG KPI Unidades' =
+			VAR _v = [Unidades]
+			VAR _txt = FORMAT(DIVIDE(_v, 1000), "#,0.0") & " mil"
+			VAR _d = [Unidades Var %]
+			VAR _dtxt = IF(ISBLANK(_d), "sem base comparável", IF(_d >= 0, "▲ ", "▼ ") & FORMAT(ABS(_d), "0.0%") & " vs ano ant.")
+			VAR _dcol = IF(ISBLANK(_d), "#64748B", IF(_d >= 0, "#16856A", "#C85B60"))
+			VAR _t = FILTER(TOPN(12, ADDCOLUMNS(VALUES(dCalendario[AnoMes]), "@v", [Unidades]), dCalendario[AnoMes], DESC), NOT ISBLANK([@v]))
+			VAR _n = COUNTROWS(_t) VAR _mn = MINX(_t, [@v]) VAR _mx = MAXX(_t, [@v])
+			VAR _pts = CONCATENATEX(_t,
+			    VAR i = RANKX(_t, dCalendario[AnoMes], , ASC)
+			    RETURN FORMAT(300 + (i - 1) * 150 / MAX(_n - 1, 1), "0") & "," & FORMAT(118 - DIVIDE([@v] - _mn, _mx - _mn, 0.5) * 46, "0"), " ", dCalendario[AnoMes], ASC)
+			VAR _spark = IF(_n >= 2, "<polyline points='" & _pts & "' fill='none' stroke='#4387AD' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><text x='450' y='146' text-anchor='end' font-size='12' fill='#64748B'>últimos " & _n & " meses</text>", "")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160' viewBox='0 0 470 160' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='468' height='158' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(20,20)'><rect width='40' height='40' rx='12' fill='#4387AD' fill-opacity='0.12'/><rect x='9' y='9' width='10' height='10' rx='2' fill='none' stroke='#4387AD' stroke-width='3'/><rect x='21' y='21' width='10' height='10' rx='2' fill='none' stroke='#4387AD' stroke-width='3'/></g>"
+			    & "<text x='72' y='38' font-size='16' font-weight='600' fill='#1B3044'>Unidades na amostra</text>"
+			    & "<text x='72' y='56' font-size='13' fill='#64748B'>" & "unidades vendidas (amostra)" & "</text>"
+			    & "<text x='22' y='112' font-size='38' font-weight='700' fill='#082746'>" & _txt & "</text>"
+			    & "<text x='22' y='142' font-size='14' font-weight='600' fill='" & _dcol & "'>" & _dtxt & "</text>"
+			    & _spark & "</svg>"
+			VAR _empty = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160'><rect x='1' y='1' width='468' height='158' rx='16' fill='#F1F5F9' stroke='#E6EDF3'/><text x='235' y='86' text-anchor='middle' font-family='Segoe UI' font-size='16' fill='#64748B'>Unidades na amostra: sem dados no contexto</text></svg>"
+			RETURN IF(ISBLANK(_v), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_empty, "%", "%25"), "#", "%23"), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: d6bd037a-8426-5c77-60ac-b04eae7a8e60
+		dataCategory: ImageUrl
+
+	measure 'SVG KPI Ruptura' =
+			VAR _v = [Ruptura %]
+			VAR _txt = FORMAT(_v, "0.0%")
+			VAR _d = [Ruptura Var pp]
+			VAR _dtxt = IF(ISBLANK(_d), "sem base comparável", IF(_d >= 0, "▲ ", "▼ ") & FORMAT(ABS(_d) * 100, "0.00") & " p.p." & " vs ano ant.")
+			VAR _dcol = IF(ISBLANK(_d), "#64748B", IF(_d <= 0, "#16856A", "#C85B60"))
+			VAR _t = FILTER(TOPN(12, ADDCOLUMNS(VALUES(dCalendario[AnoMes]), "@v", [Ruptura %]), dCalendario[AnoMes], DESC), NOT ISBLANK([@v]))
+			VAR _n = COUNTROWS(_t) VAR _mn = MINX(_t, [@v]) VAR _mx = MAXX(_t, [@v])
+			VAR _pts = CONCATENATEX(_t,
+			    VAR i = RANKX(_t, dCalendario[AnoMes], , ASC)
+			    RETURN FORMAT(300 + (i - 1) * 150 / MAX(_n - 1, 1), "0") & "," & FORMAT(118 - DIVIDE([@v] - _mn, _mx - _mn, 0.5) * 46, "0"), " ", dCalendario[AnoMes], ASC)
+			VAR _spark = IF(_n >= 2, "<polyline points='" & _pts & "' fill='none' stroke='#F58200' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><text x='450' y='146' text-anchor='end' font-size='12' fill='#64748B'>últimos " & _n & " meses</text>", "")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160' viewBox='0 0 470 160' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='468' height='158' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(20,20)'><rect width='40' height='40' rx='12' fill='#F58200' fill-opacity='0.12'/><rect x='10' y='12' width='20' height='18' rx='3' fill='none' stroke='#F58200' stroke-width='3'/><path d='M10 18 H30' stroke='#F58200' stroke-width='3'/></g>"
+			    & "<text x='72' y='38' font-size='16' font-weight='600' fill='#1B3044'>Ruptura semanal observada</text>"
+			    & "<text x='72' y='56' font-size='13' fill='#64748B'>" & FORMAT([Observações Estoque], "#,0") & " obs. PDV×SKU" & "</text>"
+			    & "<text x='22' y='112' font-size='38' font-weight='700' fill='#082746'>" & _txt & "</text>"
+			    & "<text x='22' y='142' font-size='14' font-weight='600' fill='" & _dcol & "'>" & _dtxt & "</text>"
+			    & _spark & "</svg>"
+			VAR _empty = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160'><rect x='1' y='1' width='468' height='158' rx='16' fill='#F1F5F9' stroke='#E6EDF3'/><text x='235' y='86' text-anchor='middle' font-family='Segoe UI' font-size='16' fill='#64748B'>Ruptura semanal observada: sem dados no contexto</text></svg>"
+			RETURN IF(ISBLANK(_v), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_empty, "%", "%25"), "#", "%23"), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 09b43049-224f-239e-cae9-c33a4efe1b06
+		dataCategory: ImageUrl
+
+	measure 'SVG KPI Conformidade' =
+			VAR _v = [Conformidade Checklist %]
+			VAR _txt = FORMAT(_v, "0.0%")
+			VAR _d = [Conformidade Var pp]
+			VAR _dtxt = IF(ISBLANK(_d), "sem base comparável", IF(_d >= 0, "▲ ", "▼ ") & FORMAT(ABS(_d) * 100, "0.00") & " p.p." & " vs ano ant.")
+			VAR _dcol = IF(ISBLANK(_d), "#64748B", IF(_d >= 0, "#16856A", "#C85B60"))
+			VAR _t = FILTER(TOPN(12, ADDCOLUMNS(VALUES(dCalendario[AnoMes]), "@v", [Conformidade Checklist %]), dCalendario[AnoMes], DESC), NOT ISBLANK([@v]))
+			VAR _n = COUNTROWS(_t) VAR _mn = MINX(_t, [@v]) VAR _mx = MAXX(_t, [@v])
+			VAR _pts = CONCATENATEX(_t,
+			    VAR i = RANKX(_t, dCalendario[AnoMes], , ASC)
+			    RETURN FORMAT(300 + (i - 1) * 150 / MAX(_n - 1, 1), "0") & "," & FORMAT(118 - DIVIDE([@v] - _mn, _mx - _mn, 0.5) * 46, "0"), " ", dCalendario[AnoMes], ASC)
+			VAR _spark = IF(_n >= 2, "<polyline points='" & _pts & "' fill='none' stroke='#16856A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><text x='450' y='146' text-anchor='end' font-size='12' fill='#64748B'>últimos " & _n & " meses</text>", "")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160' viewBox='0 0 470 160' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='468' height='158' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(20,20)'><rect width='40' height='40' rx='12' fill='#16856A' fill-opacity='0.12'/><path d='M10 21 L17 28 L30 13' fill='none' stroke='#16856A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/></g>"
+			    & "<text x='72' y='38' font-size='16' font-weight='600' fill='#1B3044'>Conformidade de execução</text>"
+			    & "<text x='72' y='56' font-size='13' fill='#64748B'>" & FORMAT([Visitas], "#,0") & " visitas com checklist" & "</text>"
+			    & "<text x='22' y='112' font-size='38' font-weight='700' fill='#082746'>" & _txt & "</text>"
+			    & "<text x='22' y='142' font-size='14' font-weight='600' fill='" & _dcol & "'>" & _dtxt & "</text>"
+			    & _spark & "</svg>"
+			VAR _empty = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160'><rect x='1' y='1' width='468' height='158' rx='16' fill='#F1F5F9' stroke='#E6EDF3'/><text x='235' y='86' text-anchor='middle' font-family='Segoe UI' font-size='16' fill='#64748B'>Conformidade de execução: sem dados no contexto</text></svg>"
+			RETURN IF(ISBLANK(_v), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_empty, "%", "%25"), "#", "%23"), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 59fa2fc5-4bb1-0963-d738-ceae2753b4d4
+		dataCategory: ImageUrl
+
+	measure 'SVG KPI PDVs' =
+			VAR _v = [PDVs Monitorados]
+			VAR _txt = FORMAT(_v, "#,0")
+			VAR _d = BLANK()
+			VAR _dtxt = IF(ISBLANK(_d), "sem base comparável", IF(_d >= 0, "▲ ", "▼ ") & "" & " vs ano ant.")
+			VAR _dcol = IF(ISBLANK(_d), "#64748B", IF(_d >= 0, "#16856A", "#C85B60"))
+			VAR _t = FILTER(TOPN(12, ADDCOLUMNS(VALUES(dCalendario[AnoMes]), "@v", [PDVs Monitorados]), dCalendario[AnoMes], DESC), NOT ISBLANK([@v]))
+			VAR _n = COUNTROWS(_t) VAR _mn = MINX(_t, [@v]) VAR _mx = MAXX(_t, [@v])
+			VAR _pts = CONCATENATEX(_t,
+			    VAR i = RANKX(_t, dCalendario[AnoMes], , ASC)
+			    RETURN FORMAT(300 + (i - 1) * 150 / MAX(_n - 1, 1), "0") & "," & FORMAT(118 - DIVIDE([@v] - _mn, _mx - _mn, 0.5) * 46, "0"), " ", dCalendario[AnoMes], ASC)
+			VAR _spark = IF(_n >= 2, "<polyline points='" & _pts & "' fill='none' stroke='#082746' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><text x='450' y='146' text-anchor='end' font-size='12' fill='#64748B'>últimos " & _n & " meses</text>", "")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160' viewBox='0 0 470 160' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='468' height='158' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(20,20)'><rect width='40' height='40' rx='12' fill='#082746' fill-opacity='0.12'/><path d='M9 17 L12 10 H28 L31 17 Z' fill='none' stroke='#082746' stroke-width='3' stroke-linejoin='round'/><rect x='11' y='17' width='18' height='13' fill='none' stroke='#082746' stroke-width='3'/></g>"
+			    & "<text x='72' y='38' font-size='16' font-weight='600' fill='#1B3044'>PDVs monitorados</text>"
+			    & "<text x='72' y='56' font-size='13' fill='#64748B'>" & "de " & FORMAT([PDVs Cadastrados], "#,0") & " PDVs cadastrados" & "</text>"
+			    & "<text x='22' y='112' font-size='38' font-weight='700' fill='#082746'>" & _txt & "</text>"
+			    & "<text x='22' y='142' font-size='14' font-weight='600' fill='" & _dcol & "'>" & _dtxt & "</text>"
+			    & _spark & "</svg>"
+			VAR _empty = "<svg xmlns='http://www.w3.org/2000/svg' width='470' height='160'><rect x='1' y='1' width='468' height='158' rx='16' fill='#F1F5F9' stroke='#E6EDF3'/><text x='235' y='86' text-anchor='middle' font-family='Segoe UI' font-size='16' fill='#64748B'>PDVs monitorados: sem dados no contexto</text></svg>"
+			RETURN IF(ISBLANK(_v), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_empty, "%", "%25"), "#", "%23"), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 19b2ce92-5064-43da-09b4-e91124df47ea
+		dataCategory: ImageUrl
+
+	measure 'Filtros Ativos' = INT(ISFILTERED(dProduto[industria])) + INT(ISFILTERED(dPDV[rede])) + INT(ISFILTERED(dPDV[regiao])) + INT(ISFILTERED(dPDV[uf])) + INT(ISFILTERED(dPDV[pdv])) + INT(ISFILTERED(dProduto[categoria])) + INT(ISFILTERED(dProduto[produto])) + INT(ISFILTERED(dPromotor[promotor])) + INT(ISFILTERED(dCampanha[campanha])) + INT(ISFILTERED(dCalendario[Data]) || ISFILTERED(dCalendario[Ano]) || ISFILTERED(dCalendario[MesAno]))
+		formatString: 0
+		displayFolder: 00 Contexto
+		lineageTag: caecea1a-e976-f4ef-6d87-972add6d3940
+
+	measure 'SVG Barra Contexto' =
+			VAR v0 = IF(ISBLANK(MIN(dCalendario[Data])), "Sem período", FORMAT(MIN(dCalendario[Data]), "dd/mm/yy") & " – " & FORMAT(MAX(dCalendario[Data]), "dd/mm/yy"))
+			VAR v1 = IF(ISFILTERED(dProduto[industria]), VAR n = COUNTROWS(VALUES(dProduto[industria])) RETURN IF(n = 1, SELECTEDVALUE(dProduto[industria]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dProduto[industria]) && COUNTROWS(VALUES(dProduto[industria])) < CALCULATE(COUNTROWS(VALUES(dProduto[industria])), ALL(dProduto[industria])), FORMAT(COUNTROWS(VALUES(dProduto[industria])), "0") & " (via filtros)", "Todos"))
+			VAR v2 = IF(ISFILTERED(dPDV[rede]), VAR n = COUNTROWS(VALUES(dPDV[rede])) RETURN IF(n = 1, SELECTEDVALUE(dPDV[rede]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dPDV[rede]) && COUNTROWS(VALUES(dPDV[rede])) < CALCULATE(COUNTROWS(VALUES(dPDV[rede])), ALL(dPDV[rede])), FORMAT(COUNTROWS(VALUES(dPDV[rede])), "0") & " (via filtros)", "Todos"))
+			VAR v3 = IF(ISFILTERED(dPDV[regiao]), VAR n = COUNTROWS(VALUES(dPDV[regiao])) RETURN IF(n = 1, SELECTEDVALUE(dPDV[regiao]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dPDV[regiao]) && COUNTROWS(VALUES(dPDV[regiao])) < CALCULATE(COUNTROWS(VALUES(dPDV[regiao])), ALL(dPDV[regiao])), FORMAT(COUNTROWS(VALUES(dPDV[regiao])), "0") & " (via filtros)", "Todos"))
+			VAR v4 = IF(ISFILTERED(dPDV[uf]), VAR n = COUNTROWS(VALUES(dPDV[uf])) RETURN IF(n = 1, SELECTEDVALUE(dPDV[uf]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dPDV[uf]) && COUNTROWS(VALUES(dPDV[uf])) < CALCULATE(COUNTROWS(VALUES(dPDV[uf])), ALL(dPDV[uf])), FORMAT(COUNTROWS(VALUES(dPDV[uf])), "0") & " (via filtros)", "Todos"))
+			VAR v5 = IF(ISFILTERED(dPDV[pdv]), VAR n = COUNTROWS(VALUES(dPDV[pdv])) RETURN IF(n = 1, SELECTEDVALUE(dPDV[pdv]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dPDV[pdv]) && COUNTROWS(VALUES(dPDV[pdv])) < CALCULATE(COUNTROWS(VALUES(dPDV[pdv])), ALL(dPDV[pdv])), FORMAT(COUNTROWS(VALUES(dPDV[pdv])), "0") & " (via filtros)", "Todos"))
+			VAR v6 = IF(ISFILTERED(dProduto[categoria]), VAR n = COUNTROWS(VALUES(dProduto[categoria])) RETURN IF(n = 1, SELECTEDVALUE(dProduto[categoria]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dProduto[categoria]) && COUNTROWS(VALUES(dProduto[categoria])) < CALCULATE(COUNTROWS(VALUES(dProduto[categoria])), ALL(dProduto[categoria])), FORMAT(COUNTROWS(VALUES(dProduto[categoria])), "0") & " (via filtros)", "Todos"))
+			VAR v7 = IF(ISFILTERED(dProduto[produto]), VAR n = COUNTROWS(VALUES(dProduto[produto])) RETURN IF(n = 1, SELECTEDVALUE(dProduto[produto]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dProduto[produto]) && COUNTROWS(VALUES(dProduto[produto])) < CALCULATE(COUNTROWS(VALUES(dProduto[produto])), ALL(dProduto[produto])), FORMAT(COUNTROWS(VALUES(dProduto[produto])), "0") & " (via filtros)", "Todos"))
+			VAR v8 = IF(ISFILTERED(dPromotor[promotor]), VAR n = COUNTROWS(VALUES(dPromotor[promotor])) RETURN IF(n = 1, SELECTEDVALUE(dPromotor[promotor]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dPromotor[promotor]) && COUNTROWS(VALUES(dPromotor[promotor])) < CALCULATE(COUNTROWS(VALUES(dPromotor[promotor])), ALL(dPromotor[promotor])), FORMAT(COUNTROWS(VALUES(dPromotor[promotor])), "0") & " (via filtros)", "Todos"))
+			VAR v9 = IF(ISFILTERED(dCampanha[campanha]), VAR n = COUNTROWS(VALUES(dCampanha[campanha])) RETURN IF(n = 1, SELECTEDVALUE(dCampanha[campanha]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dCampanha[campanha]) && COUNTROWS(VALUES(dCampanha[campanha])) < CALCULATE(COUNTROWS(VALUES(dCampanha[campanha])), ALL(dCampanha[campanha])), FORMAT(COUNTROWS(VALUES(dCampanha[campanha])), "0") & " (via filtros)", "Todos"))
+			VAR nf = [Filtros Ativos]
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='1872' height='44' viewBox='0 0 1872 44' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='0.5' y='0.5' width='1871' height='43' rx='14' fill='#FFFFFF' fill-opacity='0.92' stroke='#E6EDF3'/>"
+			    & "<g><rect x='16' y='7' width='222' height='30' rx='15' fill='" & IF(v0 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v0 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='28' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>PERÍODO</text>"
+			    & "<text x='85' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v0) > 22, LEFT(v0, 21) & "…", v0) & "</text></g>" & "<g><rect x='256' y='7' width='152' height='30' rx='15' fill='" & IF(v1 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v1 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='268' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>INDÚSTRIA</text>"
+			    & "<text x='340' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v1) > 10, LEFT(v1, 9) & "…", v1) & "</text></g>" & "<g><rect x='426' y='7' width='142' height='30' rx='15' fill='" & IF(v2 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v2 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='438' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>REDE</text>"
+			    & "<text x='473' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v2) > 14, LEFT(v2, 13) & "…", v2) & "</text></g>" & "<g><rect x='586' y='7' width='142' height='30' rx='15' fill='" & IF(v3 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v3 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='598' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>REGIÃO</text>"
+			    & "<text x='648' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v3) > 12, LEFT(v3, 11) & "…", v3) & "</text></g>" & "<g><rect x='746' y='7' width='112' height='30' rx='15' fill='" & IF(v4 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v4 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='758' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>ESTADO</text>"
+			    & "<text x='808' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v4) > 8, LEFT(v4, 7) & "…", v4) & "</text></g>" & "<g><rect x='876' y='7' width='162' height='30' rx='15' fill='" & IF(v5 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v5 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='888' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>PDV</text>"
+			    & "<text x='916' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v5) > 18, LEFT(v5, 17) & "…", v5) & "</text></g>" & "<g><rect x='1056' y='7' width='142' height='30' rx='15' fill='" & IF(v6 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v6 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='1068' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>CATEGORIA</text>"
+			    & "<text x='1140' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v6) > 9, LEFT(v6, 8) & "…", v6) & "</text></g>" & "<g><rect x='1216' y='7' width='162' height='30' rx='15' fill='" & IF(v7 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v7 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='1228' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>PRODUTO</text>"
+			    & "<text x='1285' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v7) > 14, LEFT(v7, 13) & "…", v7) & "</text></g>" & "<g><rect x='1396' y='7' width='152' height='30' rx='15' fill='" & IF(v8 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v8 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='1408' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>PROMOTOR</text>"
+			    & "<text x='1473' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v8) > 11, LEFT(v8, 10) & "…", v8) & "</text></g>" & "<g><rect x='1566' y='7' width='162' height='30' rx='15' fill='" & IF(v9 = "Todos", "#F1F5F9", "#FFF4E5") & "' stroke='" & IF(v9 = "Todos", "#E6EDF3", "#FFA51B") & "'/>"
+			    & "<text x='1578' y='27' font-size='11' font-weight='700' fill='#64748B' letter-spacing='0.6'>CAMPANHA</text>"
+			    & "<text x='1643' y='27' font-size='13' font-weight='600' fill='#1B3044'>" & IF(LEN(v9) > 13, LEFT(v9, 12) & "…", v9) & "</text></g>"
+			    & "<rect x='1748' y='7' width='112' height='30' rx='15' fill='" & IF(nf > 0, "#082746", "#E6EDF3") & "'/>"
+			    & "<text x='1804' y='27' text-anchor='middle' font-size='13' font-weight='700' fill='" & IF(nf > 0, "#FFFFFF", "#64748B") & "'>" & IF(nf = 0, "Sem filtros", nf & IF(nf = 1, " filtro", " filtros")) & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 9825798f-774a-721c-0eb0-5a58168bee35
+		dataCategory: ImageUrl
+
+	measure 'Atualização Dados' = "Dados até " & FORMAT(CALCULATE(MAX(fVenda[data]), ALL(fVenda), ALL(dCalendario)), "dd/mm/yyyy") & " · simulado"
+		displayFolder: 00 Contexto
+		lineageTag: 8170b3ea-1c25-d365-1eab-78786d243d48
+
+	measure 'Período Selecionado' = IF(ISBLANK(MIN(dCalendario[Data])), "Sem período", FORMAT(MIN(dCalendario[Data]), "dd/mm/yy") & " – " & FORMAT(MAX(dCalendario[Data]), "dd/mm/yy"))
+		displayFolder: 00 Contexto
+		lineageTag: a46625bf-7e66-7275-fa98-27196a2f9aed
+
+	measure 'Contexto Texto' = VAR p = IF(ISBLANK(MIN(dCalendario[Data])), "Sem período", FORMAT(MIN(dCalendario[Data]), "dd/mm/yy") & " – " & FORMAT(MAX(dCalendario[Data]), "dd/mm/yy")) VAR r = IF(ISFILTERED(dPDV[regiao]), VAR n = COUNTROWS(VALUES(dPDV[regiao])) RETURN IF(n = 1, SELECTEDVALUE(dPDV[regiao]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dPDV[regiao]) && COUNTROWS(VALUES(dPDV[regiao])) < CALCULATE(COUNTROWS(VALUES(dPDV[regiao])), ALL(dPDV[regiao])), FORMAT(COUNTROWS(VALUES(dPDV[regiao])), "0") & " (via filtros)", "Todos")) VAR d = IF(ISFILTERED(dPDV[rede]), VAR n = COUNTROWS(VALUES(dPDV[rede])) RETURN IF(n = 1, SELECTEDVALUE(dPDV[rede]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dPDV[rede]) && COUNTROWS(VALUES(dPDV[rede])) < CALCULATE(COUNTROWS(VALUES(dPDV[rede])), ALL(dPDV[rede])), FORMAT(COUNTROWS(VALUES(dPDV[rede])), "0") & " (via filtros)", "Todos")) VAR i = IF(ISFILTERED(dProduto[industria]), VAR n = COUNTROWS(VALUES(dProduto[industria])) RETURN IF(n = 1, SELECTEDVALUE(dProduto[industria]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dProduto[industria]) && COUNTROWS(VALUES(dProduto[industria])) < CALCULATE(COUNTROWS(VALUES(dProduto[industria])), ALL(dProduto[industria])), FORMAT(COUNTROWS(VALUES(dProduto[industria])), "0") & " (via filtros)", "Todos")) VAR c = IF(ISFILTERED(dProduto[categoria]), VAR n = COUNTROWS(VALUES(dProduto[categoria])) RETURN IF(n = 1, SELECTEDVALUE(dProduto[categoria]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dProduto[categoria]) && COUNTROWS(VALUES(dProduto[categoria])) < CALCULATE(COUNTROWS(VALUES(dProduto[categoria])), ALL(dProduto[categoria])), FORMAT(COUNTROWS(VALUES(dProduto[categoria])), "0") & " (via filtros)", "Todos")) VAR pd = IF(ISFILTERED(dPDV[pdv]), VAR n = COUNTROWS(VALUES(dPDV[pdv])) RETURN IF(n = 1, SELECTEDVALUE(dPDV[pdv]), FORMAT(n, "0") & " selecionados"), IF(ISCROSSFILTERED(dPDV[pdv]) && COUNTROWS(VALUES(dPDV[pdv])) < CALCULATE(COUNTROWS(VALUES(dPDV[pdv])), ALL(dPDV[pdv])), FORMAT(COUNTROWS(VALUES(dPDV[pdv])), "0") & " (via filtros)", "Todos")) RETURN "Período " & p & " · Região " & r & " · Rede " & d & " · Indústria " & i & " · Categoria " & c & " · PDV " & pd
+		displayFolder: 00 Contexto
+		lineageTag: c3c4c4fd-ff7d-128c-e56e-236b5ca67c7c
+
+	measure 'Título Detalhe PDV' = IF(HASONEVALUE(dPDV[pdv]), SELECTEDVALUE(dPDV[pdv]) & " · " & SELECTEDVALUE(dPDV[rede]) & " · " & SELECTEDVALUE(dPDV[cidade]) & "/" & SELECTEDVALUE(dPDV[uf]), "Selecione um PDV (botão direito › Detalhar › Detalhe do PDV)")
+		displayFolder: 00 Contexto
+		lineageTag: 2a9da098-b508-ee79-241a-4a03ec20733b
+
+	measure 'Ocorrências PDV (sintéticas)' = COUNTROWS(fOcorrenciasPDV)
+		formatString: #,0
+		displayFolder: 07 IA
+		lineageTag: 11bea6db-9511-0cea-74b7-c300d051764b
+
+	measure 'SVG Usuário RLS' =
+			VAR upn = USERPRINCIPALNAME()
+			VAR pf = LOOKUPVALUE(dUsuarioAcesso[perfil], dUsuarioAcesso[upn], upn)
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='40' viewBox='0 0 600 40' font-family='Segoe UI'><rect x='0' y='4' width='590' height='32' rx='16' fill='#082746' fill-opacity='0.06'/><text x='16' y='25' font-size='13' fill='#1B3044'><tspan font-weight='700'>Identidade no modelo: </tspan>" & upn & " · perfil RLS: " & COALESCE(pf, "não mapeado (sem papel aplicado no Desktop)") & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 4eb85610-7ba3-67b1-1cf8-64dcfafa3d48
+		dataCategory: ImageUrl
+
+	measure 'SVG Barra Ruptura' =
+			VAR r = [Ruptura %] VAR mg = [Ruptura Média Geral]
+			VAR w = MIN(DIVIDE(r, 0.15) * 150, 150)
+			VAR c = IF(r > mg * 1.15, "#C85B60", IF(r > mg, "#D99528", "#16856A"))
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='230' height='28' font-family='Segoe UI'><rect x='0' y='9' width='150' height='10' rx='5' fill='#F1F5F9'/><rect x='0' y='9' width='" & FORMAT(w, "0") & "' height='10' rx='5' fill='" & c & "'/><text x='160' y='19' font-size='13' font-weight='600' fill='#1B3044'>" & FORMAT(r, "0.0%") & "</text></svg>"
+			RETURN IF(ISBLANK(r), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: de1acdaf-0717-677a-fef4-150cc30ed777
+		dataCategory: ImageUrl
+
+	measure 'SVG Barra Conformidade' =
+			VAR r = [Conformidade Checklist %]
+			VAR c = IF(r < 0.8, "#C85B60", IF(r < 0.88, "#D99528", "#16856A"))
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='230' height='28' font-family='Segoe UI'><rect x='0' y='9' width='150' height='10' rx='5' fill='#F1F5F9'/><rect x='0' y='9' width='" & FORMAT(r * 150, "0") & "' height='10' rx='5' fill='" & c & "'/><text x='160' y='19' font-size='13' font-weight='600' fill='#1B3044'>" & FORMAT(r, "0.0%") & "</text></svg>"
+			RETURN IF(ISBLANK(r), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: b88afe9d-b86d-6491-d105-0994b29d4007
+		dataCategory: ImageUrl
+
+	measure 'SVG Status Atenção' =
+			VAR r = [Ruptura %] VAR mg = [Ruptura Média Geral]
+			VAR s = IF(r > mg * 1.15, "Crítico", IF(r > mg, "Atenção", "Normal"))
+			VAR c = SWITCH(s, "Crítico", "#C85B60", "Atenção", "#D99528", "#16856A")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='120' height='28' font-family='Segoe UI'><rect x='1' y='3' width='112' height='22' rx='11' fill='" & c & "' fill-opacity='0.14'/><circle cx='16' cy='14' r='5' fill='" & c & "'/><text x='28' y='19' font-size='13' font-weight='600' fill='" & c & "'>" & s & "</text></svg>"
+			RETURN IF(ISBLANK(r), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: f0ffca17-b9fc-cd8c-3d87-648283ccc05a
+		dataCategory: ImageUrl
+
+	measure 'SVG Tendência Ruptura' =
+			VAR d = [Ruptura Var pp]
+			VAR c = IF(d > 0, "#C85B60", "#16856A")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='120' height='28' font-family='Segoe UI'><text x='0' y='19' font-size='13' font-weight='700' fill='" & c & "'>" & IF(d > 0, "▲ ", "▼ ") & FORMAT(ABS(d) * 100, "0.00") & " p.p.</text></svg>"
+			RETURN IF(ISBLANK(d), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 9229ce09-5fc5-516a-5691-9834a98c506d
+		dataCategory: ImageUrl
+
+	measure 'SVG Sparkline Sell-out' =
+			VAR _t = FILTER(TOPN(12, ADDCOLUMNS(VALUES(dCalendario[AnoMes]), "@v", [Sell-out]), dCalendario[AnoMes], DESC), NOT ISBLANK([@v]))
+			VAR _n = COUNTROWS(_t) VAR _mn = MINX(_t, [@v]) VAR _mx = MAXX(_t, [@v])
+			VAR _pts = CONCATENATEX(_t, VAR i = RANKX(_t, dCalendario[AnoMes], , ASC) RETURN FORMAT(4 + (i - 1) * 152 / MAX(_n - 1, 1), "0") & "," & FORMAT(30 - DIVIDE([@v] - _mn, _mx - _mn, 0.5) * 24, "0"), " ", dCalendario[AnoMes], ASC)
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='160' height='34'><polyline points='" & _pts & "' fill='none' stroke='#06436E' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+			RETURN IF(_n < 2, BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: af54a1f5-cfc8-f571-2d85-45c74aeca07c
+		dataCategory: ImageUrl
+
+	measure 'SVG Variação Sell-out' =
+			VAR d = [Sell-out Var %]
+			VAR c = IF(d >= 0, "#16856A", "#C85B60")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='110' height='28' font-family='Segoe UI'><rect x='1' y='3' width='100' height='22' rx='11' fill='" & c & "' fill-opacity='0.12'/><text x='51' y='19' text-anchor='middle' font-size='13' font-weight='700' fill='" & c & "'>" & IF(d >= 0, "▲ ", "▼ ") & FORMAT(ABS(d), "0.0%") & "</text></svg>"
+			RETURN IF(ISBLANK(d), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 47a57e93-b382-54ee-4a42-6911911e6cda
+		dataCategory: ImageUrl
+
+	measure 'SVG Heat Ruptura' =
+			VAR r = [Ruptura %] VAR mg = [Ruptura Média Geral]
+			VAR k = DIVIDE(r - mg * 0.85, mg * 0.3)
+			VAR op = FORMAT(MAX(MIN(k, 1), 0.08) * 0.85, "0.00", "en-US")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='150' height='34' font-family='Segoe UI'><rect x='2' y='2' width='146' height='30' rx='8' fill='#F58200' fill-opacity='" & op & "'/><text x='75' y='22' text-anchor='middle' font-size='13' font-weight='700' fill='#1B3044'>" & FORMAT(r, "0.0%") & "</text></svg>"
+			RETURN IF(ISBLANK(r), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 313a50d6-44eb-3f21-456c-d6c3a84379b7
+		dataCategory: ImageUrl
+
+	measure 'Insight Região Crítica' =
+			VAR t = ADDCOLUMNS(FILTER(VALUES(dPDV[regiao]), NOT ISBLANK([Ruptura %])), "@r", [Ruptura %])
+			RETURN MAXX(TOPN(1, t, [@r], DESC), dPDV[regiao])
+		displayFolder: 06 Insight
+		lineageTag: c42120e0-aaaf-8f29-97a9-86b39858dc55
+
+	measure 'SVG Insight' =
+			VAR reg = [Insight Região Crítica]
+			VAR t = ADDCOLUMNS(FILTER(VALUES(dPDV[regiao]), NOT ISBLANK([Ruptura %])), "@r", [Ruptura %])
+			VAR rr = MAXX(TOPN(1, t, [@r], DESC), [@r]) VAR av = [Ruptura %]
+			VAR tc = ADDCOLUMNS(FILTER(VALUES(dProduto[categoria]), NOT ISBLANK([Ruptura %])), "@r", [Ruptura %])
+			VAR cat = MAXX(TOPN(1, tc, [@r], DESC), dProduto[categoria]) VAR cr = MAXX(TOPN(1, tc, [@r], DESC), [@r])
+			VAR np = CALCULATE(COUNTROWS(FILTER(VALUES(dPDV[pdv]), [Ruptura %] > av * 1.15)))
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='740' height='300' viewBox='0 0 740 300' font-family='Segoe UI, sans-serif'>"
+			 & "<rect x='1' y='1' width='738' height='298' rx='18' fill='#082746'/>"
+			 & "<circle cx='690' cy='40' r='120' fill='#06436E' fill-opacity='0.55'/><circle cx='700' cy='260' r='70' fill='#F58200' fill-opacity='0.18'/>"
+			 & "<text x='32' y='46' font-size='13' font-weight='700' fill='#FFA51B' letter-spacing='1.6'>INSIGHT DO PERÍODO · REGRA DAX AUDITÁVEL</text>"
+			 & "<text x='32' y='96' font-size='26' font-weight='700' fill='#FFFFFF'>Maior ruptura observada: " & reg & "</text>"
+			 & "<text x='32' y='136' font-size='17' fill='#DCE6F0'>" & FORMAT(rr, "0.0%") & " na região vs " & FORMAT(av, "0.0%") & " na média do contexto</text>"
+			 & "<text x='32' y='170' font-size='17' fill='#DCE6F0'>Categoria mais afetada: " & cat & " (" & FORMAT(cr, "0.0%") & ")</text>"
+			 & "<text x='32' y='204' font-size='17' fill='#DCE6F0'>" & FORMAT(np, "0") & " PDVs acima de 115% da média — candidatos a investigação</text>"
+			 & "<text x='32' y='262' font-size='13' fill='#9FB3C8'>Hipóteses, não causas comprovadas. Dados simulados.</text></svg>"
+			RETURN IF(ISBLANK(av), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 5280df35-cf8e-28c0-1dad-f9a4f24e149f
+		dataCategory: ImageUrl
+
+	measure 'RAG Taxa Aprovação' = AVERAGE(fAvaliacoesLLM[aprovado])
+		formatString: 0.0%
+		displayFolder: 07 IA
+		lineageTag: 10d418fe-83d1-53bd-7f8e-17bceaece73b
+
+	measure 'RAG Avaliações' = COUNTROWS(fAvaliacoesLLM)
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: 93905c9b-f8b0-7858-c706-3e220c96a5d1
+
+	measure 'RAG Latência Média (ms)' = AVERAGE(fAvaliacoesLLM[latencia_ms])
+		formatString: 0.0
+		displayFolder: 07 IA
+		lineageTag: da625293-e91a-8596-1bb8-67777f5528d4
+
+	measure 'RAG Documentos Indexados' = COUNTROWS(dDocumento)
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: f732bb9a-0c87-b9b4-177e-591cf9a38ec2
+
+	measure 'RAG Sem Evidência' = CALCULATE(COUNTROWS(fAvaliacoesLLM), fAvaliacoesLLM[status] = "sem_evidencia")
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: c6343a2f-9f45-7bbd-2db6-74afe99f994a
+
+	measure 'GR Testes' = COUNTROWS(fTestesGuardrails)
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: 3fb017bf-a24c-f794-b638-8c252adc3556
+
+	measure 'GR Bloqueados' = CALCULATE(COUNTROWS(fTestesGuardrails), fTestesGuardrails[resultado_obtido] <> "permitido")
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: 81d9ef7a-d55c-7c0c-c0d1-4c423bf60f80
+
+	measure 'GR Falhas' = CALCULATE(COUNTROWS(fTestesGuardrails), fTestesGuardrails[status] = "Falha de segurança")
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: a7b399e5-ba1c-cec2-1ea3-c5978fb24f88
+
+	measure 'GR Taxa Bloqueio' = DIVIDE([GR Bloqueados], [GR Testes])
+		formatString: 0.0%
+		displayFolder: 07 IA
+		lineageTag: be91ba21-9f57-7dcf-13cd-27c2c3ca8949
+
+	measure 'GR Taxa Sucesso' = DIVIDE([GR Testes] - [GR Falhas], [GR Testes])
+		formatString: 0.0%
+		displayFolder: 07 IA
+		lineageTag: b06cea40-3903-38d9-2b14-64665d69c59f
+
+	measure 'FT Macro F1 Especializado' = VAR ts = CALCULATE(MAX(fExperimentosML[timestamp]), ALL(fExperimentosML)) RETURN CALCULATE(MAX(fExperimentosML[valor]), fExperimentosML[modelo] = "classificador-ocorrencias-tfidf-lr", fExperimentosML[metrica] = "macro_f1", fExperimentosML[timestamp] = ts)
+		formatString: 0.000
+		displayFolder: 07 IA
+		lineageTag: 2771254a-3899-15eb-4335-3417164b4841
+
+	measure 'FT Macro F1 Base' = VAR ts = CALCULATE(MAX(fExperimentosML[timestamp]), ALL(fExperimentosML)) RETURN CALCULATE(MAX(fExperimentosML[valor]), fExperimentosML[modelo] = "baseline-regras-palavra-chave", fExperimentosML[metrica] = "macro_f1", fExperimentosML[timestamp] = ts)
+		formatString: 0.000
+		displayFolder: 07 IA
+		lineageTag: 6a2d52c7-8cfb-d7f0-b0b6-3a9580ae0d47
+
+	measure 'FT Accuracy Especializado' = VAR ts = CALCULATE(MAX(fExperimentosML[timestamp]), ALL(fExperimentosML)) RETURN CALCULATE(MAX(fExperimentosML[valor]), fExperimentosML[modelo] = "classificador-ocorrencias-tfidf-lr", fExperimentosML[metrica] = "accuracy", fExperimentosML[timestamp] = ts)
+		formatString: 0.0%
+		displayFolder: 07 IA
+		lineageTag: d6e82e28-d1bd-8ad6-88fa-1d01d4828921
+
+	measure 'FT Accuracy Base' = VAR ts = CALCULATE(MAX(fExperimentosML[timestamp]), ALL(fExperimentosML)) RETURN CALCULATE(MAX(fExperimentosML[valor]), fExperimentosML[modelo] = "baseline-regras-palavra-chave", fExperimentosML[metrica] = "accuracy", fExperimentosML[timestamp] = ts)
+		formatString: 0.0%
+		displayFolder: 07 IA
+		lineageTag: af1396f1-054d-e577-a1d7-3fd9103d1555
+
+	measure 'FT Casos Teste' = COUNTROWS(fComparadorModelos)
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: c1eb7ce4-efed-17fc-7fed-5cbb3ca97588
+
+	measure 'Métrica Experimento' = IF(HASONEVALUE(fExperimentosML[metrica]), MAX(fExperimentosML[valor]))
+		formatString: 0.000
+		displayFolder: 07 IA
+		lineageTag: 77fd4ea2-c45a-e75b-85c8-cca51e0a5783
+
+	measure 'ML AUC Ruptura' = VAR ts = CALCULATE(MAX(fExperimentosML[timestamp]), ALL(fExperimentosML)) RETURN CALCULATE(MAX(fExperimentosML[valor]), fExperimentosML[modelo] = "risco-ruptura-logreg", fExperimentosML[metrica] = "auc", fExperimentosML[timestamp] = ts)
+		formatString: 0.000
+		displayFolder: 07 IA
+		lineageTag: 4b1dbb4d-301f-0a65-6946-80f581c597a1
+
+	measure 'ML Experimentos' = DISTINCTCOUNT(fExperimentosML[experimento])
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: a860a7d4-2dd0-784d-68ce-3749288f1d08
+
+	measure 'ML Registros Métricas' = COUNTROWS(fExperimentosML)
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: 10be570f-0c54-0c90-df97-47cb2dd96201
+
+	measure 'ML Última Execução' = FORMAT(MAX(fExperimentosML[timestamp]), "")
+		displayFolder: 07 IA
+		lineageTag: b8075403-3139-7478-e455-edc0a726187c
+
+	measure 'ML Modelos Registrados' = COUNTROWS(dModelosIA)
+		formatString: 0
+		displayFolder: 07 IA
+		lineageTag: 887e35a9-10d9-e1b8-e310-27ad311dd52e
+
+	measure 'Prob Prevista Média' = AVERAGE(fMonitorRuptura[prob_media_prevista])
+		formatString: 0.0%
+		displayFolder: 07 IA
+		lineageTag: b8053e13-c05e-be16-2928-d552825429b0
+
+	measure 'Taxa Observada Teste' = AVERAGE(fMonitorRuptura[taxa_observada])
+		formatString: 0.0%
+		displayFolder: 07 IA
+		lineageTag: ac7a84e0-423b-a787-4007-788affc1c61d
+
+	measure 'Ocorrências Sintéticas' = COUNTROWS(fOcorrenciasPDV)
+		formatString: #,0
+		displayFolder: 07 IA
+		lineageTag: 59918148-85e4-f7fd-564d-aabe79f048f9
+
+	measure 'SVG Status Teste' =
+			VAR s = SELECTEDVALUE(fTestesGuardrails[status], "Não executado")
+			VAR c = SWITCH(s, "Aprovado", "#16856A", "Bloqueado corretamente", "#4387AD", "Falha de segurança", "#C85B60", "#64748B")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='220' height='28' font-family='Segoe UI'><rect x='1' y='3' width='210' height='22' rx='11' fill='" & c & "' fill-opacity='0.14'/><circle cx='16' cy='14' r='5' fill='" & c & "'/><text x='28' y='19' font-size='13' font-weight='600' fill='" & c & "'>" & s & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 353bbd86-fe10-8ab5-e320-767ebd78a18a
+		dataCategory: ImageUrl
+
+	measure 'SVG Acerto Base' =
+			VAR v = MAX(fComparadorModelos[acerto_base])
+			VAR c = IF(v = 1, "#16856A", "#C85B60")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='110' height='28' font-family='Segoe UI'><circle cx='14' cy='14' r='10' fill='" & c & "' fill-opacity='0.15'/><text x='14' y='19' text-anchor='middle' font-size='13' font-weight='700' fill='" & c & "'>" & IF(v = 1, "✓", "✕") & "</text><text x='32' y='19' font-size='13' fill='" & c & "'>" & IF(v = 1, "Correto", "Incorreto") & "</text></svg>"
+			RETURN IF(ISBLANK(v), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: e5d5567c-2ba9-a72b-7b2d-ff7d698bb50f
+		dataCategory: ImageUrl
+
+	measure 'SVG Acerto Especializado' =
+			VAR v = MAX(fComparadorModelos[acerto_especializado])
+			VAR c = IF(v = 1, "#16856A", "#C85B60")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='110' height='28' font-family='Segoe UI'><circle cx='14' cy='14' r='10' fill='" & c & "' fill-opacity='0.15'/><text x='14' y='19' text-anchor='middle' font-size='13' font-weight='700' fill='" & c & "'>" & IF(v = 1, "✓", "✕") & "</text><text x='32' y='19' font-size='13' fill='" & c & "'>" & IF(v = 1, "Correto", "Incorreto") & "</text></svg>"
+			RETURN IF(ISBLANK(v), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 1fb267b3-794e-46fd-2cd7-cc576cc90f54
+		dataCategory: ImageUrl
+
+	measure 'SVG Aprovado RAG' =
+			VAR v = MAX(fAvaliacoesLLM[aprovado])
+			VAR c = IF(v = 1, "#16856A", "#C85B60")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='110' height='28' font-family='Segoe UI'><circle cx='14' cy='14' r='10' fill='" & c & "' fill-opacity='0.15'/><text x='14' y='19' text-anchor='middle' font-size='13' font-weight='700' fill='" & c & "'>" & IF(v = 1, "✓", "✕") & "</text><text x='32' y='19' font-size='13' fill='" & c & "'>" & IF(v = 1, "Correto", "Incorreto") & "</text></svg>"
+			RETURN IF(ISBLANK(v), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 66b25f09-2806-7787-df3a-f6f4591b4455
+		dataCategory: ImageUrl
+
+	measure 'SVG Status Modelo' =
+			VAR s = SELECTEDVALUE(dModelosIA[status])
+			VAR c = SWITCH(s, "Ativo", "#16856A", "Treinado", "#16856A", "Referência", "#4387AD", "Rejeitado", "#C85B60", "#D99528")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='200' height='28' font-family='Segoe UI'><rect x='1' y='3' width='190' height='22' rx='11' fill='" & c & "' fill-opacity='0.14'/><circle cx='16' cy='14' r='5' fill='" & c & "'/><text x='28' y='19' font-size='13' font-weight='600' fill='" & c & "'>" & s & "</text></svg>"
+			RETURN IF(ISBLANK(s), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 4ed2a5e4-ac11-8c12-f8e8-8eb9a50f5e21
+		dataCategory: ImageUrl
+
+	measure 'SVG Card RAG' =
+			VAR st = "Ativo · API local"
+			VAR mt = "Aprovação nas avaliações: " & FORMAT([RAG Taxa Aprovação], "0%") & " · " & [RAG Documentos Indexados] & " docs"
+			VAR sc = IF(CONTAINSSTRING(st, "pendente") || CONTAINSSTRING(st, "Rejeitado"), "#D99528", "#16856A")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='170' viewBox='0 0 440 170' font-family='Segoe UI, sans-serif'>"
+			 & "<rect x='1' y='1' width='438' height='168' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			 & "<g transform='translate(20,20)'><rect width='40' height='40' rx='12' fill='#06436E' fill-opacity='0.12'/><path d='M13 9 H24 L29 14 V31 H13 Z' fill='none' stroke='#06436E' stroke-width='3' stroke-linejoin='round'/><path d='M17 20 H25 M17 25 H25' stroke='#06436E' stroke-width='2.5'/></g>"
+			 & "<text x='72' y='38' font-size='18' font-weight='700' fill='#082746'>RAG</text>"
+			 & "<text x='72' y='58' font-size='13' fill='#64748B'>Conhecimento e evidências</text>"
+			 & "<rect x='20' y='78' width='" & FORMAT(LEN(st) * 7.4 + 30, "0") & "' height='26' rx='13' fill='" & sc & "' fill-opacity='0.13'/><circle cx='34' cy='91' r='4.5' fill='" & sc & "'/>"
+			 & "<text x='46' y='96' font-size='13' font-weight='600' fill='" & sc & "'>" & st & "</text>"
+			 & "<text x='20' y='136' font-size='15' font-weight='600' fill='#1B3044'>" & mt & "</text>"
+			 & "<text x='420' y='156' text-anchor='end' font-size='13' font-weight='700' fill='#F58200'>Abrir módulo →</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: c37107b0-698b-defd-0cf8-512abc6a1015
+		dataCategory: ImageUrl
+
+	measure 'SVG Card FT' =
+			VAR st = "Classificador treinado · LLM pendente"
+			VAR mt = "Macro-F1: " & FORMAT([FT Macro F1 Especializado], "0.00") & " vs base " & FORMAT([FT Macro F1 Base], "0.00")
+			VAR sc = IF(CONTAINSSTRING(st, "pendente") || CONTAINSSTRING(st, "Rejeitado"), "#D99528", "#16856A")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='170' viewBox='0 0 440 170' font-family='Segoe UI, sans-serif'>"
+			 & "<rect x='1' y='1' width='438' height='168' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			 & "<g transform='translate(20,20)'><rect width='40' height='40' rx='12' fill='#F58200' fill-opacity='0.12'/><circle cx='20' cy='20' r='10' fill='none' stroke='#F58200' stroke-width='3'/><circle cx='20' cy='20' r='3' fill='#F58200'/><path d='M20 6 V10 M20 30 V34 M6 20 H10 M30 20 H34' stroke='#F58200' stroke-width='3'/></g>"
+			 & "<text x='72' y='38' font-size='18' font-weight='700' fill='#082746'>FINE-TUNING</text>"
+			 & "<text x='72' y='58' font-size='13' fill='#64748B'>Especialização e classificação</text>"
+			 & "<rect x='20' y='78' width='" & FORMAT(LEN(st) * 7.4 + 30, "0") & "' height='26' rx='13' fill='" & sc & "' fill-opacity='0.13'/><circle cx='34' cy='91' r='4.5' fill='" & sc & "'/>"
+			 & "<text x='46' y='96' font-size='13' font-weight='600' fill='" & sc & "'>" & st & "</text>"
+			 & "<text x='20' y='136' font-size='15' font-weight='600' fill='#1B3044'>" & mt & "</text>"
+			 & "<text x='420' y='156' text-anchor='end' font-size='13' font-weight='700' fill='#F58200'>Abrir módulo →</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 67f7d518-f82f-87d3-983a-9450ac008947
+		dataCategory: ImageUrl
+
+	measure 'SVG Card GR' =
+			VAR st = "Ativo · " & [GR Testes] & " testes executados"
+			VAR mt = "Sucesso nos testes: " & FORMAT([GR Taxa Sucesso], "0%") & " · " & ([GR Falhas] + 0) & " falhas"
+			VAR sc = IF(CONTAINSSTRING(st, "pendente") || CONTAINSSTRING(st, "Rejeitado"), "#D99528", "#16856A")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='170' viewBox='0 0 440 170' font-family='Segoe UI, sans-serif'>"
+			 & "<rect x='1' y='1' width='438' height='168' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			 & "<g transform='translate(20,20)'><rect width='40' height='40' rx='12' fill='#16856A' fill-opacity='0.12'/><path d='M20 8 L30 12 V20 C30 26 25 30 20 32 C15 30 10 26 10 20 V12 Z' fill='none' stroke='#16856A' stroke-width='3' stroke-linejoin='round'/><path d='M15 20 L19 24 L25 16' fill='none' stroke='#16856A' stroke-width='3' stroke-linecap='round'/></g>"
+			 & "<text x='72' y='38' font-size='18' font-weight='700' fill='#082746'>GUARDRAILS</text>"
+			 & "<text x='72' y='58' font-size='13' fill='#64748B'>Segurança e governança</text>"
+			 & "<rect x='20' y='78' width='" & FORMAT(LEN(st) * 7.4 + 30, "0") & "' height='26' rx='13' fill='" & sc & "' fill-opacity='0.13'/><circle cx='34' cy='91' r='4.5' fill='" & sc & "'/>"
+			 & "<text x='46' y='96' font-size='13' font-weight='600' fill='" & sc & "'>" & st & "</text>"
+			 & "<text x='20' y='136' font-size='15' font-weight='600' fill='#1B3044'>" & mt & "</text>"
+			 & "<text x='420' y='156' text-anchor='end' font-size='13' font-weight='700' fill='#F58200'>Abrir módulo →</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: cc0c370f-b539-0440-0c70-2d16922dbfe1
+		dataCategory: ImageUrl
+
+	measure 'SVG Card ML' =
+			VAR st = "Ativo · " & [ML Modelos Registrados] & " modelos registrados"
+			VAR mt = [ML Registros Métricas] & " métricas · " & [ML Experimentos] & " experimentos"
+			VAR sc = IF(CONTAINSSTRING(st, "pendente") || CONTAINSSTRING(st, "Rejeitado"), "#D99528", "#16856A")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='170' viewBox='0 0 440 170' font-family='Segoe UI, sans-serif'>"
+			 & "<rect x='1' y='1' width='438' height='168' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			 & "<g transform='translate(20,20)'><rect width='40' height='40' rx='12' fill='#4387AD' fill-opacity='0.12'/><path d='M6 20 H13 L16 12 L22 28 L25 20 H34' fill='none' stroke='#4387AD' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></g>"
+			 & "<text x='72' y='38' font-size='18' font-weight='700' fill='#082746'>MLOPS / LLMOPS</text>"
+			 & "<text x='72' y='58' font-size='13' fill='#64748B'>Qualidade e monitoramento</text>"
+			 & "<rect x='20' y='78' width='" & FORMAT(LEN(st) * 7.4 + 30, "0") & "' height='26' rx='13' fill='" & sc & "' fill-opacity='0.13'/><circle cx='34' cy='91' r='4.5' fill='" & sc & "'/>"
+			 & "<text x='46' y='96' font-size='13' font-weight='600' fill='" & sc & "'>" & st & "</text>"
+			 & "<text x='20' y='136' font-size='15' font-weight='600' fill='#1B3044'>" & mt & "</text>"
+			 & "<text x='420' y='156' text-anchor='end' font-size='13' font-weight='700' fill='#F58200'>Abrir módulo →</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 29a1f98d-d0d9-4b0e-cfeb-bf590d151c97
+		dataCategory: ImageUrl
+
+	measure 'SVG RAG Aprovação' =
+			VAR _txt = FORMAT([RAG Taxa Aprovação], "0.0%")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#16856A' fill-opacity='0.12'/><path d='M10 21 L17 28 L30 13' fill='none' stroke='#16856A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Aprovação nas avaliações</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & [RAG Avaliações] & " perguntas de teste" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: c513fe61-d2b5-077d-3368-59cc3e1c288b
+		dataCategory: ImageUrl
+
+	measure 'SVG RAG Latência' =
+			VAR _txt = FORMAT([RAG Latência Média (ms)], "0.0") & " ms"
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#4387AD' fill-opacity='0.12'/><circle cx='20' cy='20' r='11' fill='none' stroke='#4387AD' stroke-width='3'/><path d='M20 14 V20 L24 23' stroke='#4387AD' stroke-width='3' stroke-linecap='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Latência média</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "recuperação local TF-IDF" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 52f6e399-7153-9701-bc27-8a782e2eed0a
+		dataCategory: ImageUrl
+
+	measure 'SVG RAG Docs' =
+			VAR _txt = FORMAT([RAG Documentos Indexados], "0")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#06436E' fill-opacity='0.12'/><path d='M13 9 H24 L29 14 V31 H13 Z' fill='none' stroke='#06436E' stroke-width='3' stroke-linejoin='round'/><path d='M17 20 H25 M17 25 H25' stroke='#06436E' stroke-width='2.5'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Documentos indexados</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & FORMAT(CALCULATE(COUNTROWS(dDocumento), dDocumento[origem] = "original"), "0") & " originais + " & FORMAT(CALCULATE(COUNTROWS(dDocumento), dDocumento[origem] = "complementar-projeto"), "0") & " complementares do projeto" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 9c21a5a1-a438-4742-bd7b-2262454ba508
+		dataCategory: ImageUrl
+
+	measure 'SVG RAG SemEv' =
+			VAR _txt = FORMAT([RAG Sem Evidência] + 0, "0")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#F58200' fill-opacity='0.12'/><path d='M20 8 L30 12 V20 C30 26 25 30 20 32 C15 30 10 26 10 20 V12 Z' fill='none' stroke='#F58200' stroke-width='3' stroke-linejoin='round'/><path d='M15 20 L19 24 L25 16' fill='none' stroke='#F58200' stroke-width='3' stroke-linecap='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Sem evidência declarada</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "respostas recusadas por falta de fonte" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 96b36d6e-d7ae-dd17-69a9-91d1ee6e15ff
+		dataCategory: ImageUrl
+
+	measure 'SVG FT F1' =
+			VAR _txt = FORMAT([FT Macro F1 Especializado], "0.000")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#F58200' fill-opacity='0.12'/><circle cx='20' cy='20' r='10' fill='none' stroke='#F58200' stroke-width='3'/><circle cx='20' cy='20' r='3' fill='#F58200'/><path d='M20 6 V10 M20 30 V34 M6 20 H10 M30 20 H34' stroke='#F58200' stroke-width='3'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Macro-F1 especializado</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "base por regras: " & FORMAT([FT Macro F1 Base], "0.000") & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 1b87241e-59ec-c583-db48-de195a29af8e
+		dataCategory: ImageUrl
+
+	measure 'SVG FT Acc' =
+			VAR _txt = FORMAT([FT Accuracy Especializado], "0.0%")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#16856A' fill-opacity='0.12'/><path d='M10 21 L17 28 L30 13' fill='none' stroke='#16856A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Accuracy especializado</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "base por regras: " & FORMAT([FT Accuracy Base], "0.0%") & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 3a850aa8-73fa-2c61-681b-d486577af480
+		dataCategory: ImageUrl
+
+	measure 'SVG FT Casos' =
+			VAR _txt = FORMAT([FT Casos Teste], "0")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#4387AD' fill-opacity='0.12'/><rect x='9' y='9' width='10' height='10' rx='2' fill='none' stroke='#4387AD' stroke-width='3'/><rect x='21' y='21' width='10' height='10' rx='2' fill='none' stroke='#4387AD' stroke-width='3'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Casos de teste</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "split por template, sem vazamento" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: ab5e0468-8453-a0a4-302f-6f0b53224923
+		dataCategory: ImageUrl
+
+	measure 'SVG FT LLM' =
+			VAR _txt = "Pendente"
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#D99528' fill-opacity='0.12'/><circle cx='20' cy='20' r='11' fill='none' stroke='#D99528' stroke-width='3'/><path d='M20 14 V20 L24 23' stroke='#D99528' stroke-width='3' stroke-linecap='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Fine-tuning de LLM</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "dataset JSONL pronto; sem infraestrutura" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: b2de3ecc-37fd-1dcf-68d4-881465cccaf7
+		dataCategory: ImageUrl
+
+	measure 'SVG GR Testes' =
+			VAR _txt = FORMAT([GR Testes], "0")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#06436E' fill-opacity='0.12'/><path d='M20 8 L30 12 V20 C30 26 25 30 20 32 C15 30 10 26 10 20 V12 Z' fill='none' stroke='#06436E' stroke-width='3' stroke-linejoin='round'/><path d='M15 20 L19 24 L25 16' fill='none' stroke='#06436E' stroke-width='3' stroke-linecap='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Requisições avaliadas</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "cenários executados no backend" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 8504167e-1d9b-c4aa-ca27-a22d434da41b
+		dataCategory: ImageUrl
+
+	measure 'SVG GR Bloq' =
+			VAR _txt = FORMAT([GR Bloqueados], "0")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#F58200' fill-opacity='0.12'/><rect x='10' y='12' width='20' height='18' rx='3' fill='none' stroke='#F58200' stroke-width='3'/><path d='M10 18 H30' stroke='#F58200' stroke-width='3'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Bloqueadas / restritas</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "taxa de bloqueio " & FORMAT([GR Taxa Bloqueio], "0%") & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 32ef8e58-f2e9-0fbd-14f3-3807a5a4ebbb
+		dataCategory: ImageUrl
+
+	measure 'SVG GR Sucesso' =
+			VAR _txt = FORMAT([GR Taxa Sucesso], "0%")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#16856A' fill-opacity='0.12'/><path d='M10 21 L17 28 L30 13' fill='none' stroke='#16856A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Testes bem-sucedidos</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & FORMAT([GR Falhas] + 0, "0") & " falhas de segurança" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 6ea2dfd0-8166-7406-b674-7ce348f29c59
+		dataCategory: ImageUrl
+
+	measure 'SVG GR Lat' =
+			VAR _txt = FORMAT(MAX(fTestesGuardrails[timestamp]), "")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#4387AD' fill-opacity='0.12'/><circle cx='20' cy='20' r='11' fill='none' stroke='#4387AD' stroke-width='3'/><path d='M20 14 V20 L24 23' stroke='#4387AD' stroke-width='3' stroke-linecap='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Última execução</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "03_AI/run_pipeline.py" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: b4ef6037-5751-0a3c-315d-577989d35864
+		dataCategory: ImageUrl
+
+	measure 'SVG ML Modelos' =
+			VAR _txt = FORMAT([ML Modelos Registrados], "0")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#06436E' fill-opacity='0.12'/><circle cx='20' cy='20' r='10' fill='none' stroke='#06436E' stroke-width='3'/><circle cx='20' cy='20' r='3' fill='#06436E'/><path d='M20 6 V10 M20 30 V34 M6 20 H10 M30 20 H34' stroke='#06436E' stroke-width='3'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Modelos registrados</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "inclui referência e pendentes" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: b260c1d8-7eea-1d0e-3dc4-856b56bddeea
+		dataCategory: ImageUrl
+
+	measure 'SVG ML Exp' =
+			VAR _txt = FORMAT([ML Registros Métricas], "0")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#4387AD' fill-opacity='0.12'/><path d='M6 20 H13 L16 12 L22 28 L25 20 H34' fill='none' stroke='#4387AD' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Métricas registradas</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & [ML Experimentos] & " experimentos" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 015fd73b-6c40-c87d-cb8f-37db6f3be701
+		dataCategory: ImageUrl
+
+	measure 'SVG ML AUC' =
+			VAR _txt = FORMAT([ML AUC Ruptura], "0.000")
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#C85B60' fill-opacity='0.12'/><rect x='10' y='12' width='20' height='18' rx='3' fill='none' stroke='#C85B60' stroke-width='3'/><path d='M10 18 H30' stroke='#C85B60' stroke-width='3'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>AUC risco de ruptura</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "≈0,50: sem sinal · modelo rejeitado" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: bc7d02c4-3a8d-7756-3a4b-04381e1e8128
+		dataCategory: ImageUrl
+
+	measure 'SVG ML Ult' =
+			VAR _txt = [ML Última Execução]
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='440' height='120' viewBox='0 0 440 120' font-family='Segoe UI, sans-serif'>"
+			    & "<rect x='1' y='1' width='438' height='118' rx='16' fill='#FFFFFF' stroke='#E6EDF3'/>"
+			    & "<g transform='translate(18,18)'><rect width='40' height='40' rx='12' fill='#F58200' fill-opacity='0.12'/><circle cx='20' cy='20' r='11' fill='none' stroke='#F58200' stroke-width='3'/><path d='M20 14 V20 L24 23' stroke='#F58200' stroke-width='3' stroke-linecap='round'/></g>"
+			    & "<text x='70' y='36' font-size='15' font-weight='600' fill='#1B3044'>Última execução</text>"
+			    & "<text x='70' y='74' font-size='32' font-weight='700' fill='#082746'>" & COALESCE(_txt, "—") & "</text>"
+			    & "<text x='70' y='100' font-size='13' fill='#64748B'>" & "pipeline local, sem agendamento" & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: cd1e05e3-5508-f1a2-9682-8d3700ea501d
+		dataCategory: ImageUrl
+
+	measure 'SVG Hero Contexto' =
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='640' height='60' viewBox='0 0 640 60' font-family='Segoe UI'>"
+			 & "<rect x='0' y='8' width='300' height='40' rx='20' fill='#082746' fill-opacity='0.06'/><text x='18' y='34' font-size='14' fill='#1B3044'><tspan font-weight='700'>Período </tspan>" & [Período Selecionado] & "</text>"
+			 & "<rect x='312' y='8' width='320' height='40' rx='20' fill='#16856A' fill-opacity='0.10'/><circle cx='332' cy='28' r='5' fill='#16856A'/><text x='346' y='34' font-size='14' fill='#16856A' font-weight='600'>" & [Atualização Dados] & "</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 0844965f-f988-16f5-1ab2-e6dcf9f8dba5
+		dataCategory: ImageUrl
+
+	measure 'SVG Hero Rede' =
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='360' height='200' viewBox='0 0 360 200'><g stroke='#06436E' stroke-opacity='0.25' stroke-width='1.5'><line x1='20' y1='150' x2='90' y2='70'/><line x1='90' y1='70' x2='170' y2='120'/><line x1='170' y1='120' x2='250' y2='40'/><line x1='250' y1='40' x2='330' y2='100'/><line x1='90' y1='70' x2='250' y2='40'/><line x1='170' y1='120' x2='330' y2='100'/><line x1='170' y1='120' x2='210' y2='180'/></g>"
+			 & "<g fill='#06436E'><circle cx='20' cy='150' r='5'/><circle cx='90' cy='70' r='7'/><circle cx='170' cy='120' r='6'/><circle cx='330' cy='100' r='6'/><circle cx='210' cy='180' r='4'/></g><circle cx='250' cy='40' r='9' fill='#F58200'/></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: c4e8e6d4-45c9-2d8b-6e1a-8b4c426612f1
+		dataCategory: ImageUrl
+
+	measure 'SVG Insight Compacto' =
+			VAR reg = [Insight Região Crítica] VAR av = [Ruptura %]
+			VAR t = ADDCOLUMNS(FILTER(VALUES(dPDV[regiao]), NOT ISBLANK([Ruptura %])), "@r", [Ruptura %])
+			VAR rr = MAXX(TOPN(1, t, [@r], DESC), [@r])
+			VAR np = COUNTROWS(FILTER(VALUES(dPDV[pdv]), [Ruptura %] > av * 1.15))
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='740' height='104' viewBox='0 0 740 104' font-family='Segoe UI, sans-serif'>"
+			 & "<rect x='1' y='1' width='738' height='102' rx='16' fill='#082746'/><circle cx='700' cy='10' r='70' fill='#06436E' fill-opacity='0.6'/>"
+			 & "<text x='22' y='28' font-size='12' font-weight='700' fill='#FFA51B' letter-spacing='1.4'>INSIGHT DO PERÍODO · REGRA DAX AUDITÁVEL</text>"
+			 & "<text x='22' y='58' font-size='19' font-weight='700' fill='#FFFFFF'>Maior ruptura: " & reg & " · " & FORMAT(rr, "0.0%") & " vs " & FORMAT(av, "0.0%") & " média</text>"
+			 & "<text x='22' y='86' font-size='14' fill='#C9D6E3'>" & FORMAT(np, "0") & " PDVs acima de 115% da média · hipótese, não causa comprovada</text></svg>"
+			RETURN IF(ISBLANK(av), BLANK(), "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23"))
+		displayFolder: 90 SVG
+		lineageTag: 20e8492f-6ccd-2c59-befe-8c029f3c3c84
+		dataCategory: ImageUrl
+
+	measure 'FT Valor Base' = CALCULATE(MAX(fExperimentosML[valor]), fExperimentosML[modelo] = "baseline-regras-palavra-chave", fExperimentosML[experimento] = "EXP-CLS-001")
+		formatString: 0.000
+		displayFolder: 07 IA
+		lineageTag: 9e9f271e-d1af-9b26-c984-32065c648ce1
+
+	measure 'FT Valor Especializado' = CALCULATE(MAX(fExperimentosML[valor]), fExperimentosML[modelo] = "classificador-ocorrencias-tfidf-lr", fExperimentosML[experimento] = "EXP-CLS-001")
+		formatString: 0.000
+		displayFolder: 07 IA
+		lineageTag: 103838d3-2eab-53dc-ccd6-d51a16b476bd
+
+	measure 'SVG Tooltip Resumo' =
+			VAR _svg = "<svg xmlns='http://www.w3.org/2000/svg' width='608' height='56' viewBox='0 0 608 56' font-family='Segoe UI'>"
+			 & "<text x='4' y='20' font-size='12' fill='#64748B'>Sell-out atual · AA · var</text><text x='4' y='44' font-size='16' font-weight='700' fill='#082746'>" & FORMAT([Sell-out], "R$ #,0") & " · " & FORMAT([Sell-out AA], "R$ #,0") & " · " & FORMAT([Sell-out Var %], "+0.0%;-0.0%") & "</text>"
+			 & "<text x='390' y='20' font-size='12' fill='#64748B'>Ruptura · cobertura</text><text x='390' y='44' font-size='16' font-weight='700' fill='#F58200'>" & FORMAT([Ruptura %], "0.0%") & " · " & FORMAT([Observações Estoque], "#,0") & " obs.</text></svg>"
+			RETURN "data:image/svg+xml;utf8," & SUBSTITUTE(SUBSTITUTE(_svg, "%", "%25"), "#", "%23")
+		displayFolder: 90 SVG
+		lineageTag: 0eb83b70-7be7-16c7-e2b1-62781483b6db
+		dataCategory: ImageUrl
+
+	column Coluna
+		dataType: string
+		isHidden
+		lineageTag: f1be2152-0cf2-3140-b902-18c3ef3a986c
+		summarizeBy: none
+		sourceColumn: Coluna
+
+	partition _Medidas = m
+		mode: import
+		source = #table(type table [Coluna = text], {})
+

@@ -1,0 +1,88 @@
+table fAuditoria
+	lineageTag: 87173d37-9a79-3861-6720-49f07cf8c895
+
+	column auditoria_id
+		dataType: int64
+		isHidden
+		lineageTag: 9c6298da-a6c0-905b-9f0f-640648760493
+		summarizeBy: none
+		sourceColumn: auditoria_id
+
+	column data
+		dataType: dateTime
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: 6849331c-06b6-7c84-68af-833cc834e947
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column pdv_id
+		dataType: int64
+		isHidden
+		lineageTag: c874bc38-b7ab-ce69-c592-85b5f23b0f4b
+		summarizeBy: none
+		sourceColumn: pdv_id
+
+	column promotor_id
+		dataType: int64
+		isHidden
+		lineageTag: fc5052ae-7716-12bf-8527-4876ae61f256
+		summarizeBy: none
+		sourceColumn: promotor_id
+
+	column produto_id
+		dataType: int64
+		isHidden
+		lineageTag: 2ad09ada-23dc-b246-0312-9733f0a5bf37
+		summarizeBy: none
+		sourceColumn: produto_id
+
+	column preco_gondola
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: 30cf2d50-f0e9-fe42-73a9-2689b9927bbd
+		summarizeBy: none
+		sourceColumn: preco_gondola
+
+	column preco_concorrente
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: cd90e91e-48ce-2651-1f25-89f77df302b8
+		summarizeBy: none
+		sourceColumn: preco_concorrente
+
+	column facings
+		dataType: int64
+		isHidden
+		lineageTag: 8cd695ed-d56b-d2fd-6263-872696874056
+		summarizeBy: none
+		sourceColumn: facings
+
+	column planograma_ok
+		dataType: int64
+		isHidden
+		lineageTag: c676758e-c198-9e90-ef88-f2b98c6d66d7
+		summarizeBy: none
+		sourceColumn: planograma_ok
+
+	column material_pdv_ok
+		dataType: int64
+		isHidden
+		lineageTag: fcae0d5b-b519-62f0-de90-fa5a860788c8
+		summarizeBy: none
+		sourceColumn: material_pdv_ok
+
+	partition fAuditoria = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fAuditoria.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"auditoria_id", Int64.Type}, {"data", type date}, {"pdv_id", Int64.Type}, {"promotor_id", Int64.Type}, {"produto_id", Int64.Type}, {"preco_gondola", type number}, {"preco_concorrente", type number}, {"facings", Int64.Type}, {"planograma_ok", Int64.Type}, {"material_pdv_ok", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

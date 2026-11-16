@@ -1,0 +1,38 @@
+table fMeta
+	lineageTag: 7523d283-bc19-302c-4b20-bf705d86742d
+
+	column data
+		dataType: dateTime
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: d135935a-529a-bc93-e0a9-f1c046ad4d4a
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column pdv_id
+		dataType: int64
+		isHidden
+		lineageTag: 75717f3b-69d2-d668-50f5-a2150827e8eb
+		summarizeBy: none
+		sourceColumn: pdv_id
+
+	column meta_receita
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: 0bc806c9-d615-e56f-bb53-4dd4d4f78620
+		summarizeBy: none
+		sourceColumn: meta_receita
+
+	partition fMeta = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fMeta.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"data", type date}, {"pdv_id", Int64.Type}, {"meta_receita", type number}}, "en-US")
+				in
+				    Tipos
+

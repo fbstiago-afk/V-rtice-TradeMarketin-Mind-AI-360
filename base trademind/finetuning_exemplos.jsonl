@@ -1,0 +1,5 @@
+{"messages": [{"role": "user", "content": "Classifique: saldo físico zero no PDV"}, {"role": "assistant", "content": "{\"categoria\":\"ruptura\",\"prioridade\":\"alta\",\"acao\":\"verificar reposicao\"}"}], "split": "treino"}
+{"messages": [{"role": "user", "content": "Classifique: preço na gôndola divergente da tabela"}, {"role": "assistant", "content": "{\"categoria\":\"preco\",\"prioridade\":\"media\",\"acao\":\"auditar etiqueta\"}"}], "split": "treino"}
+{"messages": [{"role": "user", "content": "Classifique: exposição fora do planograma"}, {"role": "assistant", "content": "{\"categoria\":\"execucao\",\"prioridade\":\"media\",\"acao\":\"corrigir exposicao\"}"}], "split": "treino"}
+{"messages": [{"role": "user", "content": "Classifique: material promocional ausente"}, {"role": "assistant", "content": "{\"categoria\":\"campanha\",\"prioridade\":\"media\",\"acao\":\"instalar material\"}"}], "split": "treino"}
+{"messages": [{"role": "user", "content": "Classifique: queda de vendas sem evidência suficiente"}, {"role": "assistant", "content": "{\"categoria\":\"investigacao\",\"prioridade\":\"indeterminada\",\"acao\":\"coletar evidencias\"}"}], "split": "teste"}

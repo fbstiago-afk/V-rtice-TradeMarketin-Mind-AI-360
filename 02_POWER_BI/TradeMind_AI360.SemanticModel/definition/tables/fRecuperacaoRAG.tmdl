@@ -1,0 +1,58 @@
+table fRecuperacaoRAG
+	lineageTag: 4c97150d-a494-4f09-6de0-902061eb36c1
+
+	column interacao_id
+		dataType: string
+		isHidden
+		lineageTag: 34c188e6-5127-5c77-4a52-25c62bbcb9a9
+		summarizeBy: none
+		sourceColumn: interacao_id
+
+	column rank
+		dataType: int64
+		lineageTag: 98b02ade-8a80-f84c-68cb-1ee778878c34
+		summarizeBy: none
+		sourceColumn: rank
+
+	column documento_id
+		dataType: int64
+		isHidden
+		lineageTag: 9a136db8-304d-758a-4cf8-7d1e5e9ab8b5
+		summarizeBy: none
+		sourceColumn: documento_id
+
+	column documento
+		dataType: string
+		lineageTag: 4a9890a2-f747-1feb-d6aa-18fa24beec60
+		summarizeBy: none
+		sourceColumn: documento
+
+	column versao
+		dataType: string
+		lineageTag: 4ed617b3-22db-53d1-88b9-c189eb0adf3d
+		summarizeBy: none
+		sourceColumn: versao
+
+	column trecho
+		dataType: string
+		lineageTag: 184d0d0f-20fc-2f2c-d972-043a67fbc80e
+		summarizeBy: none
+		sourceColumn: trecho
+
+	column score
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e7ff5a21-4e52-0281-0607-5ca9cf3fe35c
+		summarizeBy: none
+		sourceColumn: score
+
+	partition fRecuperacaoRAG = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PastaDados & "fRecuperacaoRAG.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Cab = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cab, {{"interacao_id", type text}, {"rank", Int64.Type}, {"documento_id", Int64.Type}, {"documento", type text}, {"versao", type text}, {"trecho", type text}, {"score", type number}}, "en-US")
+				in
+				    Tipos
+

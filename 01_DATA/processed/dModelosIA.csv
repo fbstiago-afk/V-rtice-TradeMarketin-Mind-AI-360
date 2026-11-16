@@ -1,0 +1,8 @@
+modelo,versao,modulo,descricao,status,data_treinamento
+rag-tfidf-extrativo,1.0,RAG,Recuperação TF-IDF + resposta extrativa citada (sem LLM),Ativo,2026-11-15T00:21:42
+guardrails-rbac-regex,1.0,Guardrails,RBAC (regra_acesso) + RLS no backend + validação de payload + detecção regex,Ativo,2026-11-15T00:21:42
+baseline-regras-palavra-chave,1.0,Classificação,Regras por palavra-chave (modelo base de referência),Referência,2026-11-15T00:21:42
+classificador-ocorrencias-tfidf-lr,1.0,Classificação,Classificador supervisionado TF-IDF + LogReg em dados sintéticos (não é fine-tuning de LLM),Treinado,2026-11-15T00:21:42
+llm-finetune-ocorrencias,-,Fine-tuning LLM,Dataset chat JSONL preparado; sem infraestrutura/credencial de treinamento,Treinamento pendente,
+risco-ruptura-logreg,1.0,Preditivo,"LogReg com defasagens de estoque; split temporal em 2026-07-01 | AUC 0.50: sem sinal preditivo, previsões não publicadas",Rejeitado,2026-11-15T00:21:42
+risco-ruptura-gbm-vendas,1.0,Preditivo,"HistGBM + defasagens de vendas/estoque | AUC 0.50, corr. lag1 0.000: ruptura simulada sem dependência temporal",Rejeitado,2026-11-15T00:21:42
