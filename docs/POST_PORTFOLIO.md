@@ -12,7 +12,9 @@
 
 ## Descrição curta
 
-Plataforma analítica de Trade Marketing que separa, de propósito, duas camadas: a análise comercial (sell-out, ruptura, execução de PDV e campanhas) e um laboratório onde RAG, classificação especializada, guardrails de segurança e MLOps são efetivamente executados, avaliados e registrados — com o Power BI lendo essa telemetria real. O relatório inteiro, com 7 páginas, 170 visuais e 113 medidas DAX, é gerado por script Python em formato TMDL/PBIR, o que o torna reprodutível a partir do repositório. Dados fictícios gerados com seed fixa.
+Cockpit de Trade Marketing com duas camadas separadas: a análise comercial (sell-out, ruptura, execução de PDV e campanhas) e um laboratório onde RAG, guardrails de segurança, classificação especializada e MLOps são executados, avaliados e registrados — com o Power BI lendo essa telemetria real.
+
+O relatório inteiro (7 páginas, 170 visuais, 113 medidas DAX) é gerado por script Python em TMDL/PBIR, e por isso é reprodutível a partir do repositório. Dados fictícios, gerados com seed fixa.
 
 ---
 
